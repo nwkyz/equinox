@@ -1,0 +1,678 @@
+# Literary Chinese translation of equinox.
+# Copyright (C) 2026 nwkyz
+# This file is distributed under the same license as the equinox package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: equinox 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-07 07:48+0000\n"
+"PO-Revision-Date: 2026-08-24 18:30+0800\n"
+"Last-Translator: nwkyz\n"
+"Language-Team: Literary Chinese\n"
+"Language: lzh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: crates/equinox-core/src/applier.rs:203
+msgid "no supported wallpaper backend detected (need GNOME, KDE, or XFCE)"
+msgstr "未察得所宜之壁紙後端(需 GNOME、KDE 或 XFCE)"
+
+#: crates/equinox-core/src/applier.rs:230
+msgid "this environment cannot set the GNOME wallpaper (missing org.gnome.desktop.background schema)"
+msgstr "此境不能設 GNOME 之壁紙(闕 org.gnome.desktop.background schema)"
+
+#: crates/equinox-core/src/applier.rs:346
+#, fuzzy
+msgid "Failed to set Plasma wallpaper via the running shell"
+msgstr "設壁紙未果"
+
+#: crates/equinox-core/src/applier.rs:383
+#: crates/equinox-core/src/applier.rs:639
+msgid "Failed to read"
+msgstr "讀之不果"
+
+#: crates/equinox-core/src/applier.rs:404
+msgid "No image-type wallpaper configured in Plasma"
+msgstr "Plasma 中未設圖像類壁紙"
+
+#: crates/equinox-core/src/applier.rs:409
+#: crates/equinox-core/src/applier.rs:412
+#: crates/equinox-core/src/applier.rs:649
+#: crates/equinox-core/src/applier.rs:652
+msgid "Failed to write"
+msgstr "寫之不果"
+
+#: crates/equinox-core/src/applier.rs:627
+msgid "Failed to set wallpaper"
+msgstr "設壁紙未果"
+
+#: crates/equinox-core/src/applier.rs:643
+msgid "No wallpaper property found in"
+msgstr "未得其壁紙之屬,於"
+
+#: crates/equinox-core/src/applier.rs:685
+msgid "no backdrop last-image property found in the xfce4-desktop channel"
+msgstr "xfce4-desktop 道中未見 last-image 之屬"
+
+#: crates/equinox-core/src/http.rs:47
+msgid "Invalid URL"
+msgstr "網址不正"
+
+#: crates/equinox-core/src/http.rs:54 crates/equinox-core/src/http.rs:120
+#: crates/equinox-core/src/http.rs:134
+msgid "Network request failed"
+msgstr "通網之請不果"
+
+#: crates/equinox-core/src/sources/bing.rs:25
+#: crates/equinox-core/src/sources/bing.rs:138
+msgid "Bing"
+msgstr "Bing"
+
+#: crates/equinox-core/src/sources/bing.rs:32
+msgid "Region"
+msgstr "地域"
+
+#: crates/equinox-core/src/sources/bing.rs:51
+msgid "Resolution"
+msgstr "解像"
+
+#: crates/equinox-core/src/sources/bing.rs:61
+msgid "Include history"
+msgstr "兼收舊圖"
+
+#: crates/equinox-core/src/sources/bing.rs:90
+#: crates/equinox-core/src/sources/spotlight.rs:64
+#: crates/equinox-core/src/sources/spotlight.rs:80
+msgid "Auto"
+msgstr "自動"
+
+#: crates/equinox-core/src/sources/nasa.rs:24
+#: crates/equinox-core/src/sources/nasa.rs:87
+msgid "NASA"
+msgstr "NASA"
+
+#: crates/equinox-core/src/sources/nasa.rs:31
+msgid "API key (optional)"
+msgstr "API 鍵(可選)"
+
+#: crates/equinox-core/src/sources/nasa.rs:36
+msgid "Use high-definition image (hdurl)"
+msgstr "用高清之圖(hdurl)"
+
+#: crates/equinox-core/src/sources/nasa.rs:69
+msgid "Today's APOD entry is a video, skipped"
+msgstr "今日 APOD 乃影而非圖,姑置之"
+
+#: crates/equinox-core/src/sources/spotlight.rs:41
+msgid "Windows Spotlight"
+msgstr "Windows 聚焦"
+
+#: crates/equinox-core/src/sources/spotlight.rs:62
+msgid "Country"
+msgstr "國"
+
+#: crates/equinox-core/src/sources/spotlight.rs:78
+msgid "Locale"
+msgstr "語地"
+
+#: crates/equinox-core/src/sources/spotlight.rs:207
+msgid "Spotlight"
+msgstr "聚焦"
+
+#: crates/equinox-core/src/sources/wikimedia.rs:25
+#: crates/equinox-core/src/sources/wikimedia.rs:91
+msgid "Wikimedia"
+msgstr "Wikimedia"
+
+#: crates/equinox-core/src/sources/wikimedia.rs:31
+msgid "Thumbnail width"
+msgstr "縮圖之廣"
+
+#: crates/equinox-core/src/storage.rs:284
+#: crates/equinox-gui/src/views/gallery.rs:832
+msgid "Failed to delete"
+msgstr "刪之不果"
+
+#: crates/equinox-core/src/storage.rs:406
+msgid "Failed to create directory"
+msgstr "建目錄不果"
+
+#: crates/equinox-core/src/storage.rs:454
+msgid "Failed to write image"
+msgstr "書圖不果"
+
+#: crates/equinox-core/src/storage.rs:460
+msgid "Failed to write description"
+msgstr "書述不果"
+
+#: crates/equinox-daemon/src/scheduler.rs:102
+msgid "Missed update window (powered off)"
+msgstr "坐失更新之期(機停之時)"
+
+#. Aborted (mid-download or after): do NOT store/apply anything.
+#: crates/equinox-daemon/src/scheduler.rs:185
+#: crates/equinox-daemon/src/scheduler.rs:311
+#: crates/equinox-daemon/src/scheduler.rs:482
+#: crates/equinox-daemon/src/scheduler.rs:501
+#, fuzzy
+msgid "Update cancelled"
+msgstr "更新不果"
+
+#: crates/equinox-daemon/src/scheduler.rs:291
+msgid "Updating"
+msgstr "方更新"
+
+#: crates/equinox-daemon/src/scheduler.rs:468
+#: crates/equinox-daemon/src/service.rs:79
+#: crates/equinox-daemon/src/service.rs:108
+msgid "Unknown source"
+msgstr "源不可識"
+
+#: crates/equinox-daemon/src/scheduler.rs:541
+#: crates/equinox-daemon/src/scheduler.rs:552
+msgid "This source has no images yet, run \"Update now\" first"
+msgstr "此源圖像闕如,盍先「即時更新」"
+
+#: crates/equinox-daemon/src/scheduler.rs:563
+msgid "No wallpaper source selected yet, choose one on the Wallpaper page"
+msgstr "壁紙之源未擇,請往「壁紙」之頁擇一"
+
+#: crates/equinox-daemon/src/scheduler.rs:600
+msgid "Setting wallpaper"
+msgstr "方設壁紙"
+
+#: crates/equinox-daemon/src/scheduler.rs:632
+msgid "Applying image"
+msgstr "方施圖像"
+
+#: crates/equinox-daemon/src/scheduler.rs:651
+msgid "Applying previous"
+msgstr "方施前圖"
+
+#: crates/equinox-daemon/src/scheduler.rs:657
+msgid "No earlier wallpaper in history"
+msgstr "覆按史乘,無復早者"
+
+#: crates/equinox-daemon/src/scheduler.rs:674
+msgid "File does not exist"
+msgstr "檔案不存"
+
+#: crates/equinox-daemon/src/scheduler.rs:692
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:388
+#: crates/equinox-gui/src/views/gallery.rs:866
+msgid "Failed to apply wallpaper"
+msgstr "施壁紙不果"
+
+#. Daemon status banner
+#: crates/equinox-gui/src/app.rs:35
+msgid "The daemon is not running; scheduled updates will be unavailable"
+msgstr "守護進程未運,定時更新不可用矣"
+
+#: crates/equinox-gui/src/app.rs:37 crates/equinox-gui/src/app.rs:461
+#: crates/equinox-gui/src/app.rs:559 crates/equinox-gui/src/app.rs:804
+msgid "Start"
+msgstr "起"
+
+#: crates/equinox-gui/src/app.rs:57
+msgid "Wallpaper"
+msgstr "壁"
+
+#: crates/equinox-gui/src/app.rs:63 crates/equinox-gui/src/views/oobe.rs:82
+msgid "Sources"
+msgstr "源"
+
+#: crates/equinox-gui/src/app.rs:69
+msgid "Gallery"
+msgstr "圖"
+
+#: crates/equinox-gui/src/app.rs:75 crates/equinox-gui/src/views/history.rs:130
+msgid "History"
+msgstr "史"
+
+#: crates/equinox-gui/src/app.rs:143
+msgid "Main menu"
+msgstr "總目"
+
+#: crates/equinox-gui/src/app.rs:153
+msgid "Tasks"
+msgstr "任務"
+
+#: crates/equinox-gui/src/app.rs:171
+#: crates/equinox-gui/src/views/timeline.rs:54
+msgid "Timeline"
+msgstr "年表"
+
+#: crates/equinox-gui/src/app.rs:193 crates/equinox-gui/src/app.rs:506
+msgid "Preferences"
+msgstr "所好"
+
+#: crates/equinox-gui/src/app.rs:213
+msgid "About"
+msgstr "自敘"
+
+#: crates/equinox-gui/src/app.rs:228
+msgid "Multi-source daily wallpaper manager"
+msgstr "合諸源之日更壁紙者也"
+
+#: crates/equinox-gui/src/app.rs:233
+msgid "Released under the"
+msgstr "許可:"
+
+#: crates/equinox-gui/src/app.rs:272
+msgid "No running tasks"
+msgstr "目下無役"
+
+#: crates/equinox-gui/src/app.rs:321
+msgid "Cancel"
+msgstr "止"
+
+#: crates/equinox-gui/src/app.rs:392
+msgid "Interface"
+msgstr "儀表"
+
+#: crates/equinox-gui/src/app.rs:397
+msgid "Auto (follow system)"
+msgstr "因循系統"
+
+#: crates/equinox-gui/src/app.rs:414
+msgid "Language"
+msgstr "語言"
+
+#: crates/equinox-gui/src/app.rs:421 crates/equinox-gui/src/views/oobe.rs:145
+msgid "Background service"
+msgstr "後臺之役"
+
+#: crates/equinox-gui/src/app.rs:430 crates/equinox-gui/src/views/oobe.rs:154
+msgid "Standalone"
+msgstr "獨立"
+
+#: crates/equinox-gui/src/app.rs:436
+msgid "Run background via"
+msgstr "後臺役之以何道"
+
+#: crates/equinox-gui/src/app.rs:458
+msgid "Daemon status"
+msgstr "後台之狀"
+
+#: crates/equinox-gui/src/app.rs:471
+msgid "systemd is unavailable in flatpak"
+msgstr "flatpak 之內，systemd 無可施設"
+
+#: crates/equinox-gui/src/app.rs:473
+msgid "Sandboxed apps cannot reach the host systemd user session, so the background runs as a supervised process inside the sandbox."
+msgstr "沙盒之應用，不得通於主機 systemd 用戶之會，故後臺於沙盒之內，以受監之役而行。"
+
+#: crates/equinox-gui/src/app.rs:483 crates/equinox-gui/src/views/oobe.rs:166
+msgid "Start at login"
+msgstr "登錄即啟"
+
+#: crates/equinox-gui/src/app.rs:490
+msgid "systemd service"
+msgstr "systemd 之役"
+
+#: crates/equinox-gui/src/app.rs:495 crates/equinox-gui/src/app.rs:545
+msgid "Install"
+msgstr "裝設"
+
+#: crates/equinox-gui/src/app.rs:543
+msgid "Uninstall"
+msgstr "撤除"
+
+#: crates/equinox-gui/src/app.rs:557 crates/equinox-gui/src/app.rs:802
+msgid "Stop"
+msgstr "止"
+
+#: crates/equinox-gui/src/app.rs:570
+msgid "Installed and running"
+msgstr "既裝且役"
+
+#: crates/equinox-gui/src/app.rs:572
+msgid "Installed, not running"
+msgstr "既裝未役"
+
+#: crates/equinox-gui/src/app.rs:575
+msgid "Not installed"
+msgstr "未裝設"
+
+#: crates/equinox-gui/src/app.rs:601
+msgid "Restart Equinox to apply the new language"
+msgstr "易語之後,須復啟 Equinox 乃效"
+
+#: crates/equinox-gui/src/app.rs:639 crates/equinox-gui/src/app.rs:706
+#: crates/equinox-gui/src/app.rs:726
+msgid "Failed to change the systemd service"
+msgstr "systemd 之役，更易未果"
+
+#: crates/equinox-gui/src/app.rs:797
+msgid "Running"
+msgstr "運行中"
+
+#: crates/equinox-gui/src/app.rs:799
+#, fuzzy
+msgid "Not running"
+msgstr "未運行"
+
+#: crates/equinox-gui/src/daemon_client.rs:194
+msgid "Daemon is not running"
+msgstr "守護進程未運"
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:80
+#: crates/equinox-gui/src/views/wallpaper.rs:953
+msgid "Untitled wallpaper"
+msgstr "無題壁紙"
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:145
+msgid "Apply wallpaper"
+msgstr "施為壁紙"
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:148
+msgid "Set as wallpaper"
+msgstr "定為壁紙"
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:165
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:194
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:220
+msgid "Fill mode"
+msgstr "填滿之式"
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:168
+msgid "Fullscreen"
+msgstr "全屏"
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:171
+msgid "Close"
+msgstr "闔"
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:192
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:218
+msgid "Fit mode"
+msgstr "適圖之式"
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:386
+#: crates/equinox-gui/src/views/gallery.rs:863
+msgid "Wallpaper applied"
+msgstr "壁紙已施"
+
+#: crates/equinox-gui/src/views/gallery.rs:175
+msgid "Carousel"
+msgstr "迴覽"
+
+#: crates/equinox-gui/src/views/gallery.rs:177
+msgid "Grid"
+msgstr "方格"
+
+#: crates/equinox-gui/src/views/gallery.rs:188
+#: crates/equinox-gui/src/views/history.rs:140
+msgid "Refresh"
+msgstr "復新"
+
+#: crates/equinox-gui/src/views/gallery.rs:192
+msgid "Delete selected"
+msgstr "刪所擇"
+
+#: crates/equinox-gui/src/views/gallery.rs:195
+#: crates/equinox-gui/src/views/timeline.rs:46
+msgid "Apply"
+msgstr "施"
+
+#: crates/equinox-gui/src/views/gallery.rs:198
+msgid "Apply the selected image as wallpaper"
+msgstr "施所擇之圖為壁紙"
+
+#: crates/equinox-gui/src/views/gallery.rs:403
+#: crates/equinox-gui/src/views/wallpaper.rs:151
+msgid "Previous image"
+msgstr "前幀"
+
+#: crates/equinox-gui/src/views/gallery.rs:408
+#: crates/equinox-gui/src/views/wallpaper.rs:162
+msgid "Next image"
+msgstr "後幀"
+
+#: crates/equinox-gui/src/views/gallery.rs:481
+msgid "No images yet"
+msgstr "尚未有圖"
+
+#: crates/equinox-gui/src/views/gallery.rs:483
+msgid "Go to the Sources page and click \"Update now\" to download some wallpapers"
+msgstr "盍詣「諸源」之頁,按「即刻更新」,多取壁紙而歸"
+
+#: crates/equinox-gui/src/views/gallery.rs:829
+msgid "Image deleted"
+msgstr "已刪其圖"
+
+#: crates/equinox-gui/src/views/history.rs:144
+msgid "Clear history"
+msgstr "盡削史乘"
+
+#: crates/equinox-gui/src/views/history.rs:287
+#: crates/equinox-gui/src/views/history.rs:302
+msgid "Applied"
+msgstr "施於"
+
+#: crates/equinox-gui/src/views/history.rs:319
+msgid "No wallpaper has been applied yet"
+msgstr "壁紙未嘗施也"
+
+#: crates/equinox-gui/src/views/history.rs:321
+msgid "Wallpapers you apply will be recorded here so you can go back to them"
+msgstr "所施壁紙悉載於此,欲復用者隨取隨得"
+
+#: crates/equinox-gui/src/views/history.rs:383
+msgid "entries"
+msgstr "條"
+
+#: crates/equinox-gui/src/views/history.rs:438
+msgid "History cleared"
+msgstr "史乘已淨"
+
+#: crates/equinox-gui/src/views/history.rs:440
+msgid "Failed to clear history"
+msgstr "淨史乘不果"
+
+#: crates/equinox-gui/src/views/oobe.rs:68
+#, fuzzy
+msgid "Choose the sources"
+msgstr "後源"
+
+#: crates/equinox-gui/src/views/oobe.rs:74
+msgid "Enable the sources to keep up to date and set how often each one updates. Enabled sources are updated right away when you continue."
+msgstr "啟諸源以常新，定各源更新之頻。續則所啟之源立新。"
+
+#: crates/equinox-gui/src/views/oobe.rs:111
+#: crates/equinox-gui/src/views/sources.rs:78
+msgid "Refresh interval (seconds)"
+msgstr "復新之期(以秒計)"
+
+#. Continue button + a spinner shown while the daemon is being started.
+#: crates/equinox-gui/src/views/oobe.rs:124
+msgid "Continue"
+msgstr "繼"
+
+#: crates/equinox-gui/src/views/oobe.rs:160
+msgid "Run via"
+msgstr "役以何道"
+
+#: crates/equinox-gui/src/views/oobe.rs:176
+msgid "Back"
+msgstr "返"
+
+#: crates/equinox-gui/src/views/oobe.rs:177
+msgid "Finish"
+msgstr "竟"
+
+#: crates/equinox-gui/src/views/sources.rs:25
+msgid "Wallpaper sources"
+msgstr "壁紙之源"
+
+#: crates/equinox-gui/src/views/sources.rs:63
+msgid "Enable scheduled updates"
+msgstr "啟定時之新"
+
+#: crates/equinox-gui/src/views/sources.rs:95
+msgid "Max images (0 = unlimited)"
+msgstr "圖數上限(零則無限)"
+
+#: crates/equinox-gui/src/views/sources.rs:115
+msgid "Status"
+msgstr "狀"
+
+#. "Update now" shown only when the current source has no wallpapers yet,
+#. so the empty state is actionable instead of a dead blank.
+#: crates/equinox-gui/src/views/sources.rs:120
+#: crates/equinox-gui/src/views/wallpaper.rs:235
+msgid "Update now"
+msgstr "即刻更新"
+
+#: crates/equinox-gui/src/views/sources.rs:122
+msgid "Fetch one image immediately and store it in the image directory"
+msgstr "即取一圖,藏諸圖府"
+
+#: crates/equinox-gui/src/views/sources.rs:124
+msgid "Update"
+msgstr "更新"
+
+#: crates/equinox-gui/src/views/sources.rs:135
+msgid "Updating…"
+msgstr "方更新…"
+
+#: crates/equinox-gui/src/views/sources.rs:148
+#: crates/equinox-gui/src/views/wallpaper.rs:256
+msgid "Update failed"
+msgstr "更新不果"
+
+#: crates/equinox-gui/src/views/sources.rs:175
+msgid "images"
+msgstr "幀"
+
+#: crates/equinox-gui/src/views/timeline.rs:33
+msgid "sec"
+msgstr "秒"
+
+#: crates/equinox-gui/src/views/timeline.rs:35
+msgid "min"
+msgstr "分"
+
+#: crates/equinox-gui/src/views/timeline.rs:37
+msgid "h"
+msgstr "時"
+
+#: crates/equinox-gui/src/views/timeline.rs:39
+msgid "d"
+msgstr "日"
+
+#: crates/equinox-gui/src/views/timeline.rs:45
+msgid "Scheduled"
+msgstr "以時"
+
+#: crates/equinox-gui/src/views/timeline.rs:47
+#: crates/equinox-gui/src/views/wallpaper.rs:943
+msgid "Manual"
+msgstr "手定"
+
+#: crates/equinox-gui/src/views/timeline.rs:70
+msgid "Each source updates on its own interval. Windows missed while the computer was off or asleep are caught up right after boot or wake-up."
+msgstr "諸源各以其期自新。機息眠時所坐失者,既啟既寤,輒補行之。"
+
+#: crates/equinox-gui/src/views/timeline.rs:107
+msgid "Planned"
+msgstr "所擬"
+
+#: crates/equinox-gui/src/views/timeline.rs:110
+msgid "Next"
+msgstr "次及"
+
+#: crates/equinox-gui/src/views/timeline.rs:112
+msgid "Every"
+msgstr "每"
+
+#: crates/equinox-gui/src/views/timeline.rs:122
+msgid "Scheduled updates are off"
+msgstr "定時更新未啟"
+
+#: crates/equinox-gui/src/views/timeline.rs:143
+msgid "(catch-up)"
+msgstr "(追補)"
+
+#: crates/equinox-gui/src/views/timeline.rs:155
+msgid " · Success"
+msgstr " · 成矣"
+
+#: crates/equinox-gui/src/views/timeline.rs:168
+msgid "No tasks recorded yet"
+msgstr "役務無可載者"
+
+#. ---- Headline: the wallpaper title directly ----
+#: crates/equinox-gui/src/views/wallpaper.rs:216
+msgid "Loading…"
+msgstr "方載…"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:273
+msgid "Previous source"
+msgstr "前源"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:278
+msgid "Next source"
+msgstr "後源"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:470
+#, fuzzy
+msgid "No wallpapers in this source yet"
+msgstr "此源尚未藏圖"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:471
+#, fuzzy
+msgid "Switch sources below or run an update to download the first images"
+msgstr "請於下方易源,或先行一輪更新"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:610
+msgid "Failed to switch"
+msgstr "易之不果"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:651
+#: crates/equinox-gui/src/views/wallpaper.rs:733
+msgid "Failed to set"
+msgstr "設之不果"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:799
+msgid "Operation failed"
+msgstr "操作不果"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:942
+msgid "Random"
+msgstr "隨機"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:944
+msgid "Latest"
+msgstr "至新"
+
+#~ msgid "Maximize"
+#~ msgstr "最大化"
+
+#~ msgid "Welcome to Equinox"
+#~ msgstr "欣迎君至 Equinox"
+
+#~ msgid ""
+#~ "Equinox keeps a wallpaper source of your choice up to date in the background.\n"
+#~ "Pick the sources you want and how the background should run."
+#~ msgstr ""
+#~ "Equinox 居後臺之中，常新爾所擇之壁紙源。\n"
+#~ "請擇所欲之源，並定後臺役之以何道。"
+
+#~ msgid "Only enabled sources are fetched on a schedule."
+#~ msgstr "惟啟用之源，依期而取。"
+
+#~ msgid "Run the background service automatically when you log in, so wallpapers update even when Equinox is closed."
+#~ msgstr "登錄之時，後臺之役自啟，雖 Equinox 已閉，壁紙仍得常新。"
+
+#~ msgid "Standalone (Equinox supervisor)"
+#~ msgstr "獨立行役（Equinox 監護）"
+
+#~ msgid "systemd user service"
+#~ msgstr "systemd 用戶之役"
+
+#~ msgid "Get started"
+#~ msgstr "請即啟用"

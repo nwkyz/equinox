@@ -1,0 +1,678 @@
+# Russian translation of equinox.
+# Copyright (C) 2026 nwkyz
+# This file is distributed under the same license as the equinox package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: equinox 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-07 07:48+0000\n"
+"PO-Revision-Date: 2026-08-23 23:50+0300\n"
+"Last-Translator: nwkyz\n"
+"Language-Team: Russian <LL@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: crates/equinox-core/src/applier.rs:203
+msgid "no supported wallpaper backend detected (need GNOME, KDE, or XFCE)"
+msgstr "не обнаружен поддерживаемый бэкенд обоев(нужен GNOME, KDE или XFCE)"
+
+#: crates/equinox-core/src/applier.rs:230
+msgid "this environment cannot set the GNOME wallpaper (missing org.gnome.desktop.background schema)"
+msgstr "В этой среде нельзя установить обои GNOME (отсутствует схема org.gnome.desktop.background)"
+
+#: crates/equinox-core/src/applier.rs:346
+#, fuzzy
+msgid "Failed to set Plasma wallpaper via the running shell"
+msgstr "Не удалось установить обои"
+
+#: crates/equinox-core/src/applier.rs:383
+#: crates/equinox-core/src/applier.rs:639
+msgid "Failed to read"
+msgstr "Не удалось прочитать"
+
+#: crates/equinox-core/src/applier.rs:404
+msgid "No image-type wallpaper configured in Plasma"
+msgstr "В Plasma не настроены обои типа «изображение»"
+
+#: crates/equinox-core/src/applier.rs:409
+#: crates/equinox-core/src/applier.rs:412
+#: crates/equinox-core/src/applier.rs:649
+#: crates/equinox-core/src/applier.rs:652
+msgid "Failed to write"
+msgstr "Не удалось записать"
+
+#: crates/equinox-core/src/applier.rs:627
+msgid "Failed to set wallpaper"
+msgstr "Не удалось установить обои"
+
+#: crates/equinox-core/src/applier.rs:643
+msgid "No wallpaper property found in"
+msgstr "Свойство обоев не найдено в"
+
+#: crates/equinox-core/src/applier.rs:685
+msgid "no backdrop last-image property found in the xfce4-desktop channel"
+msgstr "в канале xfce4-desktop не найдено свойство фона last-image"
+
+#: crates/equinox-core/src/http.rs:47
+msgid "Invalid URL"
+msgstr "Недопустимый URL"
+
+#: crates/equinox-core/src/http.rs:54 crates/equinox-core/src/http.rs:120
+#: crates/equinox-core/src/http.rs:134
+msgid "Network request failed"
+msgstr "Сбой сетевого запроса"
+
+#: crates/equinox-core/src/sources/bing.rs:25
+#: crates/equinox-core/src/sources/bing.rs:138
+msgid "Bing"
+msgstr "Bing"
+
+#: crates/equinox-core/src/sources/bing.rs:32
+msgid "Region"
+msgstr "Регион"
+
+#: crates/equinox-core/src/sources/bing.rs:51
+msgid "Resolution"
+msgstr "Разрешение"
+
+#: crates/equinox-core/src/sources/bing.rs:61
+msgid "Include history"
+msgstr "Включать историю"
+
+#: crates/equinox-core/src/sources/bing.rs:90
+#: crates/equinox-core/src/sources/spotlight.rs:64
+#: crates/equinox-core/src/sources/spotlight.rs:80
+msgid "Auto"
+msgstr "Авто"
+
+#: crates/equinox-core/src/sources/nasa.rs:24
+#: crates/equinox-core/src/sources/nasa.rs:87
+msgid "NASA"
+msgstr "NASA"
+
+#: crates/equinox-core/src/sources/nasa.rs:31
+msgid "API key (optional)"
+msgstr "Ключ API (необязательно)"
+
+#: crates/equinox-core/src/sources/nasa.rs:36
+msgid "Use high-definition image (hdurl)"
+msgstr "Использовать изображение в высоком разрешении (hdurl)"
+
+#: crates/equinox-core/src/sources/nasa.rs:69
+msgid "Today's APOD entry is a video, skipped"
+msgstr "Сегодняшняя запись APOD — видео, пропущено"
+
+#: crates/equinox-core/src/sources/spotlight.rs:41
+msgid "Windows Spotlight"
+msgstr "Windows Интересное"
+
+#: crates/equinox-core/src/sources/spotlight.rs:62
+msgid "Country"
+msgstr "Страна"
+
+#: crates/equinox-core/src/sources/spotlight.rs:78
+msgid "Locale"
+msgstr "Локаль"
+
+#: crates/equinox-core/src/sources/spotlight.rs:207
+msgid "Spotlight"
+msgstr "Интересное"
+
+#: crates/equinox-core/src/sources/wikimedia.rs:25
+#: crates/equinox-core/src/sources/wikimedia.rs:91
+msgid "Wikimedia"
+msgstr "Викимедиа"
+
+#: crates/equinox-core/src/sources/wikimedia.rs:31
+msgid "Thumbnail width"
+msgstr "Ширина миниатюр"
+
+#: crates/equinox-core/src/storage.rs:284
+#: crates/equinox-gui/src/views/gallery.rs:832
+msgid "Failed to delete"
+msgstr "Не удалось удалить"
+
+#: crates/equinox-core/src/storage.rs:406
+msgid "Failed to create directory"
+msgstr "Не удалось создать каталог"
+
+#: crates/equinox-core/src/storage.rs:454
+msgid "Failed to write image"
+msgstr "Не удалось записать изображение"
+
+#: crates/equinox-core/src/storage.rs:460
+msgid "Failed to write description"
+msgstr "Не удалось записать описание"
+
+#: crates/equinox-daemon/src/scheduler.rs:102
+msgid "Missed update window (powered off)"
+msgstr "Пропущено окно обновления (выключено питание)"
+
+#. Aborted (mid-download or after): do NOT store/apply anything.
+#: crates/equinox-daemon/src/scheduler.rs:185
+#: crates/equinox-daemon/src/scheduler.rs:311
+#: crates/equinox-daemon/src/scheduler.rs:482
+#: crates/equinox-daemon/src/scheduler.rs:501
+#, fuzzy
+msgid "Update cancelled"
+msgstr "Сбой обновления"
+
+#: crates/equinox-daemon/src/scheduler.rs:291
+msgid "Updating"
+msgstr "Обновление"
+
+#: crates/equinox-daemon/src/scheduler.rs:468
+#: crates/equinox-daemon/src/service.rs:79
+#: crates/equinox-daemon/src/service.rs:108
+msgid "Unknown source"
+msgstr "Неизвестный источник"
+
+#: crates/equinox-daemon/src/scheduler.rs:541
+#: crates/equinox-daemon/src/scheduler.rs:552
+msgid "This source has no images yet, run \"Update now\" first"
+msgstr "В этом источнике пока нет изображений; сначала нажмите «Обновить сейчас»"
+
+#: crates/equinox-daemon/src/scheduler.rs:563
+msgid "No wallpaper source selected yet, choose one on the Wallpaper page"
+msgstr "Источник обоев ещё не выбран; выберите его на странице «Обои»"
+
+#: crates/equinox-daemon/src/scheduler.rs:600
+msgid "Setting wallpaper"
+msgstr "Установка обоев"
+
+#: crates/equinox-daemon/src/scheduler.rs:632
+msgid "Applying image"
+msgstr "Применение изображения"
+
+#: crates/equinox-daemon/src/scheduler.rs:651
+msgid "Applying previous"
+msgstr "Применение предыдущего"
+
+#: crates/equinox-daemon/src/scheduler.rs:657
+msgid "No earlier wallpaper in history"
+msgstr "В истории нет более ранних обоев"
+
+#: crates/equinox-daemon/src/scheduler.rs:674
+msgid "File does not exist"
+msgstr "Файл не существует"
+
+#: crates/equinox-daemon/src/scheduler.rs:692
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:388
+#: crates/equinox-gui/src/views/gallery.rs:866
+msgid "Failed to apply wallpaper"
+msgstr "Не удалось применить обои"
+
+#. Daemon status banner
+#: crates/equinox-gui/src/app.rs:35
+msgid "The daemon is not running; scheduled updates will be unavailable"
+msgstr "Демон не запущен; запланированные обновления будут недоступны"
+
+#: crates/equinox-gui/src/app.rs:37 crates/equinox-gui/src/app.rs:461
+#: crates/equinox-gui/src/app.rs:559 crates/equinox-gui/src/app.rs:804
+msgid "Start"
+msgstr "Запустить"
+
+#: crates/equinox-gui/src/app.rs:57
+msgid "Wallpaper"
+msgstr "Обои"
+
+#: crates/equinox-gui/src/app.rs:63 crates/equinox-gui/src/views/oobe.rs:82
+msgid "Sources"
+msgstr "Источники"
+
+#: crates/equinox-gui/src/app.rs:69
+msgid "Gallery"
+msgstr "Галерея"
+
+#: crates/equinox-gui/src/app.rs:75 crates/equinox-gui/src/views/history.rs:130
+msgid "History"
+msgstr "История"
+
+#: crates/equinox-gui/src/app.rs:143
+msgid "Main menu"
+msgstr "Главное меню"
+
+#: crates/equinox-gui/src/app.rs:153
+msgid "Tasks"
+msgstr "Задачи"
+
+#: crates/equinox-gui/src/app.rs:171
+#: crates/equinox-gui/src/views/timeline.rs:54
+msgid "Timeline"
+msgstr "Расписание"
+
+#: crates/equinox-gui/src/app.rs:193 crates/equinox-gui/src/app.rs:506
+msgid "Preferences"
+msgstr "Параметры"
+
+#: crates/equinox-gui/src/app.rs:213
+msgid "About"
+msgstr "О приложении"
+
+#: crates/equinox-gui/src/app.rs:228
+msgid "Multi-source daily wallpaper manager"
+msgstr "Менеджер ежедневных обоев с несколькими источниками"
+
+#: crates/equinox-gui/src/app.rs:233
+msgid "Released under the"
+msgstr "Лицензия:"
+
+#: crates/equinox-gui/src/app.rs:272
+msgid "No running tasks"
+msgstr "Нет активных задач"
+
+#: crates/equinox-gui/src/app.rs:321
+msgid "Cancel"
+msgstr "Отмена"
+
+#: crates/equinox-gui/src/app.rs:392
+msgid "Interface"
+msgstr "Интерфейс"
+
+#: crates/equinox-gui/src/app.rs:397
+msgid "Auto (follow system)"
+msgstr "Автоматически (как в системе)"
+
+#: crates/equinox-gui/src/app.rs:414
+msgid "Language"
+msgstr "Язык"
+
+#: crates/equinox-gui/src/app.rs:421 crates/equinox-gui/src/views/oobe.rs:145
+msgid "Background service"
+msgstr "Фоновый сервис"
+
+#: crates/equinox-gui/src/app.rs:430 crates/equinox-gui/src/views/oobe.rs:154
+msgid "Standalone"
+msgstr "Автономно"
+
+#: crates/equinox-gui/src/app.rs:436
+msgid "Run background via"
+msgstr "Запуск фона через"
+
+#: crates/equinox-gui/src/app.rs:458
+msgid "Daemon status"
+msgstr "Состояние фоновой службы"
+
+#: crates/equinox-gui/src/app.rs:471
+msgid "systemd is unavailable in flatpak"
+msgstr "systemd недоступен в flatpak"
+
+#: crates/equinox-gui/src/app.rs:473
+msgid "Sandboxed apps cannot reach the host systemd user session, so the background runs as a supervised process inside the sandbox."
+msgstr "Приложения в песочнице не могут получить доступ к пользовательской сессии systemd хоста, поэтому фоновый процесс работает внутри песочницы под надзором."
+
+#: crates/equinox-gui/src/app.rs:483 crates/equinox-gui/src/views/oobe.rs:166
+msgid "Start at login"
+msgstr "Запускать при входе"
+
+#: crates/equinox-gui/src/app.rs:490
+msgid "systemd service"
+msgstr "сервис systemd"
+
+#: crates/equinox-gui/src/app.rs:495 crates/equinox-gui/src/app.rs:545
+msgid "Install"
+msgstr "Установить"
+
+#: crates/equinox-gui/src/app.rs:543
+msgid "Uninstall"
+msgstr "Удалить"
+
+#: crates/equinox-gui/src/app.rs:557 crates/equinox-gui/src/app.rs:802
+msgid "Stop"
+msgstr "Остановить"
+
+#: crates/equinox-gui/src/app.rs:570
+msgid "Installed and running"
+msgstr "Установлен и запущен"
+
+#: crates/equinox-gui/src/app.rs:572
+msgid "Installed, not running"
+msgstr "Установлен, не запущен"
+
+#: crates/equinox-gui/src/app.rs:575
+msgid "Not installed"
+msgstr "Не установлено"
+
+#: crates/equinox-gui/src/app.rs:601
+msgid "Restart Equinox to apply the new language"
+msgstr "Чтобы применить новый язык, перезапустите Equinox"
+
+#: crates/equinox-gui/src/app.rs:639 crates/equinox-gui/src/app.rs:706
+#: crates/equinox-gui/src/app.rs:726
+msgid "Failed to change the systemd service"
+msgstr "Не удалось изменить сервис systemd"
+
+#: crates/equinox-gui/src/app.rs:797
+msgid "Running"
+msgstr "Запущено"
+
+#: crates/equinox-gui/src/app.rs:799
+#, fuzzy
+msgid "Not running"
+msgstr "Не запущено"
+
+#: crates/equinox-gui/src/daemon_client.rs:194
+msgid "Daemon is not running"
+msgstr "Демон не запущен"
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:80
+#: crates/equinox-gui/src/views/wallpaper.rs:953
+msgid "Untitled wallpaper"
+msgstr "Обои без названия"
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:145
+msgid "Apply wallpaper"
+msgstr "Применить как обои"
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:148
+msgid "Set as wallpaper"
+msgstr "Установить как обои"
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:165
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:194
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:220
+msgid "Fill mode"
+msgstr "Режим заполнения"
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:168
+msgid "Fullscreen"
+msgstr "Во весь экран"
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:171
+msgid "Close"
+msgstr "Закрыть"
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:192
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:218
+msgid "Fit mode"
+msgstr "Режим по размеру"
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:386
+#: crates/equinox-gui/src/views/gallery.rs:863
+msgid "Wallpaper applied"
+msgstr "Обои применены"
+
+#: crates/equinox-gui/src/views/gallery.rs:175
+msgid "Carousel"
+msgstr "Карусель"
+
+#: crates/equinox-gui/src/views/gallery.rs:177
+msgid "Grid"
+msgstr "Сетка"
+
+#: crates/equinox-gui/src/views/gallery.rs:188
+#: crates/equinox-gui/src/views/history.rs:140
+msgid "Refresh"
+msgstr "Обновить"
+
+#: crates/equinox-gui/src/views/gallery.rs:192
+msgid "Delete selected"
+msgstr "Удалить выбранные"
+
+#: crates/equinox-gui/src/views/gallery.rs:195
+#: crates/equinox-gui/src/views/timeline.rs:46
+msgid "Apply"
+msgstr "Применить"
+
+#: crates/equinox-gui/src/views/gallery.rs:198
+msgid "Apply the selected image as wallpaper"
+msgstr "Применить выбранное изображение как обои"
+
+#: crates/equinox-gui/src/views/gallery.rs:403
+#: crates/equinox-gui/src/views/wallpaper.rs:151
+msgid "Previous image"
+msgstr "Предыдущее изображение"
+
+#: crates/equinox-gui/src/views/gallery.rs:408
+#: crates/equinox-gui/src/views/wallpaper.rs:162
+msgid "Next image"
+msgstr "Следующее изображение"
+
+#: crates/equinox-gui/src/views/gallery.rs:481
+msgid "No images yet"
+msgstr "Изображений пока нет"
+
+#: crates/equinox-gui/src/views/gallery.rs:483
+msgid "Go to the Sources page and click \"Update now\" to download some wallpapers"
+msgstr "Перейдите на страницу «Источники» и нажмите «Обновить сейчас», чтобы скачать обои"
+
+#: crates/equinox-gui/src/views/gallery.rs:829
+msgid "Image deleted"
+msgstr "Изображение удалено"
+
+#: crates/equinox-gui/src/views/history.rs:144
+msgid "Clear history"
+msgstr "Очистить историю"
+
+#: crates/equinox-gui/src/views/history.rs:287
+#: crates/equinox-gui/src/views/history.rs:302
+msgid "Applied"
+msgstr "Применено:"
+
+#: crates/equinox-gui/src/views/history.rs:319
+msgid "No wallpaper has been applied yet"
+msgstr "Обои ещё не применялись"
+
+#: crates/equinox-gui/src/views/history.rs:321
+msgid "Wallpapers you apply will be recorded here so you can go back to them"
+msgstr "Применённые обои сохраняются здесь, чтобы к ним можно было вернуться"
+
+#: crates/equinox-gui/src/views/history.rs:383
+msgid "entries"
+msgstr "шт."
+
+#: crates/equinox-gui/src/views/history.rs:438
+msgid "History cleared"
+msgstr "История очищена"
+
+#: crates/equinox-gui/src/views/history.rs:440
+msgid "Failed to clear history"
+msgstr "Не удалось очистить историю"
+
+#: crates/equinox-gui/src/views/oobe.rs:68
+#, fuzzy
+msgid "Choose the sources"
+msgstr "Следующий источник"
+
+#: crates/equinox-gui/src/views/oobe.rs:74
+msgid "Enable the sources to keep up to date and set how often each one updates. Enabled sources are updated right away when you continue."
+msgstr "Включите источники, чтобы они оставались актуальными, и задайте, как часто обновляется каждый. После нажатия «Продолжить» включённые источники обновятся сразу."
+
+#: crates/equinox-gui/src/views/oobe.rs:111
+#: crates/equinox-gui/src/views/sources.rs:78
+msgid "Refresh interval (seconds)"
+msgstr "Интервал обновления (в секундах)"
+
+#. Continue button + a spinner shown while the daemon is being started.
+#: crates/equinox-gui/src/views/oobe.rs:124
+msgid "Continue"
+msgstr "Продолжить"
+
+#: crates/equinox-gui/src/views/oobe.rs:160
+msgid "Run via"
+msgstr "Запуск через"
+
+#: crates/equinox-gui/src/views/oobe.rs:176
+msgid "Back"
+msgstr "Назад"
+
+#: crates/equinox-gui/src/views/oobe.rs:177
+msgid "Finish"
+msgstr "Готово"
+
+#: crates/equinox-gui/src/views/sources.rs:25
+msgid "Wallpaper sources"
+msgstr "Источники обоев"
+
+#: crates/equinox-gui/src/views/sources.rs:63
+msgid "Enable scheduled updates"
+msgstr "Включить обновления по расписанию"
+
+#: crates/equinox-gui/src/views/sources.rs:95
+msgid "Max images (0 = unlimited)"
+msgstr "Максимум изображений (0 = без ограничения)"
+
+#: crates/equinox-gui/src/views/sources.rs:115
+msgid "Status"
+msgstr "Состояние"
+
+#. "Update now" shown only when the current source has no wallpapers yet,
+#. so the empty state is actionable instead of a dead blank.
+#: crates/equinox-gui/src/views/sources.rs:120
+#: crates/equinox-gui/src/views/wallpaper.rs:235
+msgid "Update now"
+msgstr "Обновить сейчас"
+
+#: crates/equinox-gui/src/views/sources.rs:122
+msgid "Fetch one image immediately and store it in the image directory"
+msgstr "Немедленно загрузить одно изображение и сохранить его в каталог изображений"
+
+#: crates/equinox-gui/src/views/sources.rs:124
+msgid "Update"
+msgstr "Обновить"
+
+#: crates/equinox-gui/src/views/sources.rs:135
+msgid "Updating…"
+msgstr "Обновление…"
+
+#: crates/equinox-gui/src/views/sources.rs:148
+#: crates/equinox-gui/src/views/wallpaper.rs:256
+msgid "Update failed"
+msgstr "Сбой обновления"
+
+#: crates/equinox-gui/src/views/sources.rs:175
+msgid "images"
+msgstr "шт."
+
+#: crates/equinox-gui/src/views/timeline.rs:33
+msgid "sec"
+msgstr "с"
+
+#: crates/equinox-gui/src/views/timeline.rs:35
+msgid "min"
+msgstr "мин"
+
+#: crates/equinox-gui/src/views/timeline.rs:37
+msgid "h"
+msgstr "ч"
+
+#: crates/equinox-gui/src/views/timeline.rs:39
+msgid "d"
+msgstr "дн"
+
+#: crates/equinox-gui/src/views/timeline.rs:45
+msgid "Scheduled"
+msgstr "По расписанию"
+
+#: crates/equinox-gui/src/views/timeline.rs:47
+#: crates/equinox-gui/src/views/wallpaper.rs:943
+msgid "Manual"
+msgstr "Вручную"
+
+#: crates/equinox-gui/src/views/timeline.rs:70
+msgid "Each source updates on its own interval. Windows missed while the computer was off or asleep are caught up right after boot or wake-up."
+msgstr "Каждый источник обновляется по собственному интервалу. Обновления, пропущенные во время выключения или сна компьютера, выполняются сразу после включения или пробуждения."
+
+#: crates/equinox-gui/src/views/timeline.rs:107
+msgid "Planned"
+msgstr "Запланировано"
+
+#: crates/equinox-gui/src/views/timeline.rs:110
+msgid "Next"
+msgstr "Следующее"
+
+#: crates/equinox-gui/src/views/timeline.rs:112
+msgid "Every"
+msgstr "каждые"
+
+#: crates/equinox-gui/src/views/timeline.rs:122
+msgid "Scheduled updates are off"
+msgstr "Обновления по расписанию отключены"
+
+#: crates/equinox-gui/src/views/timeline.rs:143
+msgid "(catch-up)"
+msgstr "(догоняющий запуск)"
+
+#: crates/equinox-gui/src/views/timeline.rs:155
+msgid " · Success"
+msgstr " · Успешно"
+
+#: crates/equinox-gui/src/views/timeline.rs:168
+msgid "No tasks recorded yet"
+msgstr "Задач пока нет"
+
+#. ---- Headline: the wallpaper title directly ----
+#: crates/equinox-gui/src/views/wallpaper.rs:216
+msgid "Loading…"
+msgstr "Загрузка…"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:273
+msgid "Previous source"
+msgstr "Предыдущий источник"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:278
+msgid "Next source"
+msgstr "Следующий источник"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:470
+#, fuzzy
+msgid "No wallpapers in this source yet"
+msgstr "В этом источнике пока нет изображений"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:471
+#, fuzzy
+msgid "Switch sources below or run an update to download the first images"
+msgstr "Переключите источник ниже или сначала выполните обновление"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:610
+msgid "Failed to switch"
+msgstr "Не удалось переключить"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:651
+#: crates/equinox-gui/src/views/wallpaper.rs:733
+msgid "Failed to set"
+msgstr "Не удалось установить"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:799
+msgid "Operation failed"
+msgstr "Не удалось выполнить операцию"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:942
+msgid "Random"
+msgstr "Случайное"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:944
+msgid "Latest"
+msgstr "Последнее"
+
+#~ msgid "Maximize"
+#~ msgstr "Развернуть"
+
+#~ msgid "Welcome to Equinox"
+#~ msgstr "Добро пожаловать в Equinox"
+
+#~ msgid ""
+#~ "Equinox keeps a wallpaper source of your choice up to date in the background.\n"
+#~ "Pick the sources you want and how the background should run."
+#~ msgstr ""
+#~ "Equinox поддерживает выбранный вами источник обоев в актуальном состоянии в фоновом режиме.\n"
+#~ "Выберите нужные источники и способ работы фона."
+
+#~ msgid "Only enabled sources are fetched on a schedule."
+#~ msgstr "По расписанию загружаются только включённые источники."
+
+#~ msgid "Run the background service automatically when you log in, so wallpapers update even when Equinox is closed."
+#~ msgstr "Автоматически запускать фоновую службу при входе в систему, чтобы обои обновлялись, даже когда Equinox закрыт."
+
+#~ msgid "Standalone (Equinox supervisor)"
+#~ msgstr "Автономно(супервизор Equinox)"
+
+#~ msgid "systemd user service"
+#~ msgstr "пользовательский сервис systemd"
+
+#~ msgid "Get started"
+#~ msgstr "Начать"

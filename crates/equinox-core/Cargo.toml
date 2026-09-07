@@ -1,0 +1,26 @@
+[package]
+name = "equinox-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+gettext-rs.workspace = true
+glib.workspace = true
+gio.workspace = true
+soup3.workspace = true
+imagesize = "0.13"
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+chrono.workspace = true
+anyhow.workspace = true
+log.workspace = true
+rand.workspace = true
+futures-channel.workspace = true
+
+# NOTE: no image-decoder dependency here on purpose. Image dimensions are
+# read header-only by `imagesize` (pure Rust, no decoder linked). Thumbnail
+# generation lives in the GUI crate, which is the only component allowed to
+# link gdk-pixbuf + the platform loader stack (glycin on GNOME) — the
+# daemon stays small at idle.

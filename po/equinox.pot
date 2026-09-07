@@ -1,0 +1,608 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE equinox'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the equinox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: equinox 0.1.1-a12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-07 07:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: crates/equinox-core/src/applier.rs:203 crates/equinox-core/src/applier.rs:203
+msgid "no supported wallpaper backend detected (need GNOME, KDE, or XFCE)"
+msgstr ""
+
+#: crates/equinox-core/src/applier.rs:230 crates/equinox-core/src/applier.rs:230
+msgid "this environment cannot set the GNOME wallpaper (missing org.gnome.desktop.background schema)"
+msgstr ""
+
+#: crates/equinox-core/src/applier.rs:346 crates/equinox-core/src/applier.rs:346
+msgid "Failed to set Plasma wallpaper via the running shell"
+msgstr ""
+
+#: crates/equinox-core/src/applier.rs:383 crates/equinox-core/src/applier.rs:639 crates/equinox-core/src/applier.rs:383 crates/equinox-core/src/applier.rs:639
+msgid "Failed to read"
+msgstr ""
+
+#: crates/equinox-core/src/applier.rs:404 crates/equinox-core/src/applier.rs:404
+msgid "No image-type wallpaper configured in Plasma"
+msgstr ""
+
+#: crates/equinox-core/src/applier.rs:409 crates/equinox-core/src/applier.rs:412 crates/equinox-core/src/applier.rs:649 crates/equinox-core/src/applier.rs:652 crates/equinox-core/src/applier.rs:409 crates/equinox-core/src/applier.rs:412 crates/equinox-core/src/applier.rs:649 crates/equinox-core/src/applier.rs:652
+msgid "Failed to write"
+msgstr ""
+
+#: crates/equinox-core/src/applier.rs:627 crates/equinox-core/src/applier.rs:627
+msgid "Failed to set wallpaper"
+msgstr ""
+
+#: crates/equinox-core/src/applier.rs:643 crates/equinox-core/src/applier.rs:643
+msgid "No wallpaper property found in"
+msgstr ""
+
+#: crates/equinox-core/src/applier.rs:685 crates/equinox-core/src/applier.rs:685
+msgid "no backdrop last-image property found in the xfce4-desktop channel"
+msgstr ""
+
+#: crates/equinox-core/src/http.rs:47 crates/equinox-core/src/http.rs:47
+msgid "Invalid URL"
+msgstr ""
+
+#: crates/equinox-core/src/http.rs:54 crates/equinox-core/src/http.rs:120 crates/equinox-core/src/http.rs:134 crates/equinox-core/src/http.rs:54 crates/equinox-core/src/http.rs:120 crates/equinox-core/src/http.rs:134
+msgid "Network request failed"
+msgstr ""
+
+#: crates/equinox-core/src/sources/bing.rs:25 crates/equinox-core/src/sources/bing.rs:138 crates/equinox-core/src/sources/bing.rs:25 crates/equinox-core/src/sources/bing.rs:138 crates/equinox-core/src/sources/bing.rs:25 crates/equinox-core/src/sources/bing.rs:138
+msgid "Bing"
+msgstr ""
+
+#: crates/equinox-core/src/sources/bing.rs:32 crates/equinox-core/src/sources/bing.rs:32 crates/equinox-core/src/sources/bing.rs:32
+msgid "Region"
+msgstr ""
+
+#: crates/equinox-core/src/sources/bing.rs:51 crates/equinox-core/src/sources/bing.rs:51 crates/equinox-core/src/sources/bing.rs:51
+msgid "Resolution"
+msgstr ""
+
+#: crates/equinox-core/src/sources/bing.rs:61 crates/equinox-core/src/sources/bing.rs:61 crates/equinox-core/src/sources/bing.rs:61
+msgid "Include history"
+msgstr ""
+
+#: crates/equinox-core/src/sources/bing.rs:90 crates/equinox-core/src/sources/spotlight.rs:64 crates/equinox-core/src/sources/spotlight.rs:80 crates/equinox-core/src/sources/bing.rs:90 crates/equinox-core/src/sources/bing.rs:90 crates/equinox-core/src/sources/spotlight.rs:64 crates/equinox-core/src/sources/spotlight.rs:80 crates/equinox-core/src/sources/spotlight.rs:64 crates/equinox-core/src/sources/spotlight.rs:80
+msgid "Auto"
+msgstr ""
+
+#: crates/equinox-core/src/sources/nasa.rs:24 crates/equinox-core/src/sources/nasa.rs:87 crates/equinox-core/src/sources/nasa.rs:24 crates/equinox-core/src/sources/nasa.rs:87 crates/equinox-core/src/sources/nasa.rs:24 crates/equinox-core/src/sources/nasa.rs:87
+msgid "NASA"
+msgstr ""
+
+#: crates/equinox-core/src/sources/nasa.rs:31 crates/equinox-core/src/sources/nasa.rs:31 crates/equinox-core/src/sources/nasa.rs:31
+msgid "API key (optional)"
+msgstr ""
+
+#: crates/equinox-core/src/sources/nasa.rs:36 crates/equinox-core/src/sources/nasa.rs:36 crates/equinox-core/src/sources/nasa.rs:36
+msgid "Use high-definition image (hdurl)"
+msgstr ""
+
+#: crates/equinox-core/src/sources/nasa.rs:69 crates/equinox-core/src/sources/nasa.rs:69 crates/equinox-core/src/sources/nasa.rs:69
+msgid "Today's APOD entry is a video, skipped"
+msgstr ""
+
+#: crates/equinox-core/src/sources/spotlight.rs:41 crates/equinox-core/src/sources/spotlight.rs:41 crates/equinox-core/src/sources/spotlight.rs:41
+msgid "Windows Spotlight"
+msgstr ""
+
+#: crates/equinox-core/src/sources/spotlight.rs:62 crates/equinox-core/src/sources/spotlight.rs:62 crates/equinox-core/src/sources/spotlight.rs:62
+msgid "Country"
+msgstr ""
+
+#: crates/equinox-core/src/sources/spotlight.rs:78 crates/equinox-core/src/sources/spotlight.rs:78 crates/equinox-core/src/sources/spotlight.rs:78
+msgid "Locale"
+msgstr ""
+
+#: crates/equinox-core/src/sources/spotlight.rs:207 crates/equinox-core/src/sources/spotlight.rs:207 crates/equinox-core/src/sources/spotlight.rs:207
+msgid "Spotlight"
+msgstr ""
+
+#: crates/equinox-core/src/sources/wikimedia.rs:25 crates/equinox-core/src/sources/wikimedia.rs:91 crates/equinox-core/src/sources/wikimedia.rs:25 crates/equinox-core/src/sources/wikimedia.rs:91 crates/equinox-core/src/sources/wikimedia.rs:25 crates/equinox-core/src/sources/wikimedia.rs:91
+msgid "Wikimedia"
+msgstr ""
+
+#: crates/equinox-core/src/sources/wikimedia.rs:31 crates/equinox-core/src/sources/wikimedia.rs:31 crates/equinox-core/src/sources/wikimedia.rs:31
+msgid "Thumbnail width"
+msgstr ""
+
+#: crates/equinox-core/src/storage.rs:284 crates/equinox-core/src/storage.rs:284 crates/equinox-gui/src/views/gallery.rs:832 crates/equinox-gui/src/views/gallery.rs:832 crates/equinox-gui/src/views/gallery.rs:832
+msgid "Failed to delete"
+msgstr ""
+
+#: crates/equinox-core/src/storage.rs:406 crates/equinox-core/src/storage.rs:406
+msgid "Failed to create directory"
+msgstr ""
+
+#: crates/equinox-core/src/storage.rs:454 crates/equinox-core/src/storage.rs:454
+msgid "Failed to write image"
+msgstr ""
+
+#: crates/equinox-core/src/storage.rs:460 crates/equinox-core/src/storage.rs:460
+msgid "Failed to write description"
+msgstr ""
+
+#: crates/equinox-daemon/src/scheduler.rs:102 crates/equinox-daemon/src/scheduler.rs:102
+msgid "Missed update window (powered off)"
+msgstr ""
+
+#. Aborted (mid-download or after): do NOT store/apply anything.
+#: crates/equinox-daemon/src/scheduler.rs:185 crates/equinox-daemon/src/scheduler.rs:311 crates/equinox-daemon/src/scheduler.rs:482 crates/equinox-daemon/src/scheduler.rs:501 crates/equinox-daemon/src/scheduler.rs:185 crates/equinox-daemon/src/scheduler.rs:311 crates/equinox-daemon/src/scheduler.rs:482 crates/equinox-daemon/src/scheduler.rs:501
+msgid "Update cancelled"
+msgstr ""
+
+#: crates/equinox-daemon/src/scheduler.rs:291 crates/equinox-daemon/src/scheduler.rs:291
+msgid "Updating"
+msgstr ""
+
+#: crates/equinox-daemon/src/scheduler.rs:468 crates/equinox-daemon/src/service.rs:79 crates/equinox-daemon/src/service.rs:108 crates/equinox-daemon/src/scheduler.rs:468 crates/equinox-daemon/src/service.rs:79 crates/equinox-daemon/src/service.rs:108
+msgid "Unknown source"
+msgstr ""
+
+#: crates/equinox-daemon/src/scheduler.rs:541 crates/equinox-daemon/src/scheduler.rs:552 crates/equinox-daemon/src/scheduler.rs:541 crates/equinox-daemon/src/scheduler.rs:552
+msgid "This source has no images yet, run \"Update now\" first"
+msgstr ""
+
+#: crates/equinox-daemon/src/scheduler.rs:563 crates/equinox-daemon/src/scheduler.rs:563
+msgid "No wallpaper source selected yet, choose one on the Wallpaper page"
+msgstr ""
+
+#: crates/equinox-daemon/src/scheduler.rs:600 crates/equinox-daemon/src/scheduler.rs:600
+msgid "Setting wallpaper"
+msgstr ""
+
+#: crates/equinox-daemon/src/scheduler.rs:632 crates/equinox-daemon/src/scheduler.rs:632
+msgid "Applying image"
+msgstr ""
+
+#: crates/equinox-daemon/src/scheduler.rs:651 crates/equinox-daemon/src/scheduler.rs:651
+msgid "Applying previous"
+msgstr ""
+
+#: crates/equinox-daemon/src/scheduler.rs:657 crates/equinox-daemon/src/scheduler.rs:657
+msgid "No earlier wallpaper in history"
+msgstr ""
+
+#: crates/equinox-daemon/src/scheduler.rs:674 crates/equinox-daemon/src/scheduler.rs:674
+msgid "File does not exist"
+msgstr ""
+
+#: crates/equinox-daemon/src/scheduler.rs:692 crates/equinox-daemon/src/scheduler.rs:692 crates/equinox-gui/src/views/fullscreen_viewer.rs:388 crates/equinox-gui/src/views/gallery.rs:866 crates/equinox-gui/src/views/fullscreen_viewer.rs:388 crates/equinox-gui/src/views/gallery.rs:866 crates/equinox-gui/src/views/fullscreen_viewer.rs:388 crates/equinox-gui/src/views/gallery.rs:866
+msgid "Failed to apply wallpaper"
+msgstr ""
+
+#. Daemon status banner
+#: crates/equinox-gui/src/app.rs:35 crates/equinox-gui/src/app.rs:35
+msgid "The daemon is not running; scheduled updates will be unavailable"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:37 crates/equinox-gui/src/app.rs:461 crates/equinox-gui/src/app.rs:559 crates/equinox-gui/src/app.rs:804 crates/equinox-gui/src/app.rs:37 crates/equinox-gui/src/app.rs:461 crates/equinox-gui/src/app.rs:559 crates/equinox-gui/src/app.rs:804
+msgid "Start"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:57 crates/equinox-gui/src/app.rs:57
+msgid "Wallpaper"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:63 crates/equinox-gui/src/app.rs:63 crates/equinox-gui/src/views/oobe.rs:82 crates/equinox-gui/src/views/oobe.rs:82 crates/equinox-gui/src/views/oobe.rs:82
+msgid "Sources"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:69 crates/equinox-gui/src/app.rs:69
+msgid "Gallery"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:75 crates/equinox-gui/src/app.rs:75 crates/equinox-gui/src/views/history.rs:130 crates/equinox-gui/src/views/history.rs:130 crates/equinox-gui/src/views/history.rs:130
+msgid "History"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:143 crates/equinox-gui/src/app.rs:143
+msgid "Main menu"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:153 crates/equinox-gui/src/app.rs:153
+msgid "Tasks"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:171 crates/equinox-gui/src/app.rs:171 crates/equinox-gui/src/views/timeline.rs:54 crates/equinox-gui/src/views/timeline.rs:54 crates/equinox-gui/src/views/timeline.rs:54
+msgid "Timeline"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:193 crates/equinox-gui/src/app.rs:506 crates/equinox-gui/src/app.rs:193 crates/equinox-gui/src/app.rs:506
+msgid "Preferences"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:213 crates/equinox-gui/src/app.rs:213
+msgid "About"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:228 crates/equinox-gui/src/app.rs:228
+msgid "Multi-source daily wallpaper manager"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:233 crates/equinox-gui/src/app.rs:233
+msgid "Released under the"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:272 crates/equinox-gui/src/app.rs:272
+msgid "No running tasks"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:321 crates/equinox-gui/src/app.rs:321
+msgid "Cancel"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:392 crates/equinox-gui/src/app.rs:392
+msgid "Interface"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:397 crates/equinox-gui/src/app.rs:397
+msgid "Auto (follow system)"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:414 crates/equinox-gui/src/app.rs:414
+msgid "Language"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:421 crates/equinox-gui/src/app.rs:421 crates/equinox-gui/src/views/oobe.rs:145 crates/equinox-gui/src/views/oobe.rs:145 crates/equinox-gui/src/views/oobe.rs:145
+msgid "Background service"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:430 crates/equinox-gui/src/app.rs:430 crates/equinox-gui/src/views/oobe.rs:154 crates/equinox-gui/src/views/oobe.rs:154 crates/equinox-gui/src/views/oobe.rs:154
+msgid "Standalone"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:436 crates/equinox-gui/src/app.rs:436
+msgid "Run background via"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:458 crates/equinox-gui/src/app.rs:458
+msgid "Daemon status"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:471 crates/equinox-gui/src/app.rs:471
+msgid "systemd is unavailable in flatpak"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:473 crates/equinox-gui/src/app.rs:473
+msgid "Sandboxed apps cannot reach the host systemd user session, so the background runs as a supervised process inside the sandbox."
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:483 crates/equinox-gui/src/app.rs:483 crates/equinox-gui/src/views/oobe.rs:166 crates/equinox-gui/src/views/oobe.rs:166 crates/equinox-gui/src/views/oobe.rs:166
+msgid "Start at login"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:490 crates/equinox-gui/src/app.rs:490
+msgid "systemd service"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:495 crates/equinox-gui/src/app.rs:545 crates/equinox-gui/src/app.rs:495 crates/equinox-gui/src/app.rs:545
+msgid "Install"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:543 crates/equinox-gui/src/app.rs:543
+msgid "Uninstall"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:557 crates/equinox-gui/src/app.rs:802 crates/equinox-gui/src/app.rs:557 crates/equinox-gui/src/app.rs:802
+msgid "Stop"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:570 crates/equinox-gui/src/app.rs:570
+msgid "Installed and running"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:572 crates/equinox-gui/src/app.rs:572
+msgid "Installed, not running"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:575 crates/equinox-gui/src/app.rs:575
+msgid "Not installed"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:601 crates/equinox-gui/src/app.rs:601
+msgid "Restart Equinox to apply the new language"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:639 crates/equinox-gui/src/app.rs:706 crates/equinox-gui/src/app.rs:726 crates/equinox-gui/src/app.rs:639 crates/equinox-gui/src/app.rs:706 crates/equinox-gui/src/app.rs:726
+msgid "Failed to change the systemd service"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:797 crates/equinox-gui/src/app.rs:797
+msgid "Running"
+msgstr ""
+
+#: crates/equinox-gui/src/app.rs:799 crates/equinox-gui/src/app.rs:799
+msgid "Not running"
+msgstr ""
+
+#: crates/equinox-gui/src/daemon_client.rs:194 crates/equinox-gui/src/daemon_client.rs:194
+msgid "Daemon is not running"
+msgstr ""
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:80 crates/equinox-gui/src/views/wallpaper.rs:953 crates/equinox-gui/src/views/fullscreen_viewer.rs:80 crates/equinox-gui/src/views/fullscreen_viewer.rs:80 crates/equinox-gui/src/views/wallpaper.rs:953 crates/equinox-gui/src/views/wallpaper.rs:953
+msgid "Untitled wallpaper"
+msgstr ""
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:145 crates/equinox-gui/src/views/fullscreen_viewer.rs:145 crates/equinox-gui/src/views/fullscreen_viewer.rs:145
+msgid "Apply wallpaper"
+msgstr ""
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:148 crates/equinox-gui/src/views/fullscreen_viewer.rs:148 crates/equinox-gui/src/views/fullscreen_viewer.rs:148
+msgid "Set as wallpaper"
+msgstr ""
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:165 crates/equinox-gui/src/views/fullscreen_viewer.rs:194 crates/equinox-gui/src/views/fullscreen_viewer.rs:220 crates/equinox-gui/src/views/fullscreen_viewer.rs:165 crates/equinox-gui/src/views/fullscreen_viewer.rs:194 crates/equinox-gui/src/views/fullscreen_viewer.rs:220 crates/equinox-gui/src/views/fullscreen_viewer.rs:165 crates/equinox-gui/src/views/fullscreen_viewer.rs:194 crates/equinox-gui/src/views/fullscreen_viewer.rs:220
+msgid "Fill mode"
+msgstr ""
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:168 crates/equinox-gui/src/views/fullscreen_viewer.rs:168 crates/equinox-gui/src/views/fullscreen_viewer.rs:168
+msgid "Fullscreen"
+msgstr ""
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:171 crates/equinox-gui/src/views/fullscreen_viewer.rs:171 crates/equinox-gui/src/views/fullscreen_viewer.rs:171
+msgid "Close"
+msgstr ""
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:192 crates/equinox-gui/src/views/fullscreen_viewer.rs:218 crates/equinox-gui/src/views/fullscreen_viewer.rs:192 crates/equinox-gui/src/views/fullscreen_viewer.rs:218 crates/equinox-gui/src/views/fullscreen_viewer.rs:192 crates/equinox-gui/src/views/fullscreen_viewer.rs:218
+msgid "Fit mode"
+msgstr ""
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:386 crates/equinox-gui/src/views/gallery.rs:863 crates/equinox-gui/src/views/fullscreen_viewer.rs:386 crates/equinox-gui/src/views/gallery.rs:863 crates/equinox-gui/src/views/fullscreen_viewer.rs:386 crates/equinox-gui/src/views/gallery.rs:863
+msgid "Wallpaper applied"
+msgstr ""
+
+#: crates/equinox-gui/src/views/gallery.rs:175 crates/equinox-gui/src/views/gallery.rs:175 crates/equinox-gui/src/views/gallery.rs:175
+msgid "Carousel"
+msgstr ""
+
+#: crates/equinox-gui/src/views/gallery.rs:177 crates/equinox-gui/src/views/gallery.rs:177 crates/equinox-gui/src/views/gallery.rs:177
+msgid "Grid"
+msgstr ""
+
+#: crates/equinox-gui/src/views/gallery.rs:188 crates/equinox-gui/src/views/history.rs:140 crates/equinox-gui/src/views/gallery.rs:188 crates/equinox-gui/src/views/history.rs:140 crates/equinox-gui/src/views/gallery.rs:188 crates/equinox-gui/src/views/history.rs:140
+msgid "Refresh"
+msgstr ""
+
+#: crates/equinox-gui/src/views/gallery.rs:192 crates/equinox-gui/src/views/gallery.rs:192 crates/equinox-gui/src/views/gallery.rs:192
+msgid "Delete selected"
+msgstr ""
+
+#: crates/equinox-gui/src/views/gallery.rs:195 crates/equinox-gui/src/views/timeline.rs:46 crates/equinox-gui/src/views/gallery.rs:195 crates/equinox-gui/src/views/gallery.rs:195 crates/equinox-gui/src/views/timeline.rs:46 crates/equinox-gui/src/views/timeline.rs:46
+msgid "Apply"
+msgstr ""
+
+#: crates/equinox-gui/src/views/gallery.rs:198 crates/equinox-gui/src/views/gallery.rs:198 crates/equinox-gui/src/views/gallery.rs:198
+msgid "Apply the selected image as wallpaper"
+msgstr ""
+
+#: crates/equinox-gui/src/views/gallery.rs:403 crates/equinox-gui/src/views/wallpaper.rs:151 crates/equinox-gui/src/views/gallery.rs:403 crates/equinox-gui/src/views/gallery.rs:403 crates/equinox-gui/src/views/wallpaper.rs:151 crates/equinox-gui/src/views/wallpaper.rs:151
+msgid "Previous image"
+msgstr ""
+
+#: crates/equinox-gui/src/views/gallery.rs:408 crates/equinox-gui/src/views/wallpaper.rs:162 crates/equinox-gui/src/views/gallery.rs:408 crates/equinox-gui/src/views/gallery.rs:408 crates/equinox-gui/src/views/wallpaper.rs:162 crates/equinox-gui/src/views/wallpaper.rs:162
+msgid "Next image"
+msgstr ""
+
+#: crates/equinox-gui/src/views/gallery.rs:481 crates/equinox-gui/src/views/gallery.rs:481 crates/equinox-gui/src/views/gallery.rs:481
+msgid "No images yet"
+msgstr ""
+
+#: crates/equinox-gui/src/views/gallery.rs:483 crates/equinox-gui/src/views/gallery.rs:483 crates/equinox-gui/src/views/gallery.rs:483
+msgid "Go to the Sources page and click \"Update now\" to download some wallpapers"
+msgstr ""
+
+#: crates/equinox-gui/src/views/gallery.rs:829 crates/equinox-gui/src/views/gallery.rs:829 crates/equinox-gui/src/views/gallery.rs:829
+msgid "Image deleted"
+msgstr ""
+
+#: crates/equinox-gui/src/views/history.rs:144 crates/equinox-gui/src/views/history.rs:144 crates/equinox-gui/src/views/history.rs:144
+msgid "Clear history"
+msgstr ""
+
+#: crates/equinox-gui/src/views/history.rs:287 crates/equinox-gui/src/views/history.rs:302 crates/equinox-gui/src/views/history.rs:287 crates/equinox-gui/src/views/history.rs:302 crates/equinox-gui/src/views/history.rs:287 crates/equinox-gui/src/views/history.rs:302
+msgid "Applied"
+msgstr ""
+
+#: crates/equinox-gui/src/views/history.rs:319 crates/equinox-gui/src/views/history.rs:319 crates/equinox-gui/src/views/history.rs:319
+msgid "No wallpaper has been applied yet"
+msgstr ""
+
+#: crates/equinox-gui/src/views/history.rs:321 crates/equinox-gui/src/views/history.rs:321 crates/equinox-gui/src/views/history.rs:321
+msgid "Wallpapers you apply will be recorded here so you can go back to them"
+msgstr ""
+
+#: crates/equinox-gui/src/views/history.rs:383 crates/equinox-gui/src/views/history.rs:383 crates/equinox-gui/src/views/history.rs:383
+msgid "entries"
+msgstr ""
+
+#: crates/equinox-gui/src/views/history.rs:438 crates/equinox-gui/src/views/history.rs:438 crates/equinox-gui/src/views/history.rs:438
+msgid "History cleared"
+msgstr ""
+
+#: crates/equinox-gui/src/views/history.rs:440 crates/equinox-gui/src/views/history.rs:440 crates/equinox-gui/src/views/history.rs:440
+msgid "Failed to clear history"
+msgstr ""
+
+#: crates/equinox-gui/src/views/oobe.rs:68 crates/equinox-gui/src/views/oobe.rs:68 crates/equinox-gui/src/views/oobe.rs:68
+msgid "Choose the sources"
+msgstr ""
+
+#: crates/equinox-gui/src/views/oobe.rs:74 crates/equinox-gui/src/views/oobe.rs:74 crates/equinox-gui/src/views/oobe.rs:74
+msgid "Enable the sources to keep up to date and set how often each one updates. Enabled sources are updated right away when you continue."
+msgstr ""
+
+#: crates/equinox-gui/src/views/oobe.rs:111 crates/equinox-gui/src/views/sources.rs:78 crates/equinox-gui/src/views/oobe.rs:111 crates/equinox-gui/src/views/sources.rs:78 crates/equinox-gui/src/views/oobe.rs:111 crates/equinox-gui/src/views/sources.rs:78
+msgid "Refresh interval (seconds)"
+msgstr ""
+
+#. Continue button + a spinner shown while the daemon is being started.
+#: crates/equinox-gui/src/views/oobe.rs:124 crates/equinox-gui/src/views/oobe.rs:124 crates/equinox-gui/src/views/oobe.rs:124
+msgid "Continue"
+msgstr ""
+
+#: crates/equinox-gui/src/views/oobe.rs:160 crates/equinox-gui/src/views/oobe.rs:160 crates/equinox-gui/src/views/oobe.rs:160
+msgid "Run via"
+msgstr ""
+
+#: crates/equinox-gui/src/views/oobe.rs:176 crates/equinox-gui/src/views/oobe.rs:176 crates/equinox-gui/src/views/oobe.rs:176
+msgid "Back"
+msgstr ""
+
+#: crates/equinox-gui/src/views/oobe.rs:177 crates/equinox-gui/src/views/oobe.rs:177 crates/equinox-gui/src/views/oobe.rs:177
+msgid "Finish"
+msgstr ""
+
+#: crates/equinox-gui/src/views/sources.rs:25 crates/equinox-gui/src/views/sources.rs:25 crates/equinox-gui/src/views/sources.rs:25
+msgid "Wallpaper sources"
+msgstr ""
+
+#: crates/equinox-gui/src/views/sources.rs:63 crates/equinox-gui/src/views/sources.rs:63 crates/equinox-gui/src/views/sources.rs:63
+msgid "Enable scheduled updates"
+msgstr ""
+
+#: crates/equinox-gui/src/views/sources.rs:95 crates/equinox-gui/src/views/sources.rs:95 crates/equinox-gui/src/views/sources.rs:95
+msgid "Max images (0 = unlimited)"
+msgstr ""
+
+#: crates/equinox-gui/src/views/sources.rs:115 crates/equinox-gui/src/views/sources.rs:115 crates/equinox-gui/src/views/sources.rs:115
+msgid "Status"
+msgstr ""
+
+#. "Update now" shown only when the current source has no wallpapers yet,
+#. so the empty state is actionable instead of a dead blank.
+#: crates/equinox-gui/src/views/sources.rs:120 crates/equinox-gui/src/views/wallpaper.rs:235 crates/equinox-gui/src/views/sources.rs:120 crates/equinox-gui/src/views/wallpaper.rs:235 crates/equinox-gui/src/views/sources.rs:120 crates/equinox-gui/src/views/wallpaper.rs:235
+msgid "Update now"
+msgstr ""
+
+#: crates/equinox-gui/src/views/sources.rs:122 crates/equinox-gui/src/views/sources.rs:122 crates/equinox-gui/src/views/sources.rs:122
+msgid "Fetch one image immediately and store it in the image directory"
+msgstr ""
+
+#: crates/equinox-gui/src/views/sources.rs:124 crates/equinox-gui/src/views/sources.rs:124 crates/equinox-gui/src/views/sources.rs:124
+msgid "Update"
+msgstr ""
+
+#: crates/equinox-gui/src/views/sources.rs:135 crates/equinox-gui/src/views/sources.rs:135 crates/equinox-gui/src/views/sources.rs:135
+msgid "Updating…"
+msgstr ""
+
+#: crates/equinox-gui/src/views/sources.rs:148 crates/equinox-gui/src/views/wallpaper.rs:256 crates/equinox-gui/src/views/sources.rs:148 crates/equinox-gui/src/views/wallpaper.rs:256 crates/equinox-gui/src/views/sources.rs:148 crates/equinox-gui/src/views/wallpaper.rs:256
+msgid "Update failed"
+msgstr ""
+
+#: crates/equinox-gui/src/views/sources.rs:175 crates/equinox-gui/src/views/sources.rs:175 crates/equinox-gui/src/views/sources.rs:175
+msgid "images"
+msgstr ""
+
+#: crates/equinox-gui/src/views/timeline.rs:33 crates/equinox-gui/src/views/timeline.rs:33 crates/equinox-gui/src/views/timeline.rs:33
+msgid "sec"
+msgstr ""
+
+#: crates/equinox-gui/src/views/timeline.rs:35 crates/equinox-gui/src/views/timeline.rs:35 crates/equinox-gui/src/views/timeline.rs:35
+msgid "min"
+msgstr ""
+
+#: crates/equinox-gui/src/views/timeline.rs:37 crates/equinox-gui/src/views/timeline.rs:37 crates/equinox-gui/src/views/timeline.rs:37
+msgid "h"
+msgstr ""
+
+#: crates/equinox-gui/src/views/timeline.rs:39 crates/equinox-gui/src/views/timeline.rs:39 crates/equinox-gui/src/views/timeline.rs:39
+msgid "d"
+msgstr ""
+
+#: crates/equinox-gui/src/views/timeline.rs:45 crates/equinox-gui/src/views/timeline.rs:45 crates/equinox-gui/src/views/timeline.rs:45
+msgid "Scheduled"
+msgstr ""
+
+#: crates/equinox-gui/src/views/timeline.rs:47 crates/equinox-gui/src/views/wallpaper.rs:943 crates/equinox-gui/src/views/timeline.rs:47 crates/equinox-gui/src/views/wallpaper.rs:943 crates/equinox-gui/src/views/timeline.rs:47 crates/equinox-gui/src/views/wallpaper.rs:943
+msgid "Manual"
+msgstr ""
+
+#: crates/equinox-gui/src/views/timeline.rs:70 crates/equinox-gui/src/views/timeline.rs:70 crates/equinox-gui/src/views/timeline.rs:70
+msgid "Each source updates on its own interval. Windows missed while the computer was off or asleep are caught up right after boot or wake-up."
+msgstr ""
+
+#: crates/equinox-gui/src/views/timeline.rs:107 crates/equinox-gui/src/views/timeline.rs:107 crates/equinox-gui/src/views/timeline.rs:107
+msgid "Planned"
+msgstr ""
+
+#: crates/equinox-gui/src/views/timeline.rs:110 crates/equinox-gui/src/views/timeline.rs:110 crates/equinox-gui/src/views/timeline.rs:110
+msgid "Next"
+msgstr ""
+
+#: crates/equinox-gui/src/views/timeline.rs:112 crates/equinox-gui/src/views/timeline.rs:112 crates/equinox-gui/src/views/timeline.rs:112
+msgid "Every"
+msgstr ""
+
+#: crates/equinox-gui/src/views/timeline.rs:122 crates/equinox-gui/src/views/timeline.rs:122 crates/equinox-gui/src/views/timeline.rs:122
+msgid "Scheduled updates are off"
+msgstr ""
+
+#: crates/equinox-gui/src/views/timeline.rs:143 crates/equinox-gui/src/views/timeline.rs:143 crates/equinox-gui/src/views/timeline.rs:143
+msgid "(catch-up)"
+msgstr ""
+
+#: crates/equinox-gui/src/views/timeline.rs:155 crates/equinox-gui/src/views/timeline.rs:155 crates/equinox-gui/src/views/timeline.rs:155
+msgid " · Success"
+msgstr ""
+
+#: crates/equinox-gui/src/views/timeline.rs:168 crates/equinox-gui/src/views/timeline.rs:168 crates/equinox-gui/src/views/timeline.rs:168
+msgid "No tasks recorded yet"
+msgstr ""
+
+#. ---- Headline: the wallpaper title directly ----
+#: crates/equinox-gui/src/views/wallpaper.rs:216 crates/equinox-gui/src/views/wallpaper.rs:216 crates/equinox-gui/src/views/wallpaper.rs:216
+msgid "Loading…"
+msgstr ""
+
+#: crates/equinox-gui/src/views/wallpaper.rs:273 crates/equinox-gui/src/views/wallpaper.rs:273 crates/equinox-gui/src/views/wallpaper.rs:273
+msgid "Previous source"
+msgstr ""
+
+#: crates/equinox-gui/src/views/wallpaper.rs:278 crates/equinox-gui/src/views/wallpaper.rs:278 crates/equinox-gui/src/views/wallpaper.rs:278
+msgid "Next source"
+msgstr ""
+
+#: crates/equinox-gui/src/views/wallpaper.rs:470 crates/equinox-gui/src/views/wallpaper.rs:470 crates/equinox-gui/src/views/wallpaper.rs:470
+msgid "No wallpapers in this source yet"
+msgstr ""
+
+#: crates/equinox-gui/src/views/wallpaper.rs:471 crates/equinox-gui/src/views/wallpaper.rs:471 crates/equinox-gui/src/views/wallpaper.rs:471
+msgid "Switch sources below or run an update to download the first images"
+msgstr ""
+
+#: crates/equinox-gui/src/views/wallpaper.rs:610 crates/equinox-gui/src/views/wallpaper.rs:610 crates/equinox-gui/src/views/wallpaper.rs:610
+msgid "Failed to switch"
+msgstr ""
+
+#: crates/equinox-gui/src/views/wallpaper.rs:651 crates/equinox-gui/src/views/wallpaper.rs:733 crates/equinox-gui/src/views/wallpaper.rs:651 crates/equinox-gui/src/views/wallpaper.rs:733 crates/equinox-gui/src/views/wallpaper.rs:651 crates/equinox-gui/src/views/wallpaper.rs:733
+msgid "Failed to set"
+msgstr ""
+
+#: crates/equinox-gui/src/views/wallpaper.rs:799 crates/equinox-gui/src/views/wallpaper.rs:799 crates/equinox-gui/src/views/wallpaper.rs:799
+msgid "Operation failed"
+msgstr ""
+
+#: crates/equinox-gui/src/views/wallpaper.rs:942 crates/equinox-gui/src/views/wallpaper.rs:942 crates/equinox-gui/src/views/wallpaper.rs:942
+msgid "Random"
+msgstr ""
+
+#: crates/equinox-gui/src/views/wallpaper.rs:944 crates/equinox-gui/src/views/wallpaper.rs:944 crates/equinox-gui/src/views/wallpaper.rs:944
+msgid "Latest"
+msgstr ""

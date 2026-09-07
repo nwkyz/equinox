@@ -1,0 +1,682 @@
+# Tibetan translations for equinox package.
+# Copyright (C) 2026 THE equinox'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the equinox package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: equinox 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-07 07:48+0000\n"
+"PO-Revision-Date: 2026-08-24 17:52+0800\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: bo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: crates/equinox-core/src/applier.rs:203
+msgid "no supported wallpaper backend detected (need GNOME, KDE, or XFCE)"
+msgstr "རྩིག་ངོས་ཀྱི་པར་གྱི་རྒྱབ་སྟེགས་གང་ཡང་རྙེད་མ་སོང་། (GNOME ། KDE ། ཡང་ན་ XFCE དགོས།)"
+
+#: crates/equinox-core/src/applier.rs:230
+msgid "this environment cannot set the GNOME wallpaper (missing org.gnome.desktop.background schema)"
+msgstr "ཁོར་ཡུག་འདིས་GNOME ཡི་རྩིག་ངོས་ཀྱི་པར་སྒྲིག་མི་ཐུབ། (org.gnome.desktop.background schema མེད་པས།)"
+
+#: crates/equinox-core/src/applier.rs:346
+#, fuzzy
+msgid "Failed to set Plasma wallpaper via the running shell"
+msgstr "རྩིག་ངོས་ཀྱི་པར་སྒྲིག་མ་ཐུབ།"
+
+#: crates/equinox-core/src/applier.rs:383
+#: crates/equinox-core/src/applier.rs:639
+msgid "Failed to read"
+msgstr "ཀློག་མ་ཐུབ།"
+
+#: crates/equinox-core/src/applier.rs:404
+msgid "No image-type wallpaper configured in Plasma"
+msgstr "Plasma ནང་བརྙན་རིས་རིགས་ཀྱི་རྩིག་ངོས་ཀྱི་པར་སྒྲིག་འགོད་བྱས་མེད།"
+
+#: crates/equinox-core/src/applier.rs:409
+#: crates/equinox-core/src/applier.rs:412
+#: crates/equinox-core/src/applier.rs:649
+#: crates/equinox-core/src/applier.rs:652
+msgid "Failed to write"
+msgstr "འབྲི་མ་ཐུབ།"
+
+#: crates/equinox-core/src/applier.rs:627
+msgid "Failed to set wallpaper"
+msgstr "རྩིག་ངོས་ཀྱི་པར་སྒྲིག་མ་ཐུབ།"
+
+#: crates/equinox-core/src/applier.rs:643
+msgid "No wallpaper property found in"
+msgstr "རྩིག་ངོས་ཀྱི་པར་གྱི་ཁྱད་ཆོས་མ་རྙེད།"
+
+#: crates/equinox-core/src/applier.rs:685
+msgid "no backdrop last-image property found in the xfce4-desktop channel"
+msgstr "xfce4-desktop བརྡ་ལམ་ནང་རྩིག་ངོས་ཀྱི་པར་གྱི་མཐའ་མའི་བརྙན་རིས་ཀྱི་ཁྱད་ཆོས་མ་རྙེད།"
+
+#: crates/equinox-core/src/http.rs:47
+msgid "Invalid URL"
+msgstr "URL ནུས་མེད།"
+
+#: crates/equinox-core/src/http.rs:54 crates/equinox-core/src/http.rs:120
+#: crates/equinox-core/src/http.rs:134
+msgid "Network request failed"
+msgstr "དྲ་རྒྱའི་རེ་ཞུ་མ་ཐུབ།"
+
+#: crates/equinox-core/src/sources/bing.rs:25
+#: crates/equinox-core/src/sources/bing.rs:138
+msgid "Bing"
+msgstr "Bing"
+
+#: crates/equinox-core/src/sources/bing.rs:32
+msgid "Region"
+msgstr "ས་ཁུལ།"
+
+#: crates/equinox-core/src/sources/bing.rs:51
+msgid "Resolution"
+msgstr "གསལ་ཚད།"
+
+#: crates/equinox-core/src/sources/bing.rs:61
+msgid "Include history"
+msgstr "ལོ་རྒྱུས་ཚུད་པ།"
+
+#: crates/equinox-core/src/sources/bing.rs:90
+#: crates/equinox-core/src/sources/spotlight.rs:64
+#: crates/equinox-core/src/sources/spotlight.rs:80
+msgid "Auto"
+msgstr "རང་འགུལ།"
+
+#: crates/equinox-core/src/sources/nasa.rs:24
+#: crates/equinox-core/src/sources/nasa.rs:87
+msgid "NASA"
+msgstr "NASA"
+
+#: crates/equinox-core/src/sources/nasa.rs:31
+msgid "API key (optional)"
+msgstr "API ལྡེ་མིག (འདེམས་ཆོག)"
+
+#: crates/equinox-core/src/sources/nasa.rs:36
+msgid "Use high-definition image (hdurl)"
+msgstr "གསལ་ཚད་མཐོ་བའི་པར་(hdurl) སྤྱོད་པ།"
+
+#: crates/equinox-core/src/sources/nasa.rs:69
+msgid "Today's APOD entry is a video, skipped"
+msgstr "དེ་རིང་གི་APOD ཚན་པ་དེ་བརྙན་ཟློས་ཡིན་པས། མཆོངས་བཞག་ཡོད།"
+
+#: crates/equinox-core/src/sources/spotlight.rs:41
+msgid "Windows Spotlight"
+msgstr "Windows Spotlight"
+
+#: crates/equinox-core/src/sources/spotlight.rs:62
+msgid "Country"
+msgstr "རྒྱལ་ཁབ།"
+
+#: crates/equinox-core/src/sources/spotlight.rs:78
+msgid "Locale"
+msgstr "སྐད་ཡིག་དང་ས་ཁུལ།"
+
+#: crates/equinox-core/src/sources/spotlight.rs:207
+msgid "Spotlight"
+msgstr "Spotlight"
+
+#: crates/equinox-core/src/sources/wikimedia.rs:25
+#: crates/equinox-core/src/sources/wikimedia.rs:91
+msgid "Wikimedia"
+msgstr "Wikimedia"
+
+#: crates/equinox-core/src/sources/wikimedia.rs:31
+msgid "Thumbnail width"
+msgstr "བསྡུས་པའི་པར་གྱི་ཞེང་ཚད།"
+
+#: crates/equinox-core/src/storage.rs:284
+#: crates/equinox-gui/src/views/gallery.rs:832
+msgid "Failed to delete"
+msgstr "སུབ་མ་ཐུབ།"
+
+#: crates/equinox-core/src/storage.rs:406
+msgid "Failed to create directory"
+msgstr "ཡིག་ཆ་ཁང་བཟོ་མ་ཐུབ།"
+
+#: crates/equinox-core/src/storage.rs:454
+msgid "Failed to write image"
+msgstr "པར་འབྲི་མ་ཐུབ།"
+
+#: crates/equinox-core/src/storage.rs:460
+msgid "Failed to write description"
+msgstr "འགྲེལ་བཤད་འབྲི་མ་ཐུབ།"
+
+#: crates/equinox-daemon/src/scheduler.rs:102
+msgid "Missed update window (powered off)"
+msgstr "གསར་སྒྱུར་དུས་ཚོད་ཆད་པ། (གློག་ཀླད་སྒོ་བརྒྱབ་པས།)"
+
+#. Aborted (mid-download or after): do NOT store/apply anything.
+#: crates/equinox-daemon/src/scheduler.rs:185
+#: crates/equinox-daemon/src/scheduler.rs:311
+#: crates/equinox-daemon/src/scheduler.rs:482
+#: crates/equinox-daemon/src/scheduler.rs:501
+#, fuzzy
+msgid "Update cancelled"
+msgstr "གསར་སྒྱུར་མ་ཐུབ།"
+
+#: crates/equinox-daemon/src/scheduler.rs:291
+msgid "Updating"
+msgstr "གསར་སྒྱུར་བྱེད་བཞིན་པ།"
+
+#: crates/equinox-daemon/src/scheduler.rs:468
+#: crates/equinox-daemon/src/service.rs:79
+#: crates/equinox-daemon/src/service.rs:108
+msgid "Unknown source"
+msgstr "ཁུངས་མི་ཤེས་པ།"
+
+#: crates/equinox-daemon/src/scheduler.rs:541
+#: crates/equinox-daemon/src/scheduler.rs:552
+msgid "This source has no images yet, run \"Update now\" first"
+msgstr "ཁུངས་འདིར་ད་དུང་པར་མེད་པས། ཐོག་མར་“ད་ལྟ་གསར་སྒྱུར་”བྱོས།"
+
+#: crates/equinox-daemon/src/scheduler.rs:563
+msgid "No wallpaper source selected yet, choose one on the Wallpaper page"
+msgstr "ད་དུང་རྩིག་ངོས་ཀྱི་པར་ཁུངས་གདམས་མེད་པས། རྩིག་ངོས་ཀྱི་ཤོག་ངོས་སུ་གཅིག་གདམས།"
+
+#: crates/equinox-daemon/src/scheduler.rs:600
+msgid "Setting wallpaper"
+msgstr "རྩིག་ངོས་ཀྱི་པར་སྒྲིག་བཞིན་པ།"
+
+#: crates/equinox-daemon/src/scheduler.rs:632
+msgid "Applying image"
+msgstr "པར་སྤྱོད་བཞིན་པ།"
+
+#: crates/equinox-daemon/src/scheduler.rs:651
+msgid "Applying previous"
+msgstr "སྔོན་མའི་པར་སྤྱོད་བཞིན་པ།"
+
+#: crates/equinox-daemon/src/scheduler.rs:657
+msgid "No earlier wallpaper in history"
+msgstr "ལོ་རྒྱུས་ནང་སྔོན་གྱི་རྩིག་ངོས་ཀྱི་པར་མེད།"
+
+#: crates/equinox-daemon/src/scheduler.rs:674
+msgid "File does not exist"
+msgstr "ཡིག་ཆ་མི་གནས།"
+
+#: crates/equinox-daemon/src/scheduler.rs:692
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:388
+#: crates/equinox-gui/src/views/gallery.rs:866
+msgid "Failed to apply wallpaper"
+msgstr "རྩིག་ངོས་ཀྱི་པར་སྤྱོད་མ་ཐུབ།"
+
+#. Daemon status banner
+#: crates/equinox-gui/src/app.rs:35
+msgid "The daemon is not running; scheduled updates will be unavailable"
+msgstr "ཌེ་མོན་འཁོར་སྐྱོད་མི་བྱེད་པས། དུས་བཀག་གསར་སྒྱུར་བྱེད་མི་ཐུབ།"
+
+#: crates/equinox-gui/src/app.rs:37 crates/equinox-gui/src/app.rs:461
+#: crates/equinox-gui/src/app.rs:559 crates/equinox-gui/src/app.rs:804
+msgid "Start"
+msgstr "འགོ་འཛུགས།"
+
+#: crates/equinox-gui/src/app.rs:57
+msgid "Wallpaper"
+msgstr "རྩིག་ངོས་ཀྱི་པར།"
+
+#: crates/equinox-gui/src/app.rs:63 crates/equinox-gui/src/views/oobe.rs:82
+msgid "Sources"
+msgstr "ཁུངས་ཁག"
+
+#: crates/equinox-gui/src/app.rs:69
+msgid "Gallery"
+msgstr "པར་མཛོད།"
+
+#: crates/equinox-gui/src/app.rs:75 crates/equinox-gui/src/views/history.rs:130
+msgid "History"
+msgstr "ལོ་རྒྱུས།"
+
+#: crates/equinox-gui/src/app.rs:143
+msgid "Main menu"
+msgstr "གཙོ་བོའི་དཀར་ཆག"
+
+#: crates/equinox-gui/src/app.rs:153
+msgid "Tasks"
+msgstr "ལས་ཀ་ཁག"
+
+#: crates/equinox-gui/src/app.rs:171
+#: crates/equinox-gui/src/views/timeline.rs:54
+msgid "Timeline"
+msgstr "དུས་ཐོའི་ཐིག"
+
+#: crates/equinox-gui/src/app.rs:193 crates/equinox-gui/src/app.rs:506
+msgid "Preferences"
+msgstr "གདམ་ག་ཁག"
+
+#: crates/equinox-gui/src/app.rs:213
+msgid "About"
+msgstr "སྐོར་ལ།"
+
+#: crates/equinox-gui/src/app.rs:228
+msgid "Multi-source daily wallpaper manager"
+msgstr "ཁུངས་མང་པོའི་ཉིན་རེའི་རྩིག་ངོས་ཀྱི་པར་དོ་དམ་བྱེད་ཆས།"
+
+#: crates/equinox-gui/src/app.rs:233
+msgid "Released under the"
+msgstr "ཆོག་མཆན་འདིའི་འོག་ཏུ་སྤེལ་བ།"
+
+#: crates/equinox-gui/src/app.rs:272
+msgid "No running tasks"
+msgstr "ད་ལྟ་འཁོར་སྐྱོད་བྱེད་པའི་ལས་ཀ་མེད།"
+
+#: crates/equinox-gui/src/app.rs:321
+msgid "Cancel"
+msgstr "ཕྱིར་འཐེན་པ།"
+
+#: crates/equinox-gui/src/app.rs:392
+msgid "Interface"
+msgstr "མཐུད་ཁ།"
+
+#: crates/equinox-gui/src/app.rs:397
+msgid "Auto (follow system)"
+msgstr "རང་འགུལ། (རྒྱུད་ཁོངས་ལ་རྗེས་སུ་འབྲང་།)"
+
+#: crates/equinox-gui/src/app.rs:414
+msgid "Language"
+msgstr "སྐད་ཡིག"
+
+#: crates/equinox-gui/src/app.rs:421 crates/equinox-gui/src/views/oobe.rs:145
+msgid "Background service"
+msgstr "རྒྱབ་ལོགས་ཞབས་ཞུ།"
+
+#: crates/equinox-gui/src/app.rs:430 crates/equinox-gui/src/views/oobe.rs:154
+msgid "Standalone"
+msgstr "རང་ཚུགས་ཀྱི་བྱ་རིམ།"
+
+#: crates/equinox-gui/src/app.rs:436
+msgid "Run background via"
+msgstr "རྒྱབ་ལོགས་ཞབས་ཞུ་འདི་བརྒྱུད་ནས་གཉེར་བ།"
+
+#: crates/equinox-gui/src/app.rs:458
+msgid "Daemon status"
+msgstr "ཌེ་མོན་གྱི་གནས་སྟངས།"
+
+#: crates/equinox-gui/src/app.rs:471
+msgid "systemd is unavailable in flatpak"
+msgstr "Flatpak ནང་ systemd སྤྱོད་མི་ཐུབ།"
+
+#: crates/equinox-gui/src/app.rs:473
+msgid "Sandboxed apps cannot reach the host systemd user session, so the background runs as a supervised process inside the sandbox."
+msgstr "བཀག་སྡོམ་བྱས་པའི་ཉེར་སྤྱོད་ཀྱིས་གཙོ་གཞིའི་ systemd སྤྱོད་མཁན་གྱི་ལས་ཡུན་ལ་འབྲེལ་མི་ཐུབ་པས། རྒྱབ་ལོགས་ཀྱི་ལས་རིམ་དེ་བཀག་སྡོམ་ཁོངས་སུ་ལྟ་སྐྱོང་བྱས་པའི་ལས་རིམ་ཞིག་གི་ཚུལ་དུ་གཉེར་གྱི་ཡོད།"
+
+#: crates/equinox-gui/src/app.rs:483 crates/equinox-gui/src/views/oobe.rs:166
+msgid "Start at login"
+msgstr "ཐོ་འཇུག་སྐབས་འགོ་འཛུགས།"
+
+#: crates/equinox-gui/src/app.rs:490
+msgid "systemd service"
+msgstr "systemd ཞབས་ཞུ།"
+
+#: crates/equinox-gui/src/app.rs:495 crates/equinox-gui/src/app.rs:545
+msgid "Install"
+msgstr "བསྒར་འཛུད།"
+
+#: crates/equinox-gui/src/app.rs:543
+msgid "Uninstall"
+msgstr "བསྒར་འཛུད་མེད་པར་བཟོ་བ།"
+
+#: crates/equinox-gui/src/app.rs:557 crates/equinox-gui/src/app.rs:802
+msgid "Stop"
+msgstr "མཚམས་འཇོག་པ།"
+
+#: crates/equinox-gui/src/app.rs:570
+msgid "Installed and running"
+msgstr "བསྒར་འཛུད་ཟིན་ནས་གཉེར་བཞིན་ཡོད།"
+
+#: crates/equinox-gui/src/app.rs:572
+msgid "Installed, not running"
+msgstr "བསྒར་འཛུད་ཟིན་ཡང་གཉེར་མེད།"
+
+#: crates/equinox-gui/src/app.rs:575
+msgid "Not installed"
+msgstr "སྒྲིག་འཇུག་བྱས་མེད།"
+
+#: crates/equinox-gui/src/app.rs:601
+msgid "Restart Equinox to apply the new language"
+msgstr "སྐད་ཡིག་གསར་པ་སྤྱོད་པར་Equinox བསྐྱར་དུ་འགོ་སྒྲུབ་དགོས།"
+
+#: crates/equinox-gui/src/app.rs:639 crates/equinox-gui/src/app.rs:706
+#: crates/equinox-gui/src/app.rs:726
+msgid "Failed to change the systemd service"
+msgstr "systemd ཞབས་ཞུ་བརྗེ་བཅོས་མ་ཐུབ།"
+
+#: crates/equinox-gui/src/app.rs:797
+msgid "Running"
+msgstr "འཁོར་སྐྱོད་བཞིན་པ།"
+
+#: crates/equinox-gui/src/app.rs:799
+#, fuzzy
+msgid "Not running"
+msgstr "འཁོར་སྐྱོད་མི་བཞིན་པ།"
+
+#: crates/equinox-gui/src/daemon_client.rs:194
+msgid "Daemon is not running"
+msgstr "ཌེ་མོན་འཁོར་སྐྱོད་མི་བྱེད།"
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:80
+#: crates/equinox-gui/src/views/wallpaper.rs:953
+msgid "Untitled wallpaper"
+msgstr "མཚན་མེད་པའི་རྩིག་ངོས་ཀྱི་པར།"
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:145
+msgid "Apply wallpaper"
+msgstr "གྱང་རིས་སུ་སྤྱོད་པ།"
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:148
+msgid "Set as wallpaper"
+msgstr "གྱང་རིས་སུ་སྒྲིག་པ།"
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:165
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:194
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:220
+msgid "Fill mode"
+msgstr "ཁེངས་སུ་སྒྲིག་ཐབས།"
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:168
+msgid "Fullscreen"
+msgstr "བརྙན་ཡོལ་ཆ་ཚང་།"
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:171
+msgid "Close"
+msgstr "སྒོ་རྒྱག་པ།"
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:192
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:218
+msgid "Fit mode"
+msgstr "ཚད་དང་མཐུན་པར་སྒྲིག་ཐབས།"
+
+#: crates/equinox-gui/src/views/fullscreen_viewer.rs:386
+#: crates/equinox-gui/src/views/gallery.rs:863
+msgid "Wallpaper applied"
+msgstr "གྱང་རིས་སུ་སྤྱད་ཟིན།"
+
+#: crates/equinox-gui/src/views/gallery.rs:175
+msgid "Carousel"
+msgstr "འཁོར་རྒྱུག་མཐོང་སྣང་།"
+
+#: crates/equinox-gui/src/views/gallery.rs:177
+msgid "Grid"
+msgstr "དྲ་མིག"
+
+#: crates/equinox-gui/src/views/gallery.rs:188
+#: crates/equinox-gui/src/views/history.rs:140
+msgid "Refresh"
+msgstr "གསར་སྒྱུར།"
+
+#: crates/equinox-gui/src/views/gallery.rs:192
+msgid "Delete selected"
+msgstr "གདམས་པ་སུབ་པ།"
+
+#: crates/equinox-gui/src/views/gallery.rs:195
+#: crates/equinox-gui/src/views/timeline.rs:46
+msgid "Apply"
+msgstr "སྤྱོད་པ།"
+
+#: crates/equinox-gui/src/views/gallery.rs:198
+msgid "Apply the selected image as wallpaper"
+msgstr "བདམས་པའི་བརྙན་རིས་དེ་གྱང་རིས་སུ་སྤྱོད་པ།"
+
+#: crates/equinox-gui/src/views/gallery.rs:403
+#: crates/equinox-gui/src/views/wallpaper.rs:151
+msgid "Previous image"
+msgstr "སྔོན་མའི་པར།"
+
+#: crates/equinox-gui/src/views/gallery.rs:408
+#: crates/equinox-gui/src/views/wallpaper.rs:162
+msgid "Next image"
+msgstr "རྗེས་མའི་པར།"
+
+#: crates/equinox-gui/src/views/gallery.rs:481
+msgid "No images yet"
+msgstr "ད་དུང་པར་མེད།"
+
+#: crates/equinox-gui/src/views/gallery.rs:483
+msgid "Go to the Sources page and click \"Update now\" to download some wallpapers"
+msgstr "ཁུངས་ཀྱི་ཤོག་ངོས་སུ་སོང་ནས་“ད་ལྟ་གསར་སྒྱུར་”ལ་སྣུན་ཏེ། རྩིག་ངོས་ཀྱི་པར་ཁ་ཤས་ཕབ་ལེན་བྱོས།"
+
+#: crates/equinox-gui/src/views/gallery.rs:829
+msgid "Image deleted"
+msgstr "པར་སུབ་ཟིན།"
+
+#: crates/equinox-gui/src/views/history.rs:144
+msgid "Clear history"
+msgstr "ལོ་རྒྱུས་སུབ་པ།"
+
+#: crates/equinox-gui/src/views/history.rs:287
+#: crates/equinox-gui/src/views/history.rs:302
+msgid "Applied"
+msgstr "སྤྱད་ཟིན།"
+
+#: crates/equinox-gui/src/views/history.rs:319
+msgid "No wallpaper has been applied yet"
+msgstr "ད་དུང་རྩིག་ངོས་ཀྱི་པར་གང་ཡང་སྤྱད་མེད།"
+
+#: crates/equinox-gui/src/views/history.rs:321
+msgid "Wallpapers you apply will be recorded here so you can go back to them"
+msgstr "ཁྱེད་ཀྱིས་སྤྱད་པའི་རྩིག་ངོས་ཀྱི་པར་རྣམས་འདིར་ཟིན་ཐོར་འགོད་ཅིང་། ཕྱིར་དེ་དག་ལ་ལོག་ཐུབ།"
+
+#: crates/equinox-gui/src/views/history.rs:383
+msgid "entries"
+msgstr "ཚན་པ།"
+
+#: crates/equinox-gui/src/views/history.rs:438
+msgid "History cleared"
+msgstr "ལོ་རྒྱུས་སུབ་ཟིན།"
+
+#: crates/equinox-gui/src/views/history.rs:440
+msgid "Failed to clear history"
+msgstr "ལོ་རྒྱུས་སུབ་མ་ཐུབ།"
+
+#: crates/equinox-gui/src/views/oobe.rs:68
+#, fuzzy
+msgid "Choose the sources"
+msgstr "རྗེས་མའི་ཁུངས།"
+
+#: crates/equinox-gui/src/views/oobe.rs:74
+msgid "Enable the sources to keep up to date and set how often each one updates. Enabled sources are updated right away when you continue."
+msgstr "ཁུངས་ཁག་སྤྱོད་འཇུག་བྱས་ནས་རྒྱུན་དུ་གསར་སྒྱུར་ཐུབ་པར་བྱོས་ཤིང་། ཁུངས་རེ་རེའི་གསར་སྒྱུར་དུས་ཚོད་ཇི་ཙམ་ཡིན་པ་སྒྲིག་དགོས། སྤྱོད་འཇུག་བྱས་པའི་ཁུངས་ཁག་མུ་མཐུད་མནན་མ་ཐག་ཏུ་གསར་སྒྱུར་བྱེད།"
+
+#: crates/equinox-gui/src/views/oobe.rs:111
+#: crates/equinox-gui/src/views/sources.rs:78
+msgid "Refresh interval (seconds)"
+msgstr "གསར་སྒྱུར་བར་མཚམས། (སྐར་ཆ)"
+
+#. Continue button + a spinner shown while the daemon is being started.
+#: crates/equinox-gui/src/views/oobe.rs:124
+msgid "Continue"
+msgstr "མུ་མཐུད་པ།"
+
+#: crates/equinox-gui/src/views/oobe.rs:160
+msgid "Run via"
+msgstr "འདི་བརྒྱུད་ནས་གཉེར་བ།"
+
+#: crates/equinox-gui/src/views/oobe.rs:176
+msgid "Back"
+msgstr "ཕྱིར་ལོག་པ།"
+
+#: crates/equinox-gui/src/views/oobe.rs:177
+msgid "Finish"
+msgstr "མཇུག་སྒྲིལ་བ།"
+
+#: crates/equinox-gui/src/views/sources.rs:25
+msgid "Wallpaper sources"
+msgstr "རྩིག་ངོས་ཀྱི་པར་གྱི་ཁུངས་ཁག"
+
+#: crates/equinox-gui/src/views/sources.rs:63
+msgid "Enable scheduled updates"
+msgstr "དུས་བཀག་གསར་སྒྱུར་སྤྱོད་པ།"
+
+#: crates/equinox-gui/src/views/sources.rs:95
+msgid "Max images (0 = unlimited)"
+msgstr "པར་གྱི་གྲངས་མང་ཤོས། (0 = ཚད་མེད།)"
+
+#: crates/equinox-gui/src/views/sources.rs:115
+msgid "Status"
+msgstr "གནས་ཚུལ།"
+
+#. "Update now" shown only when the current source has no wallpapers yet,
+#. so the empty state is actionable instead of a dead blank.
+#: crates/equinox-gui/src/views/sources.rs:120
+#: crates/equinox-gui/src/views/wallpaper.rs:235
+msgid "Update now"
+msgstr "ད་ལྟ་གསར་སྒྱུར།"
+
+#: crates/equinox-gui/src/views/sources.rs:122
+msgid "Fetch one image immediately and store it in the image directory"
+msgstr "ད་ལྟ་བར་མ་ཆད་པར་པར་གཅིག་ལེན་ཞིང་། པར་གྱི་ཡིག་ཆ་ཁང་དུ་ཉར་ཚགས་བྱེད།"
+
+#: crates/equinox-gui/src/views/sources.rs:124
+msgid "Update"
+msgstr "གསར་སྒྱུར།"
+
+#: crates/equinox-gui/src/views/sources.rs:135
+msgid "Updating…"
+msgstr "གསར་སྒྱུར་བྱེད་བཞིན་པ…"
+
+#: crates/equinox-gui/src/views/sources.rs:148
+#: crates/equinox-gui/src/views/wallpaper.rs:256
+msgid "Update failed"
+msgstr "གསར་སྒྱུར་མ་ཐུབ།"
+
+#: crates/equinox-gui/src/views/sources.rs:175
+msgid "images"
+msgstr "པར"
+
+#: crates/equinox-gui/src/views/timeline.rs:33
+msgid "sec"
+msgstr "སྐར་ཆ"
+
+#: crates/equinox-gui/src/views/timeline.rs:35
+msgid "min"
+msgstr "སྐར་མ"
+
+#: crates/equinox-gui/src/views/timeline.rs:37
+msgid "h"
+msgstr "ཆུ་ཚོད"
+
+#: crates/equinox-gui/src/views/timeline.rs:39
+msgid "d"
+msgstr "ཉིན"
+
+#: crates/equinox-gui/src/views/timeline.rs:45
+msgid "Scheduled"
+msgstr "དུས་བཀག"
+
+#: crates/equinox-gui/src/views/timeline.rs:47
+#: crates/equinox-gui/src/views/wallpaper.rs:943
+msgid "Manual"
+msgstr "ལག་བསྟར།"
+
+#: crates/equinox-gui/src/views/timeline.rs:70
+msgid "Each source updates on its own interval. Windows missed while the computer was off or asleep are caught up right after boot or wake-up."
+msgstr "ཁུངས་རེ་རེས་རང་རང་གི་བར་མཚམས་ལྟར་གསར་སྒྱུར་བྱེད། གློག་ཀླད་སྒོ་བརྒྱབ་པའམ་གཉིད་དུ་ཡོད་སྐབས་ཆད་པའི་གསར་སྒྱུར་རྣམས། འགོ་སླར་བསླངས་པའམ་གཉིད་ལས་སད་མ་ཐག་ཏུ་ཁ་གསབ་བྱེད།"
+
+#: crates/equinox-gui/src/views/timeline.rs:107
+msgid "Planned"
+msgstr "འཆར་གཞི་བཞིན།"
+
+#: crates/equinox-gui/src/views/timeline.rs:110
+msgid "Next"
+msgstr "རྗེས་མ།"
+
+#: crates/equinox-gui/src/views/timeline.rs:112
+msgid "Every"
+msgstr "རེ་རེ།"
+
+#: crates/equinox-gui/src/views/timeline.rs:122
+msgid "Scheduled updates are off"
+msgstr "དུས་བཀག་གསར་སྒྱུར་སྒོ་བརྒྱབ་ཟིན།"
+
+#: crates/equinox-gui/src/views/timeline.rs:143
+msgid "(catch-up)"
+msgstr "(ཁ་གསབ)"
+
+#: crates/equinox-gui/src/views/timeline.rs:155
+msgid " · Success"
+msgstr " · ལེགས་གྲུབ"
+
+#: crates/equinox-gui/src/views/timeline.rs:168
+msgid "No tasks recorded yet"
+msgstr "ད་དུང་ལས་ཀའི་ཟིན་ཐོ་མེད།"
+
+#. ---- Headline: the wallpaper title directly ----
+#: crates/equinox-gui/src/views/wallpaper.rs:216
+msgid "Loading…"
+msgstr "ཕབ་ལེན་བྱེད་བཞིན་པ…"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:273
+msgid "Previous source"
+msgstr "སྔོན་མའི་ཁུངས།"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:278
+msgid "Next source"
+msgstr "རྗེས་མའི་ཁུངས།"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:470
+#, fuzzy
+msgid "No wallpapers in this source yet"
+msgstr "ཁུངས་འདིར་ད་དུང་པར་མེད།"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:471
+#, fuzzy
+msgid "Switch sources below or run an update to download the first images"
+msgstr "གཤམ་དུ་ཁུངས་བརྗེ་བའམ། ཐོག་མར་གསར་སྒྱུར་ཐེངས་གཅིག་བྱོས།"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:610
+msgid "Failed to switch"
+msgstr "བརྗེ་མ་ཐུབ།"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:651
+#: crates/equinox-gui/src/views/wallpaper.rs:733
+msgid "Failed to set"
+msgstr "སྒྲིག་མ་ཐུབ།"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:799
+msgid "Operation failed"
+msgstr "བྱ་བ་མ་ཐུབ།"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:942
+msgid "Random"
+msgstr "གང་བྱུང་།"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:944
+msgid "Latest"
+msgstr "གསར་ཤོས།"
+
+#~ msgid "Maximize"
+#~ msgstr "ཆེ་ཤོས་སུ་སྒྱུར་བ།"
+
+#~ msgid "Welcome to Equinox"
+#~ msgstr "Equinox ལ་དགའ་བསུ་ཞུ།"
+
+#~ msgid ""
+#~ "Equinox keeps a wallpaper source of your choice up to date in the background.\n"
+#~ "Pick the sources you want and how the background should run."
+#~ msgstr ""
+#~ "Equinox ཡིས་ཁྱེད་ཀྱིས་བདམས་པའི་རྩིག་ངོས་ཀྱི་པར་གྱི་ཁུངས་དེ་རྒྱབ་ལོགས་སུ་དུས་མཐུན་གྱིས་གསར་སྒྱུར་བྱེད་ཀྱི་ཡོད།\n"
+#~ "ཁྱེད་ཀྱིས་དགོས་པའི་ཁུངས་རྣམས་འདེམས་ཤིང་། རྒྱབ་ལོགས་ཞབས་ཞུ་ཇི་ལྟར་གཉེར་དགོས་པ་འདེམས་རོགས།"
+
+#~ msgid "Only enabled sources are fetched on a schedule."
+#~ msgstr "སྤྱོད་འགོ་ཚུགས་པའི་ཁུངས་ཁོ་ན་དུས་བཀག་ལྟར་ལེན་གྱི་ཡོད།"
+
+#~ msgid "Run the background service automatically when you log in, so wallpapers update even when Equinox is closed."
+#~ msgstr "ཐོ་འཇུག་བྱེད་སྐབས་རྒྱབ་ལོགས་ཞབས་ཞུ་རང་འགུལ་གྱིས་གཉེར་བར་བྱེད་དེ། Equinox ཁ་བརྒྱབ་ཡོད་ཀྱང་རྩིག་ངོས་ཀྱི་པར་གསར་སྒྱུར་བྱེད་ཐུབ།"
+
+#~ msgid "Standalone (Equinox supervisor)"
+#~ msgstr "རང་ཚུགས། (Equinox ལྟ་སྐྱོང་པ།)"
+
+#~ msgid "systemd user service"
+#~ msgstr "systemd སྤྱོད་མཁན་ཞབས་ཞུ།"
+
+#~ msgid "Get started"
+#~ msgstr "འགོ་འཛུགས།"
+
+#~ msgid "Run the background automatically when you log in, even when Equinox is closed."
+#~ msgstr "ཐོ་འཇུག་བྱེད་སྐབས་རྒྱབ་ལོགས་ཞབས་ཞུ་རང་འགུལ་གྱིས་གཉེར་བར་བྱེད་དེ། Equinox ཁ་བརྒྱབ་ཡོད་ཀྱང་རྩིག་ངོས་ཀྱི་པར་གསར་སྒྱུར་བྱེད་ཐུབ།"

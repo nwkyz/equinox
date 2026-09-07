@@ -1,0 +1,21 @@
+[package]
+name = "equinox-gui"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+gettext-rs.workspace = true
+equinox-core = { path = "../equinox-core" }
+# Image loaders (gdk-pixbuf + the platform stack, glycin on GNOME) belong to
+# the GUI only: the daemon must never link them (idle RSS). Thumbnail
+# generation is implemented in this crate (see views/mod.rs).
+gdk-pixbuf = "0.22"
+gtk4 = { workspace = true, features = ["v4_22"] }
+libadwaita = { workspace = true, features = ["v1_9", "gtk_v4_22"] }
+glib.workspace = true
+gio.workspace = true
+anyhow.workspace = true
+log.workspace = true
+serde_json.workspace = true
+chrono.workspace = true

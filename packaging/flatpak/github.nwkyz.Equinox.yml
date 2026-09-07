@@ -1,0 +1,91 @@
+app-id: github.nwkyz.Equinox
+runtime: org.gnome.Platform//50
+sdk: org.gnome.Sdk//50
+command: equinox-gui
+separate-locales: false
+
+# The icon FILE stays "equinox" in the repo (user's asset); flatpak exports
+# icons under the app id, so rename it during export (desktop Icon= is updated
+# accordingly).
+rename-icon: equinox
+
+# The payload is the HOST `cargo build --release` output, passed into the
+# build sandbox as `type: file` sources (binaries + compiled .mo). No cargo
+# runs inside the SDK and nothing is downloaded from crates.io, so a
+# packaging run takes seconds instead of minutes. The SDK sandbox is only
+# used to run the `install` commands.
+
+# finish-args rationale:
+#   --share=network                  sources (Bing/NASA/…) need it
+#   --device=dri + wayland/x11       GTK4 rendering
+#   --socket=session-bus             daemon↔GUI D-Bus on the session bus
+#   --talk-name=ca.desrt.dconf       GNOME backend writes picture-uri via dconf
+#   --talk-name=github.nwkyz.Equinox.Daemon1
+#                                    GUI talks to the sandboxed daemon
+#   --filesystem=xdg-pictures/Equinox      image storage root
+#   --filesystem=xdg-config/equinox       shared JSON config
+#   --filesystem=xdg-config/autostart     XDG autostart entry (login)
+#   --filesystem=xdg-data/equinox         history + task log
+#   --filesystem=xdg-run/equinox          supervisor singleton lock
+finish-args:
+  - --share=network
+  - --device=dri
+  - --socket=wayland
+  - --socket=x11
+  - --socket=session-bus
+  - --talk-name=ca.desrt.dconf
+  - --talk-name=github.nwkyz.Equinox.Daemon1
+  - --filesystem=xdg-pictures/Equinox
+  - --filesystem=xdg-config/equinox
+  - --filesystem=xdg-config/plasma-org.kde.plasma.desktop-appletsrc
+  - --filesystem=xdg-config/autostart
+  - --filesystem=xdg-data/equinox
+  - --filesystem=xdg-run/equinox
+
+modules:
+  - name: equinox
+    buildsystem: simple
+    build-commands:
+      - install -Dm755 equinox-gui -t /app/bin
+      - install -Dm755 equinox-supervisor -t /app/bin
+      - install -Dm755 equinox-daemon -t /app/bin
+      - install -Dm644 data/equinox.svg /app/share/icons/hicolor/scalable/apps/equinox.svg
+      - install -Dm644 data/github.nwkyz.Equinox.desktop /app/share/applications/github.nwkyz.Equinox.desktop
+      - install -Dm644 packaging/flatpak/github.nwkyz.Equinox.metainfo.xml /app/share/metainfo/github.nwkyz.Equinox.metainfo.xml
+      - 'for loc in zh_CN yue lzh ja ru bo; do install -Dm644 equinox-$loc.mo /app/share/locale/$loc/LC_MESSAGES/equinox.mo; done'
+    sources:
+      - type: dir
+        path: ../..
+        skip:
+          - target
+          - dist
+          - .git
+          - .commandcode
+          - .flatpak-builder
+      # Host build artifacts (release.sh runs `cargo build --release` once).
+      # `.mo` names would all collide as `equinox.mo`, so give them unique
+      # dest-filenames and loop-install them above.
+      - type: file
+        path: ../../target/release/equinox-gui
+      - type: file
+        path: ../../target/release/equinox-supervisor
+      - type: file
+        path: ../../target/release/equinox-daemon
+      - type: file
+        path: ../../target/i18n/zh_CN/LC_MESSAGES/equinox.mo
+        dest-filename: equinox-zh_CN.mo
+      - type: file
+        path: ../../target/i18n/yue/LC_MESSAGES/equinox.mo
+        dest-filename: equinox-yue.mo
+      - type: file
+        path: ../../target/i18n/lzh/LC_MESSAGES/equinox.mo
+        dest-filename: equinox-lzh.mo
+      - type: file
+        path: ../../target/i18n/ja/LC_MESSAGES/equinox.mo
+        dest-filename: equinox-ja.mo
+      - type: file
+        path: ../../target/i18n/ru/LC_MESSAGES/equinox.mo
+        dest-filename: equinox-ru.mo
+      - type: file
+        path: ../../target/i18n/bo/LC_MESSAGES/equinox.mo
+        dest-filename: equinox-bo.mo

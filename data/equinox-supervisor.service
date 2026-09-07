@@ -1,0 +1,17 @@
+[Unit]
+# Optional systemd user service for users who prefer systemd to the default
+# standalone supervisor (journald logs, systemd supervision). Not installed
+# by default — enable manually with:
+#   systemctl --user enable --now equinox-supervisor.service
+# This wraps the SUPERVISOR (not the raw daemon): the supervisor already
+# restarts the daemon on crash, and systemd adds login-startup + journald.
+Description=Equinox wallpaper supervisor
+After=graphical-session.target
+
+[Service]
+ExecStart=%h/.local/bin/equinox-supervisor
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

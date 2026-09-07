@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Equinox
+Comment=Wallpaper manager
+Comment[zh_CN]=壁纸管理
+Exec=equinox-gui
+Icon=equinox
+Terminal=false
+StartupNotify=true
+Categories=GNOME;GTK;Utility;
+StartupWMClass=github.nwkyz.Equinox

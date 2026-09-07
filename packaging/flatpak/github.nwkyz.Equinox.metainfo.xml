@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>github.nwkyz.Equinox</id>
+  <name>Equinox</name>
+  <summary>Refresh your Linux desktop every day</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <developer_name>nwkyz</developer_name>
+  <description>
+    <p>Equinox is a multi-source online wallpaper manager built with GTK4 and libadwaita. It refreshes your desktop with a new wallpaper at the interval you set — from Bing&apos;s daily wallpaper, Windows Spotlight, NASA&apos;s Astronomy Picture of the Day, and Wikimedia&apos;s Picture of the Day (with local folders and Unsplash collections on the way).</p>
+    <p>Every source is managed independently: its own update schedule, on-demand refresh and its own gallery. A resident background service (a supervisor plus a daemon) keeps updates running while you work — no systemd required, though it is supported as an option. The daemon stays lean at idle (~11 MB) because image downloads run in a short-lived child process.</p>
+    <p>Wallpapers are applied through pluggable GNOME, KDE Plasma and XFCE backends on both X11 and Wayland, and duplicate images are stored only once in your Pictures folder. Tested on Ubuntu and Fedora with GNOME 50, Plasma 6 and Xfce 4.20.</p>
+  </description>
+  <launchable type="desktop-id">github.nwkyz.Equinox.desktop</launchable>
+  <screenshots/>
+  <content_rating type="oars-1.1">
+    <content_attribute id="violence-cartoon">none</content_attribute>
+    <content_attribute id="violence-fantasy">none</content_attribute>
+    <content_attribute id="violence-realistic">none</content_attribute>
+    <content_attribute id="violence-bloodshed">none</content_attribute>
+    <content_attribute id="violence-sexual">none</content_attribute>
+    <content_attribute id="drugs-alcohol">none</content_attribute>
+    <content_attribute id="drugs-narcotics">none</content_attribute>
+    <content_attribute id="drugs-tobacco">none</content_attribute>
+    <content_attribute id="sex-nudity">none</content_attribute>
+    <content_attribute id="sex-themes">none</content_attribute>
+    <content_attribute id="sex-homosexuality">none</content_attribute>
+    <content_attribute id="sex-prostitution">none</content_attribute>
+    <content_attribute id="sex-adultery">none</content_attribute>
+    <content_attribute id="sex-appearance">none</content_attribute>
+    <content_attribute id="language-profanity">none</content_attribute>
+    <content_attribute id="language-humor">none</content_attribute>
+    <content_attribute id="language-discrimination">none</content_attribute>
+    <content_attribute id="social-chat">none</content_attribute>
+    <content_attribute id="social-info">none</content_attribute>
+    <content_attribute id="social-audio">none</content_attribute>
+    <content_attribute id="social-location">none</content_attribute>
+    <content_attribute id="social-contacts">none</content_attribute>
+    <content_attribute id="money-purchasing">none</content_attribute>
+    <content_attribute id="money-gambling">none</content_attribute>
+  </content_rating>
+  <releases>
+    <release version="0.1.2" date="2026-09-07"/>
+    <release version="0.1.0" date="2026-09-06"/>
+  </releases>
+</component>

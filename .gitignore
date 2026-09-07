@@ -1,0 +1,29 @@
+# --- Rust / Cargo 构建产物 ---
+/target
+
+# --- 发布打包产物 (release.sh 输出) ---
+/dist
+
+# --- 编辑器临时/备份文件 ---
+*.swp
+*~
+*.bak
+
+# --- 系统的杂物 ---
+.DS_Store
+Thumbs.db
+
+# --- IDE / Agent 本地配置 ---
+.idea/
+.vscode/
+.commandcode/
+.opencode/
+.cursor/
+.claude/
+
+# --- flatpak-builder 缓存 ---
+.flatpak-builder/
+
+# --- passdown ---
+pass-down.md
+architecture-new.md

@@ -1,0 +1,20 @@
+[package]
+name = "equinox-daemon"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+gettext-rs.workspace = true
+equinox-core = { path = "../equinox-core" }
+glib.workspace = true
+gio.workspace = true
+libc = "0.2"
+signal-hook.workspace = true
+anyhow.workspace = true
+log.workspace = true
+rand.workspace = true
+chrono.workspace = true
+serde_json.workspace = true
+serde.workspace = true
+futures-channel.workspace = true

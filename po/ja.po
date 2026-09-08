@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: equinox 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-07 07:48+0000\n"
+"POT-Creation-Date: 2026-09-08 09:24+0000\n"
 "PO-Revision-Date: 2026-08-23 23:50+0900\n"
 "Last-Translator: nwkyz\n"
 "Language-Team: Japanese <LL@li.org>\n"
@@ -21,39 +21,43 @@ msgid "no supported wallpaper backend detected (need GNOME, KDE, or XFCE)"
 msgstr "対応する壁紙バックエンドが見つかりません(GNOME、KDE、XFCE が必要です)"
 
 #: crates/equinox-core/src/applier.rs:230
-msgid "this environment cannot set the GNOME wallpaper (missing org.gnome.desktop.background schema)"
-msgstr "この環境では GNOME の壁紙を設定できません(org.gnome.desktop.background スキーマが見つかりません)"
+msgid ""
+"this environment cannot set the GNOME wallpaper (missing "
+"org.gnome.desktop.background schema)"
+msgstr ""
+"この環境では GNOME の壁紙を設定できません(org.gnome.desktop.background スキー"
+"マが見つかりません)"
 
 #: crates/equinox-core/src/applier.rs:346
-#, fuzzy
 msgid "Failed to set Plasma wallpaper via the running shell"
-msgstr "壁紙の設定に失敗しました"
+msgstr "Plasma の壁紙設定に失敗しました"
 
-#: crates/equinox-core/src/applier.rs:383
-#: crates/equinox-core/src/applier.rs:639
+#: crates/equinox-core/src/applier.rs:401
+#: crates/equinox-core/src/applier.rs:695
 msgid "Failed to read"
 msgstr "読み込みに失敗しました"
 
-#: crates/equinox-core/src/applier.rs:404
+#: crates/equinox-core/src/applier.rs:422
 msgid "No image-type wallpaper configured in Plasma"
 msgstr "Plasma に画像タイプの壁紙が設定されていません"
 
-#: crates/equinox-core/src/applier.rs:409
-#: crates/equinox-core/src/applier.rs:412
-#: crates/equinox-core/src/applier.rs:649
-#: crates/equinox-core/src/applier.rs:652
+#: crates/equinox-core/src/applier.rs:427
+#: crates/equinox-core/src/applier.rs:430
+#: crates/equinox-core/src/applier.rs:705
+#: crates/equinox-core/src/applier.rs:708
 msgid "Failed to write"
 msgstr "書き込みに失敗しました"
 
-#: crates/equinox-core/src/applier.rs:627
+#: crates/equinox-core/src/applier.rs:661
+#: crates/equinox-core/src/applier.rs:681
 msgid "Failed to set wallpaper"
-msgstr "壁紙の設定に失敗しました"
+msgstr "Plasma の壁紙設定に失敗しました"
 
-#: crates/equinox-core/src/applier.rs:643
+#: crates/equinox-core/src/applier.rs:699
 msgid "No wallpaper property found in"
 msgstr "壁紙プロパティが見つかりません:"
 
-#: crates/equinox-core/src/applier.rs:685
+#: crates/equinox-core/src/applier.rs:906
 msgid "no backdrop last-image property found in the xfce4-desktop channel"
 msgstr "xfce4-desktop チャンネルに last-image プロパティが見つかりません"
 
@@ -157,9 +161,8 @@ msgstr "更新時刻を逃しました(電源オフ)"
 #: crates/equinox-daemon/src/scheduler.rs:311
 #: crates/equinox-daemon/src/scheduler.rs:482
 #: crates/equinox-daemon/src/scheduler.rs:501
-#, fuzzy
 msgid "Update cancelled"
-msgstr "更新に失敗しました"
+msgstr "更新をキャンセルしました"
 
 #: crates/equinox-daemon/src/scheduler.rs:291
 msgid "Updating"
@@ -174,7 +177,8 @@ msgstr "不明なソース"
 #: crates/equinox-daemon/src/scheduler.rs:541
 #: crates/equinox-daemon/src/scheduler.rs:552
 msgid "This source has no images yet, run \"Update now\" first"
-msgstr "このソースにはまだ画像がありません。先に「今すぐ更新」を実行してください"
+msgstr ""
+"このソースにはまだ画像がありません。先に「今すぐ更新」を実行してください"
 
 #: crates/equinox-daemon/src/scheduler.rs:563
 msgid "No wallpaper source selected yet, choose one on the Wallpaper page"
@@ -302,8 +306,13 @@ msgid "systemd is unavailable in flatpak"
 msgstr "systemd は flatpak では利用できません"
 
 #: crates/equinox-gui/src/app.rs:473
-msgid "Sandboxed apps cannot reach the host systemd user session, so the background runs as a supervised process inside the sandbox."
-msgstr "サンドボックス内のアプリはホストの systemd ユーザーセッションにアクセスできないため、バックグラウンドはサンドボックス内で監視付きプロセスとして動作します。"
+msgid ""
+"Sandboxed apps cannot reach the host systemd user session, so the background "
+"runs as a supervised process inside the sandbox."
+msgstr ""
+"サンドボックス内のアプリはホストの systemd ユーザーセッションにアクセスできな"
+"いため、バックグラウンドはサンドボックス内で監視付きプロセスとして動作しま"
+"す。"
 
 #: crates/equinox-gui/src/app.rs:483 crates/equinox-gui/src/views/oobe.rs:166
 msgid "Start at login"
@@ -351,7 +360,6 @@ msgid "Running"
 msgstr "実行中"
 
 #: crates/equinox-gui/src/app.rs:799
-#, fuzzy
 msgid "Not running"
 msgstr "未実行"
 
@@ -437,8 +445,10 @@ msgid "No images yet"
 msgstr "画像がまだありません"
 
 #: crates/equinox-gui/src/views/gallery.rs:483
-msgid "Go to the Sources page and click \"Update now\" to download some wallpapers"
-msgstr "「ソース」ページで「今すぐ更新」をクリックして、壁紙をダウンロードしましょう"
+msgid ""
+"Go to the Sources page and click \"Update now\" to download some wallpapers"
+msgstr ""
+"「ソース」ページで「今すぐ更新」をクリックして、壁紙をダウンロードしましょう"
 
 #: crates/equinox-gui/src/views/gallery.rs:829
 msgid "Image deleted"
@@ -474,13 +484,16 @@ msgid "Failed to clear history"
 msgstr "履歴の消去に失敗しました"
 
 #: crates/equinox-gui/src/views/oobe.rs:68
-#, fuzzy
 msgid "Choose the sources"
-msgstr "次のソース"
+msgstr "ソースを選択"
 
 #: crates/equinox-gui/src/views/oobe.rs:74
-msgid "Enable the sources to keep up to date and set how often each one updates. Enabled sources are updated right away when you continue."
-msgstr "ソースを有効にして最新状態を保ち、各ソースの更新頻度を設定します。「続ける」を押すと、有効化したソースがすぐに更新されます。"
+msgid ""
+"Enable the sources to keep up to date and set how often each one updates. "
+"Enabled sources are updated right away when you continue."
+msgstr ""
+"ソースを有効にして最新状態を保ち、各ソースの更新頻度を設定します。「続ける」"
+"を押すと、有効化したソースがすぐに更新されます。"
 
 #: crates/equinox-gui/src/views/oobe.rs:111
 #: crates/equinox-gui/src/views/sources.rs:78
@@ -542,7 +555,7 @@ msgstr "更新中…"
 #: crates/equinox-gui/src/views/sources.rs:148
 #: crates/equinox-gui/src/views/wallpaper.rs:256
 msgid "Update failed"
-msgstr "更新に失敗しました"
+msgstr "更新をキャンセルしました"
 
 #: crates/equinox-gui/src/views/sources.rs:175
 msgid "images"
@@ -574,8 +587,12 @@ msgid "Manual"
 msgstr "手動"
 
 #: crates/equinox-gui/src/views/timeline.rs:70
-msgid "Each source updates on its own interval. Windows missed while the computer was off or asleep are caught up right after boot or wake-up."
-msgstr "各ソースはそれぞれの間隔で更新されます。電源オフやスリープ中に逃した更新は、起動・復帰後すぐに行われます。"
+msgid ""
+"Each source updates on its own interval. Windows missed while the computer "
+"was off or asleep are caught up right after boot or wake-up."
+msgstr ""
+"各ソースはそれぞれの間隔で更新されます。電源オフやスリープ中に逃した更新は、"
+"起動・復帰後すぐに行われます。"
 
 #: crates/equinox-gui/src/views/timeline.rs:107
 msgid "Planned"
@@ -616,15 +633,13 @@ msgstr "前のソース"
 
 #: crates/equinox-gui/src/views/wallpaper.rs:278
 msgid "Next source"
-msgstr "次のソース"
+msgstr "ソースを選択"
 
 #: crates/equinox-gui/src/views/wallpaper.rs:470
-#, fuzzy
 msgid "No wallpapers in this source yet"
 msgstr "このソースにはまだ画像がありません"
 
 #: crates/equinox-gui/src/views/wallpaper.rs:471
-#, fuzzy
 msgid "Switch sources below or run an update to download the first images"
 msgstr "下でソースを切り替えるか、先に更新を実行してください"
 
@@ -656,7 +671,8 @@ msgstr "最新"
 #~ msgstr "Equinox へようこそ"
 
 #~ msgid ""
-#~ "Equinox keeps a wallpaper source of your choice up to date in the background.\n"
+#~ "Equinox keeps a wallpaper source of your choice up to date in the "
+#~ "background.\n"
 #~ "Pick the sources you want and how the background should run."
 #~ msgstr ""
 #~ "Equinox は選択した壁紙のソースをバックグラウンドで最新に保ちます。\n"
@@ -665,8 +681,12 @@ msgstr "最新"
 #~ msgid "Only enabled sources are fetched on a schedule."
 #~ msgstr "有効なソースのみがスケジュールに従って取得されます。"
 
-#~ msgid "Run the background service automatically when you log in, so wallpapers update even when Equinox is closed."
-#~ msgstr "ログイン時にバックグラウンドサービスを自動起動し、Equinox を閉じていても壁紙を更新し続けます。"
+#~ msgid ""
+#~ "Run the background service automatically when you log in, so wallpapers "
+#~ "update even when Equinox is closed."
+#~ msgstr ""
+#~ "ログイン時にバックグラウンドサービスを自動起動し、Equinox を閉じていても壁"
+#~ "紙を更新し続けます。"
 
 #~ msgid "Standalone (Equinox supervisor)"
 #~ msgstr "スタンドアロン(Equinox スーパーバイザー)"

@@ -1,5 +1,5 @@
 # Tibetan translations for equinox package.
-# Copyright (C) 2026 THE equinox'S COPYRIGHT HOLDER
+# Copyright (C) 2026 nwkyz
 # This file is distributed under the same license as the equinox package.
 # Automatically generated, 2026.
 #
@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: equinox 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-07 07:48+0000\n"
+"POT-Creation-Date: 2026-09-08 09:24+0000\n"
 "PO-Revision-Date: 2026-08-24 17:52+0800\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -22,39 +22,43 @@ msgid "no supported wallpaper backend detected (need GNOME, KDE, or XFCE)"
 msgstr "རྩིག་ངོས་ཀྱི་པར་གྱི་རྒྱབ་སྟེགས་གང་ཡང་རྙེད་མ་སོང་། (GNOME ། KDE ། ཡང་ན་ XFCE དགོས།)"
 
 #: crates/equinox-core/src/applier.rs:230
-msgid "this environment cannot set the GNOME wallpaper (missing org.gnome.desktop.background schema)"
-msgstr "ཁོར་ཡུག་འདིས་GNOME ཡི་རྩིག་ངོས་ཀྱི་པར་སྒྲིག་མི་ཐུབ། (org.gnome.desktop.background schema མེད་པས།)"
+msgid ""
+"this environment cannot set the GNOME wallpaper (missing "
+"org.gnome.desktop.background schema)"
+msgstr ""
+"ཁོར་ཡུག་འདིས་GNOME ཡི་རྩིག་ངོས་ཀྱི་པར་སྒྲིག་མི་ཐུབ། (org.gnome.desktop.background schema "
+"མེད་པས།)"
 
 #: crates/equinox-core/src/applier.rs:346
-#, fuzzy
 msgid "Failed to set Plasma wallpaper via the running shell"
 msgstr "རྩིག་ངོས་ཀྱི་པར་སྒྲིག་མ་ཐུབ།"
 
-#: crates/equinox-core/src/applier.rs:383
-#: crates/equinox-core/src/applier.rs:639
+#: crates/equinox-core/src/applier.rs:401
+#: crates/equinox-core/src/applier.rs:695
 msgid "Failed to read"
 msgstr "ཀློག་མ་ཐུབ།"
 
-#: crates/equinox-core/src/applier.rs:404
+#: crates/equinox-core/src/applier.rs:422
 msgid "No image-type wallpaper configured in Plasma"
 msgstr "Plasma ནང་བརྙན་རིས་རིགས་ཀྱི་རྩིག་ངོས་ཀྱི་པར་སྒྲིག་འགོད་བྱས་མེད།"
 
-#: crates/equinox-core/src/applier.rs:409
-#: crates/equinox-core/src/applier.rs:412
-#: crates/equinox-core/src/applier.rs:649
-#: crates/equinox-core/src/applier.rs:652
+#: crates/equinox-core/src/applier.rs:427
+#: crates/equinox-core/src/applier.rs:430
+#: crates/equinox-core/src/applier.rs:705
+#: crates/equinox-core/src/applier.rs:708
 msgid "Failed to write"
 msgstr "འབྲི་མ་ཐུབ།"
 
-#: crates/equinox-core/src/applier.rs:627
+#: crates/equinox-core/src/applier.rs:661
+#: crates/equinox-core/src/applier.rs:681
 msgid "Failed to set wallpaper"
 msgstr "རྩིག་ངོས་ཀྱི་པར་སྒྲིག་མ་ཐུབ།"
 
-#: crates/equinox-core/src/applier.rs:643
+#: crates/equinox-core/src/applier.rs:699
 msgid "No wallpaper property found in"
 msgstr "རྩིག་ངོས་ཀྱི་པར་གྱི་ཁྱད་ཆོས་མ་རྙེད།"
 
-#: crates/equinox-core/src/applier.rs:685
+#: crates/equinox-core/src/applier.rs:906
 msgid "no backdrop last-image property found in the xfce4-desktop channel"
 msgstr "xfce4-desktop བརྡ་ལམ་ནང་རྩིག་ངོས་ཀྱི་པར་གྱི་མཐའ་མའི་བརྙན་རིས་ཀྱི་ཁྱད་ཆོས་མ་རྙེད།"
 
@@ -303,8 +307,12 @@ msgid "systemd is unavailable in flatpak"
 msgstr "Flatpak ནང་ systemd སྤྱོད་མི་ཐུབ།"
 
 #: crates/equinox-gui/src/app.rs:473
-msgid "Sandboxed apps cannot reach the host systemd user session, so the background runs as a supervised process inside the sandbox."
-msgstr "བཀག་སྡོམ་བྱས་པའི་ཉེར་སྤྱོད་ཀྱིས་གཙོ་གཞིའི་ systemd སྤྱོད་མཁན་གྱི་ལས་ཡུན་ལ་འབྲེལ་མི་ཐུབ་པས། རྒྱབ་ལོགས་ཀྱི་ལས་རིམ་དེ་བཀག་སྡོམ་ཁོངས་སུ་ལྟ་སྐྱོང་བྱས་པའི་ལས་རིམ་ཞིག་གི་ཚུལ་དུ་གཉེར་གྱི་ཡོད།"
+msgid ""
+"Sandboxed apps cannot reach the host systemd user session, so the background "
+"runs as a supervised process inside the sandbox."
+msgstr ""
+"བཀག་སྡོམ་བྱས་པའི་ཉེར་སྤྱོད་ཀྱིས་གཙོ་གཞིའི་ systemd སྤྱོད་མཁན་གྱི་ལས་ཡུན་ལ་འབྲེལ་མི་ཐུབ་པས། རྒྱབ་ལོགས་ཀྱི་"
+"ལས་རིམ་དེ་བཀག་སྡོམ་ཁོངས་སུ་ལྟ་སྐྱོང་བྱས་པའི་ལས་རིམ་ཞིག་གི་ཚུལ་དུ་གཉེར་གྱི་ཡོད།"
 
 #: crates/equinox-gui/src/app.rs:483 crates/equinox-gui/src/views/oobe.rs:166
 msgid "Start at login"
@@ -352,7 +360,6 @@ msgid "Running"
 msgstr "འཁོར་སྐྱོད་བཞིན་པ།"
 
 #: crates/equinox-gui/src/app.rs:799
-#, fuzzy
 msgid "Not running"
 msgstr "འཁོར་སྐྱོད་མི་བཞིན་པ།"
 
@@ -438,7 +445,8 @@ msgid "No images yet"
 msgstr "ད་དུང་པར་མེད།"
 
 #: crates/equinox-gui/src/views/gallery.rs:483
-msgid "Go to the Sources page and click \"Update now\" to download some wallpapers"
+msgid ""
+"Go to the Sources page and click \"Update now\" to download some wallpapers"
 msgstr "ཁུངས་ཀྱི་ཤོག་ངོས་སུ་སོང་ནས་“ད་ལྟ་གསར་སྒྱུར་”ལ་སྣུན་ཏེ། རྩིག་ངོས་ཀྱི་པར་ཁ་ཤས་ཕབ་ལེན་བྱོས།"
 
 #: crates/equinox-gui/src/views/gallery.rs:829
@@ -480,8 +488,12 @@ msgid "Choose the sources"
 msgstr "རྗེས་མའི་ཁུངས།"
 
 #: crates/equinox-gui/src/views/oobe.rs:74
-msgid "Enable the sources to keep up to date and set how often each one updates. Enabled sources are updated right away when you continue."
-msgstr "ཁུངས་ཁག་སྤྱོད་འཇུག་བྱས་ནས་རྒྱུན་དུ་གསར་སྒྱུར་ཐུབ་པར་བྱོས་ཤིང་། ཁུངས་རེ་རེའི་གསར་སྒྱུར་དུས་ཚོད་ཇི་ཙམ་ཡིན་པ་སྒྲིག་དགོས། སྤྱོད་འཇུག་བྱས་པའི་ཁུངས་ཁག་མུ་མཐུད་མནན་མ་ཐག་ཏུ་གསར་སྒྱུར་བྱེད།"
+msgid ""
+"Enable the sources to keep up to date and set how often each one updates. "
+"Enabled sources are updated right away when you continue."
+msgstr ""
+"ཁུངས་ཁག་སྤྱོད་འཇུག་བྱས་ནས་རྒྱུན་དུ་གསར་སྒྱུར་ཐུབ་པར་བྱོས་ཤིང་། ཁུངས་རེ་རེའི་གསར་སྒྱུར་དུས་ཚོད་ཇི་ཙམ་ཡིན་"
+"པ་སྒྲིག་དགོས། སྤྱོད་འཇུག་བྱས་པའི་ཁུངས་ཁག་མུ་མཐུད་མནན་མ་ཐག་ཏུ་གསར་སྒྱུར་བྱེད།"
 
 #: crates/equinox-gui/src/views/oobe.rs:111
 #: crates/equinox-gui/src/views/sources.rs:78
@@ -575,8 +587,12 @@ msgid "Manual"
 msgstr "ལག་བསྟར།"
 
 #: crates/equinox-gui/src/views/timeline.rs:70
-msgid "Each source updates on its own interval. Windows missed while the computer was off or asleep are caught up right after boot or wake-up."
-msgstr "ཁུངས་རེ་རེས་རང་རང་གི་བར་མཚམས་ལྟར་གསར་སྒྱུར་བྱེད། གློག་ཀླད་སྒོ་བརྒྱབ་པའམ་གཉིད་དུ་ཡོད་སྐབས་ཆད་པའི་གསར་སྒྱུར་རྣམས། འགོ་སླར་བསླངས་པའམ་གཉིད་ལས་སད་མ་ཐག་ཏུ་ཁ་གསབ་བྱེད།"
+msgid ""
+"Each source updates on its own interval. Windows missed while the computer "
+"was off or asleep are caught up right after boot or wake-up."
+msgstr ""
+"ཁུངས་རེ་རེས་རང་རང་གི་བར་མཚམས་ལྟར་གསར་སྒྱུར་བྱེད། གློག་ཀླད་སྒོ་བརྒྱབ་པའམ་གཉིད་དུ་ཡོད་སྐབས་ཆད་པའི་"
+"གསར་སྒྱུར་རྣམས། འགོ་སླར་བསླངས་པའམ་གཉིད་ལས་སད་མ་ཐག་ཏུ་ཁ་གསབ་བྱེད།"
 
 #: crates/equinox-gui/src/views/timeline.rs:107
 msgid "Planned"
@@ -620,12 +636,10 @@ msgid "Next source"
 msgstr "རྗེས་མའི་ཁུངས།"
 
 #: crates/equinox-gui/src/views/wallpaper.rs:470
-#, fuzzy
 msgid "No wallpapers in this source yet"
 msgstr "ཁུངས་འདིར་ད་དུང་པར་མེད།"
 
 #: crates/equinox-gui/src/views/wallpaper.rs:471
-#, fuzzy
 msgid "Switch sources below or run an update to download the first images"
 msgstr "གཤམ་དུ་ཁུངས་བརྗེ་བའམ། ཐོག་མར་གསར་སྒྱུར་ཐེངས་གཅིག་བྱོས།"
 
@@ -657,17 +671,23 @@ msgstr "གསར་ཤོས།"
 #~ msgstr "Equinox ལ་དགའ་བསུ་ཞུ།"
 
 #~ msgid ""
-#~ "Equinox keeps a wallpaper source of your choice up to date in the background.\n"
+#~ "Equinox keeps a wallpaper source of your choice up to date in the "
+#~ "background.\n"
 #~ "Pick the sources you want and how the background should run."
 #~ msgstr ""
-#~ "Equinox ཡིས་ཁྱེད་ཀྱིས་བདམས་པའི་རྩིག་ངོས་ཀྱི་པར་གྱི་ཁུངས་དེ་རྒྱབ་ལོགས་སུ་དུས་མཐུན་གྱིས་གསར་སྒྱུར་བྱེད་ཀྱི་ཡོད།\n"
+#~ "Equinox ཡིས་ཁྱེད་ཀྱིས་བདམས་པའི་རྩིག་ངོས་ཀྱི་པར་གྱི་ཁུངས་དེ་རྒྱབ་ལོགས་སུ་དུས་མཐུན་གྱིས་གསར་སྒྱུར་བྱེད་"
+#~ "ཀྱི་ཡོད།\n"
 #~ "ཁྱེད་ཀྱིས་དགོས་པའི་ཁུངས་རྣམས་འདེམས་ཤིང་། རྒྱབ་ལོགས་ཞབས་ཞུ་ཇི་ལྟར་གཉེར་དགོས་པ་འདེམས་རོགས།"
 
 #~ msgid "Only enabled sources are fetched on a schedule."
 #~ msgstr "སྤྱོད་འགོ་ཚུགས་པའི་ཁུངས་ཁོ་ན་དུས་བཀག་ལྟར་ལེན་གྱི་ཡོད།"
 
-#~ msgid "Run the background service automatically when you log in, so wallpapers update even when Equinox is closed."
-#~ msgstr "ཐོ་འཇུག་བྱེད་སྐབས་རྒྱབ་ལོགས་ཞབས་ཞུ་རང་འགུལ་གྱིས་གཉེར་བར་བྱེད་དེ། Equinox ཁ་བརྒྱབ་ཡོད་ཀྱང་རྩིག་ངོས་ཀྱི་པར་གསར་སྒྱུར་བྱེད་ཐུབ།"
+#~ msgid ""
+#~ "Run the background service automatically when you log in, so wallpapers "
+#~ "update even when Equinox is closed."
+#~ msgstr ""
+#~ "ཐོ་འཇུག་བྱེད་སྐབས་རྒྱབ་ལོགས་ཞབས་ཞུ་རང་འགུལ་གྱིས་གཉེར་བར་བྱེད་དེ། Equinox ཁ་བརྒྱབ་ཡོད་ཀྱང་རྩིག་"
+#~ "ངོས་ཀྱི་པར་གསར་སྒྱུར་བྱེད་ཐུབ།"
 
 #~ msgid "Standalone (Equinox supervisor)"
 #~ msgstr "རང་ཚུགས། (Equinox ལྟ་སྐྱོང་པ།)"
@@ -678,5 +698,9 @@ msgstr "གསར་ཤོས།"
 #~ msgid "Get started"
 #~ msgstr "འགོ་འཛུགས།"
 
-#~ msgid "Run the background automatically when you log in, even when Equinox is closed."
-#~ msgstr "ཐོ་འཇུག་བྱེད་སྐབས་རྒྱབ་ལོགས་ཞབས་ཞུ་རང་འགུལ་གྱིས་གཉེར་བར་བྱེད་དེ། Equinox ཁ་བརྒྱབ་ཡོད་ཀྱང་རྩིག་ངོས་ཀྱི་པར་གསར་སྒྱུར་བྱེད་ཐུབ།"
+#~ msgid ""
+#~ "Run the background automatically when you log in, even when Equinox is "
+#~ "closed."
+#~ msgstr ""
+#~ "ཐོ་འཇུག་བྱེད་སྐབས་རྒྱབ་ལོགས་ཞབས་ཞུ་རང་འགུལ་གྱིས་གཉེར་བར་བྱེད་དེ། Equinox ཁ་བརྒྱབ་ཡོད་ཀྱང་རྩིག་"
+#~ "ངོས་ཀྱི་པར་གསར་སྒྱུར་བྱེད་ཐུབ།"

@@ -11,6 +11,7 @@ A multi-source online wallpaper manager built with **GTK4 / libadwaita**. Refres
   - Windows Spotlight
   - NASA Astronomy Picture of the Day (APOD)
   - Wikimedia Picture of the Day (POTD)
+  - Google Earth View
   - *Working on: Local folder & Unsplash collections*
 - **Scheduled update** - Auto update on your set interval.
 - **Deduplicated storage** - the same image is stored once.

@@ -178,7 +178,7 @@ dependencies = [
 
 [[package]]
 name = "equinox-core"
-version = "0.1.2"
+version = "0.1.3-a1"
 dependencies = [
  "anyhow",
  "chrono",
@@ -197,7 +197,7 @@ dependencies = [
 
 [[package]]
 name = "equinox-daemon"
-version = "0.1.2"
+version = "0.1.3-a1"
 dependencies = [
  "anyhow",
  "chrono",
@@ -216,7 +216,7 @@ dependencies = [
 
 [[package]]
 name = "equinox-gui"
-version = "0.1.2"
+version = "0.1.3-a1"
 dependencies = [
  "anyhow",
  "chrono",

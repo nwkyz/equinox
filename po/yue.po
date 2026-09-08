@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: equinox 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-07 07:48+0000\n"
+"POT-Creation-Date: 2026-09-08 09:24+0000\n"
 "PO-Revision-Date: 2026-08-24 18:30+0800\n"
 "Last-Translator: nwkyz\n"
 "Language-Team: Cantonese\n"
@@ -21,39 +21,41 @@ msgid "no supported wallpaper backend detected (need GNOME, KDE, or XFCE)"
 msgstr "偵測唔到受支援嘅壁紙後端(需要 GNOME、KDE 或 XFCE)"
 
 #: crates/equinox-core/src/applier.rs:230
-msgid "this environment cannot set the GNOME wallpaper (missing org.gnome.desktop.background schema)"
+msgid ""
+"this environment cannot set the GNOME wallpaper (missing "
+"org.gnome.desktop.background schema)"
 msgstr "呢個環境設定唔到 GNOME 壁紙(缺少 org.gnome.desktop.background schema)"
 
 #: crates/equinox-core/src/applier.rs:346
-#, fuzzy
 msgid "Failed to set Plasma wallpaper via the running shell"
-msgstr "設定壁紙失敗"
+msgstr "設定 Plasma 壁紙失敗"
 
-#: crates/equinox-core/src/applier.rs:383
-#: crates/equinox-core/src/applier.rs:639
+#: crates/equinox-core/src/applier.rs:401
+#: crates/equinox-core/src/applier.rs:695
 msgid "Failed to read"
 msgstr "讀取失敗"
 
-#: crates/equinox-core/src/applier.rs:404
+#: crates/equinox-core/src/applier.rs:422
 msgid "No image-type wallpaper configured in Plasma"
 msgstr "Plasma 入面未設定圖片類型嘅壁紙"
 
-#: crates/equinox-core/src/applier.rs:409
-#: crates/equinox-core/src/applier.rs:412
-#: crates/equinox-core/src/applier.rs:649
-#: crates/equinox-core/src/applier.rs:652
+#: crates/equinox-core/src/applier.rs:427
+#: crates/equinox-core/src/applier.rs:430
+#: crates/equinox-core/src/applier.rs:705
+#: crates/equinox-core/src/applier.rs:708
 msgid "Failed to write"
 msgstr "寫入失敗"
 
-#: crates/equinox-core/src/applier.rs:627
+#: crates/equinox-core/src/applier.rs:661
+#: crates/equinox-core/src/applier.rs:681
 msgid "Failed to set wallpaper"
-msgstr "設定壁紙失敗"
+msgstr "設定 Plasma 壁紙失敗"
 
-#: crates/equinox-core/src/applier.rs:643
+#: crates/equinox-core/src/applier.rs:699
 msgid "No wallpaper property found in"
 msgstr "喺呢個檔案入面搵唔到壁紙屬性"
 
-#: crates/equinox-core/src/applier.rs:685
+#: crates/equinox-core/src/applier.rs:906
 msgid "no backdrop last-image property found in the xfce4-desktop channel"
 msgstr "喺 xfce4-desktop 通道搵唔到背景嘅 last-image 屬性"
 
@@ -157,9 +159,8 @@ msgstr "錯過咗更新時間(關機期間)"
 #: crates/equinox-daemon/src/scheduler.rs:311
 #: crates/equinox-daemon/src/scheduler.rs:482
 #: crates/equinox-daemon/src/scheduler.rs:501
-#, fuzzy
 msgid "Update cancelled"
-msgstr "更新失敗"
+msgstr "已取消更新"
 
 #: crates/equinox-daemon/src/scheduler.rs:291
 msgid "Updating"
@@ -302,8 +303,12 @@ msgid "systemd is unavailable in flatpak"
 msgstr "systemd 喺 flatpak 入面唔可以用"
 
 #: crates/equinox-gui/src/app.rs:473
-msgid "Sandboxed apps cannot reach the host systemd user session, so the background runs as a supervised process inside the sandbox."
-msgstr "沙盒應用程式訪問唔到宿主嘅 systemd 用戶工作階段，所以後台會以受監管程序嘅身份喺沙盒入面行。"
+msgid ""
+"Sandboxed apps cannot reach the host systemd user session, so the background "
+"runs as a supervised process inside the sandbox."
+msgstr ""
+"沙盒應用程式訪問唔到宿主嘅 systemd 用戶工作階段，所以後台會以受監管程序嘅身份"
+"喺沙盒入面行。"
 
 #: crates/equinox-gui/src/app.rs:483 crates/equinox-gui/src/views/oobe.rs:166
 msgid "Start at login"
@@ -351,7 +356,6 @@ msgid "Running"
 msgstr "運行緊"
 
 #: crates/equinox-gui/src/app.rs:799
-#, fuzzy
 msgid "Not running"
 msgstr "未運行"
 
@@ -437,7 +441,8 @@ msgid "No images yet"
 msgstr "仲未有圖片"
 
 #: crates/equinox-gui/src/views/gallery.rs:483
-msgid "Go to the Sources page and click \"Update now\" to download some wallpapers"
+msgid ""
+"Go to the Sources page and click \"Update now\" to download some wallpapers"
 msgstr "去「來源」頁面撳「立即更新」,下載啲壁紙"
 
 #: crates/equinox-gui/src/views/gallery.rs:829
@@ -474,13 +479,16 @@ msgid "Failed to clear history"
 msgstr "清空歷史失敗"
 
 #: crates/equinox-gui/src/views/oobe.rs:68
-#, fuzzy
 msgid "Choose the sources"
-msgstr "下一個來源"
+msgstr "選擇壁紙來源"
 
 #: crates/equinox-gui/src/views/oobe.rs:74
-msgid "Enable the sources to keep up to date and set how often each one updates. Enabled sources are updated right away when you continue."
-msgstr "啟用來源以保持最新，並設定每個來源嘅更新頻率。㩒“繼續”之後，已啟用嘅來源會即刻更新。"
+msgid ""
+"Enable the sources to keep up to date and set how often each one updates. "
+"Enabled sources are updated right away when you continue."
+msgstr ""
+"啟用來源以保持最新，並設定每個來源嘅更新頻率。㩒“繼續”之後，已啟用嘅來源會即"
+"刻更新。"
 
 #: crates/equinox-gui/src/views/oobe.rs:111
 #: crates/equinox-gui/src/views/sources.rs:78
@@ -542,7 +550,7 @@ msgstr "更新緊…"
 #: crates/equinox-gui/src/views/sources.rs:148
 #: crates/equinox-gui/src/views/wallpaper.rs:256
 msgid "Update failed"
-msgstr "更新失敗"
+msgstr "已取消更新"
 
 #: crates/equinox-gui/src/views/sources.rs:175
 msgid "images"
@@ -574,8 +582,12 @@ msgid "Manual"
 msgstr "手動"
 
 #: crates/equinox-gui/src/views/timeline.rs:70
-msgid "Each source updates on its own interval. Windows missed while the computer was off or asleep are caught up right after boot or wake-up."
-msgstr "每個來源按各自設定嘅間隔獨立更新。電腦關機或者睡眠期間錯過咗嘅更新,會喺開機或者喚醒之後即刻補跑。"
+msgid ""
+"Each source updates on its own interval. Windows missed while the computer "
+"was off or asleep are caught up right after boot or wake-up."
+msgstr ""
+"每個來源按各自設定嘅間隔獨立更新。電腦關機或者睡眠期間錯過咗嘅更新,會喺開機或"
+"者喚醒之後即刻補跑。"
 
 #: crates/equinox-gui/src/views/timeline.rs:107
 msgid "Planned"
@@ -616,15 +628,13 @@ msgstr "上一個來源"
 
 #: crates/equinox-gui/src/views/wallpaper.rs:278
 msgid "Next source"
-msgstr "下一個來源"
+msgstr "選擇壁紙來源"
 
 #: crates/equinox-gui/src/views/wallpaper.rs:470
-#, fuzzy
 msgid "No wallpapers in this source yet"
 msgstr "呢個來源仲未有圖片"
 
 #: crates/equinox-gui/src/views/wallpaper.rs:471
-#, fuzzy
 msgid "Switch sources below or run an update to download the first images"
 msgstr "請喺下面轉來源,或者先做一次更新"
 
@@ -656,7 +666,8 @@ msgstr "最新"
 #~ msgstr "歡迎使用 Equinox"
 
 #~ msgid ""
-#~ "Equinox keeps a wallpaper source of your choice up to date in the background.\n"
+#~ "Equinox keeps a wallpaper source of your choice up to date in the "
+#~ "background.\n"
 #~ "Pick the sources you want and how the background should run."
 #~ msgstr ""
 #~ "Equinox 會喺背景持續更新你揀咗嘅壁紙來源。\n"
@@ -665,7 +676,9 @@ msgstr "最新"
 #~ msgid "Only enabled sources are fetched on a schedule."
 #~ msgstr "淨係會按計劃攞已啟用嘅來源。"
 
-#~ msgid "Run the background service automatically when you log in, so wallpapers update even when Equinox is closed."
+#~ msgid ""
+#~ "Run the background service automatically when you log in, so wallpapers "
+#~ "update even when Equinox is closed."
 #~ msgstr "登入嗰陣自動運行後台服務，咁就算閂咗 Equinox，啲壁紙都會持續更新。"
 
 #~ msgid "Standalone (Equinox supervisor)"

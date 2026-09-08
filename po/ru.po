@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: equinox 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 09:24+0000\n"
+"POT-Creation-Date: 2026-09-08 09:49+0000\n"
 "PO-Revision-Date: 2026-08-23 23:50+0300\n"
 "Last-Translator: nwkyz\n"
 "Language-Team: Russian <LL@li.org>\n"
@@ -111,6 +111,22 @@ msgstr "Использовать изображение в высоком раз
 msgid "Today's APOD entry is a video, skipped"
 msgstr "Сегодняшняя запись APOD — видео, пропущено"
 
+#: crates/equinox-core/src/sources/picsum.rs:50
+msgid "Width (0 = auto)"
+msgstr "Ширина (0 = авто)"
+
+#: crates/equinox-core/src/sources/picsum.rs:57
+msgid "Height (0 = auto)"
+msgstr "Высота (0 = авто)"
+
+#: crates/equinox-core/src/sources/picsum.rs:64
+msgid "Grayscale"
+msgstr "Оттенки серого"
+
+#: crates/equinox-core/src/sources/picsum.rs:69
+msgid "Blur"
+msgstr "Размытие"
+
 #: crates/equinox-core/src/sources/spotlight.rs:41
 msgid "Windows Spotlight"
 msgstr "Windows Интересное"
@@ -212,101 +228,101 @@ msgid "Failed to apply wallpaper"
 msgstr "Не удалось применить обои"
 
 #. Daemon status banner
-#: crates/equinox-gui/src/app.rs:35
+#: crates/equinox-gui/src/app.rs:38
 msgid "The daemon is not running; scheduled updates will be unavailable"
 msgstr "Демон не запущен; запланированные обновления будут недоступны"
 
-#: crates/equinox-gui/src/app.rs:37 crates/equinox-gui/src/app.rs:461
-#: crates/equinox-gui/src/app.rs:559 crates/equinox-gui/src/app.rs:804
+#: crates/equinox-gui/src/app.rs:40 crates/equinox-gui/src/app.rs:464
+#: crates/equinox-gui/src/app.rs:562 crates/equinox-gui/src/app.rs:807
 msgid "Start"
 msgstr "Запустить"
 
-#: crates/equinox-gui/src/app.rs:57
+#: crates/equinox-gui/src/app.rs:60
 msgid "Wallpaper"
 msgstr "Обои"
 
-#: crates/equinox-gui/src/app.rs:63 crates/equinox-gui/src/views/oobe.rs:82
+#: crates/equinox-gui/src/app.rs:66 crates/equinox-gui/src/views/oobe.rs:82
 msgid "Sources"
 msgstr "Источники"
 
-#: crates/equinox-gui/src/app.rs:69
+#: crates/equinox-gui/src/app.rs:72
 msgid "Gallery"
 msgstr "Галерея"
 
-#: crates/equinox-gui/src/app.rs:75 crates/equinox-gui/src/views/history.rs:130
+#: crates/equinox-gui/src/app.rs:78 crates/equinox-gui/src/views/history.rs:130
 msgid "History"
 msgstr "История"
 
-#: crates/equinox-gui/src/app.rs:143
+#: crates/equinox-gui/src/app.rs:146
 msgid "Main menu"
 msgstr "Главное меню"
 
-#: crates/equinox-gui/src/app.rs:153
+#: crates/equinox-gui/src/app.rs:156
 msgid "Tasks"
 msgstr "Задачи"
 
-#: crates/equinox-gui/src/app.rs:171
+#: crates/equinox-gui/src/app.rs:174
 #: crates/equinox-gui/src/views/timeline.rs:54
 msgid "Timeline"
 msgstr "Расписание"
 
-#: crates/equinox-gui/src/app.rs:193 crates/equinox-gui/src/app.rs:506
+#: crates/equinox-gui/src/app.rs:196 crates/equinox-gui/src/app.rs:509
 msgid "Preferences"
 msgstr "Параметры"
 
-#: crates/equinox-gui/src/app.rs:213
+#: crates/equinox-gui/src/app.rs:216
 msgid "About"
 msgstr "О приложении"
 
-#: crates/equinox-gui/src/app.rs:228
+#: crates/equinox-gui/src/app.rs:231
 msgid "Multi-source daily wallpaper manager"
 msgstr "Менеджер ежедневных обоев с несколькими источниками"
 
-#: crates/equinox-gui/src/app.rs:233
+#: crates/equinox-gui/src/app.rs:236
 msgid "Released under the"
 msgstr "Лицензия:"
 
-#: crates/equinox-gui/src/app.rs:272
+#: crates/equinox-gui/src/app.rs:275
 msgid "No running tasks"
 msgstr "Нет активных задач"
 
-#: crates/equinox-gui/src/app.rs:321
+#: crates/equinox-gui/src/app.rs:324
 msgid "Cancel"
 msgstr "Отмена"
 
-#: crates/equinox-gui/src/app.rs:392
+#: crates/equinox-gui/src/app.rs:395
 msgid "Interface"
 msgstr "Интерфейс"
 
-#: crates/equinox-gui/src/app.rs:397
+#: crates/equinox-gui/src/app.rs:400
 msgid "Auto (follow system)"
 msgstr "Автоматически (как в системе)"
 
-#: crates/equinox-gui/src/app.rs:414
+#: crates/equinox-gui/src/app.rs:417
 msgid "Language"
 msgstr "Язык"
 
-#: crates/equinox-gui/src/app.rs:421 crates/equinox-gui/src/views/oobe.rs:145
+#: crates/equinox-gui/src/app.rs:424 crates/equinox-gui/src/views/oobe.rs:145
 msgid "Background service"
 msgstr "Фоновый сервис"
 
-#: crates/equinox-gui/src/app.rs:430 crates/equinox-gui/src/views/oobe.rs:154
+#: crates/equinox-gui/src/app.rs:433 crates/equinox-gui/src/views/oobe.rs:154
 msgid "Standalone"
 msgstr "Автономно"
 
-#: crates/equinox-gui/src/app.rs:436
+#: crates/equinox-gui/src/app.rs:439
 msgid "Run background via"
 msgstr "Запуск фона через"
 
-#: crates/equinox-gui/src/app.rs:458
+#: crates/equinox-gui/src/app.rs:461
 msgid "Daemon status"
 msgstr "Состояние фоновой службы"
 
-#: crates/equinox-gui/src/app.rs:471
+#: crates/equinox-gui/src/app.rs:474
 msgid "systemd is unavailable in flatpak"
 msgstr "systemd недоступен в flatpak"
 
-#: crates/equinox-gui/src/app.rs:473
+#: crates/equinox-gui/src/app.rs:476
 msgid ""
 "Sandboxed apps cannot reach the host systemd user session, so the background "
 "runs as a supervised process inside the sandbox."
@@ -315,52 +331,52 @@ msgstr ""
 "systemd хоста, поэтому фоновый процесс работает внутри песочницы под "
 "надзором."
 
-#: crates/equinox-gui/src/app.rs:483 crates/equinox-gui/src/views/oobe.rs:166
+#: crates/equinox-gui/src/app.rs:486 crates/equinox-gui/src/views/oobe.rs:166
 msgid "Start at login"
 msgstr "Запускать при входе"
 
-#: crates/equinox-gui/src/app.rs:490
+#: crates/equinox-gui/src/app.rs:493
 msgid "systemd service"
 msgstr "сервис systemd"
 
-#: crates/equinox-gui/src/app.rs:495 crates/equinox-gui/src/app.rs:545
+#: crates/equinox-gui/src/app.rs:498 crates/equinox-gui/src/app.rs:548
 msgid "Install"
 msgstr "Установить"
 
-#: crates/equinox-gui/src/app.rs:543
+#: crates/equinox-gui/src/app.rs:546
 msgid "Uninstall"
 msgstr "Удалить"
 
-#: crates/equinox-gui/src/app.rs:557 crates/equinox-gui/src/app.rs:802
+#: crates/equinox-gui/src/app.rs:560 crates/equinox-gui/src/app.rs:805
 msgid "Stop"
 msgstr "Остановить"
 
-#: crates/equinox-gui/src/app.rs:570
+#: crates/equinox-gui/src/app.rs:573
 msgid "Installed and running"
 msgstr "Установлен и запущен"
 
-#: crates/equinox-gui/src/app.rs:572
+#: crates/equinox-gui/src/app.rs:575
 msgid "Installed, not running"
 msgstr "Установлен, не запущен"
 
-#: crates/equinox-gui/src/app.rs:575
+#: crates/equinox-gui/src/app.rs:578
 msgid "Not installed"
 msgstr "Не установлено"
 
-#: crates/equinox-gui/src/app.rs:601
+#: crates/equinox-gui/src/app.rs:604
 msgid "Restart Equinox to apply the new language"
 msgstr "Чтобы применить новый язык, перезапустите Equinox"
 
-#: crates/equinox-gui/src/app.rs:639 crates/equinox-gui/src/app.rs:706
-#: crates/equinox-gui/src/app.rs:726
+#: crates/equinox-gui/src/app.rs:642 crates/equinox-gui/src/app.rs:709
+#: crates/equinox-gui/src/app.rs:729
 msgid "Failed to change the systemd service"
 msgstr "Не удалось изменить сервис systemd"
 
-#: crates/equinox-gui/src/app.rs:797
+#: crates/equinox-gui/src/app.rs:800
 msgid "Running"
 msgstr "Запущено"
 
-#: crates/equinox-gui/src/app.rs:799
+#: crates/equinox-gui/src/app.rs:802
 msgid "Not running"
 msgstr "Не запущено"
 

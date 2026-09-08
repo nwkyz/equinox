@@ -4,11 +4,13 @@
 mod bing;
 mod earthview;
 mod nasa;
+mod picsum;
 mod spotlight;
 mod wikimedia;
 
 pub use bing::BingSource;
 pub use earthview::EarthViewSource;
 pub use nasa::NasaApodSource;
+pub use picsum::PicsumSource;
 pub use spotlight::SpotlightSource;
 pub use wikimedia::WikimediaPotdSource;

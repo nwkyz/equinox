@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: equinox 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 09:24+0000\n"
+"POT-Creation-Date: 2026-09-08 09:49+0000\n"
 "PO-Revision-Date: 2026-08-24 18:30+0800\n"
 "Last-Translator: nwkyz\n"
 "Language-Team: Literary Chinese\n"
@@ -108,6 +108,22 @@ msgstr "用高清之圖(hdurl)"
 msgid "Today's APOD entry is a video, skipped"
 msgstr "今日 APOD 乃影而非圖,姑置之"
 
+#: crates/equinox-core/src/sources/picsum.rs:50
+msgid "Width (0 = auto)"
+msgstr "闊(0 = 自動)"
+
+#: crates/equinox-core/src/sources/picsum.rs:57
+msgid "Height (0 = auto)"
+msgstr "高(0 = 自動)"
+
+#: crates/equinox-core/src/sources/picsum.rs:64
+msgid "Grayscale"
+msgstr "灰階"
+
+#: crates/equinox-core/src/sources/picsum.rs:69
+msgid "Blur"
+msgstr "模糊"
+
 #: crates/equinox-core/src/sources/spotlight.rs:41
 msgid "Windows Spotlight"
 msgstr "Windows 聚焦"
@@ -208,153 +224,153 @@ msgid "Failed to apply wallpaper"
 msgstr "施壁紙不果"
 
 #. Daemon status banner
-#: crates/equinox-gui/src/app.rs:35
+#: crates/equinox-gui/src/app.rs:38
 msgid "The daemon is not running; scheduled updates will be unavailable"
 msgstr "守護進程未運,定時更新不可用矣"
 
-#: crates/equinox-gui/src/app.rs:37 crates/equinox-gui/src/app.rs:461
-#: crates/equinox-gui/src/app.rs:559 crates/equinox-gui/src/app.rs:804
+#: crates/equinox-gui/src/app.rs:40 crates/equinox-gui/src/app.rs:464
+#: crates/equinox-gui/src/app.rs:562 crates/equinox-gui/src/app.rs:807
 msgid "Start"
 msgstr "起"
 
-#: crates/equinox-gui/src/app.rs:57
+#: crates/equinox-gui/src/app.rs:60
 msgid "Wallpaper"
 msgstr "壁"
 
-#: crates/equinox-gui/src/app.rs:63 crates/equinox-gui/src/views/oobe.rs:82
+#: crates/equinox-gui/src/app.rs:66 crates/equinox-gui/src/views/oobe.rs:82
 msgid "Sources"
 msgstr "源"
 
-#: crates/equinox-gui/src/app.rs:69
+#: crates/equinox-gui/src/app.rs:72
 msgid "Gallery"
 msgstr "圖"
 
-#: crates/equinox-gui/src/app.rs:75 crates/equinox-gui/src/views/history.rs:130
+#: crates/equinox-gui/src/app.rs:78 crates/equinox-gui/src/views/history.rs:130
 msgid "History"
 msgstr "史"
 
-#: crates/equinox-gui/src/app.rs:143
+#: crates/equinox-gui/src/app.rs:146
 msgid "Main menu"
 msgstr "總目"
 
-#: crates/equinox-gui/src/app.rs:153
+#: crates/equinox-gui/src/app.rs:156
 msgid "Tasks"
 msgstr "任務"
 
-#: crates/equinox-gui/src/app.rs:171
+#: crates/equinox-gui/src/app.rs:174
 #: crates/equinox-gui/src/views/timeline.rs:54
 msgid "Timeline"
 msgstr "年表"
 
-#: crates/equinox-gui/src/app.rs:193 crates/equinox-gui/src/app.rs:506
+#: crates/equinox-gui/src/app.rs:196 crates/equinox-gui/src/app.rs:509
 msgid "Preferences"
 msgstr "所好"
 
-#: crates/equinox-gui/src/app.rs:213
+#: crates/equinox-gui/src/app.rs:216
 msgid "About"
 msgstr "自敘"
 
-#: crates/equinox-gui/src/app.rs:228
+#: crates/equinox-gui/src/app.rs:231
 msgid "Multi-source daily wallpaper manager"
 msgstr "合諸源之日更壁紙者也"
 
-#: crates/equinox-gui/src/app.rs:233
+#: crates/equinox-gui/src/app.rs:236
 msgid "Released under the"
 msgstr "許可:"
 
-#: crates/equinox-gui/src/app.rs:272
+#: crates/equinox-gui/src/app.rs:275
 msgid "No running tasks"
 msgstr "目下無役"
 
-#: crates/equinox-gui/src/app.rs:321
+#: crates/equinox-gui/src/app.rs:324
 msgid "Cancel"
 msgstr "止"
 
-#: crates/equinox-gui/src/app.rs:392
+#: crates/equinox-gui/src/app.rs:395
 msgid "Interface"
 msgstr "儀表"
 
-#: crates/equinox-gui/src/app.rs:397
+#: crates/equinox-gui/src/app.rs:400
 msgid "Auto (follow system)"
 msgstr "因循系統"
 
-#: crates/equinox-gui/src/app.rs:414
+#: crates/equinox-gui/src/app.rs:417
 msgid "Language"
 msgstr "語言"
 
-#: crates/equinox-gui/src/app.rs:421 crates/equinox-gui/src/views/oobe.rs:145
+#: crates/equinox-gui/src/app.rs:424 crates/equinox-gui/src/views/oobe.rs:145
 msgid "Background service"
 msgstr "後臺之役"
 
-#: crates/equinox-gui/src/app.rs:430 crates/equinox-gui/src/views/oobe.rs:154
+#: crates/equinox-gui/src/app.rs:433 crates/equinox-gui/src/views/oobe.rs:154
 msgid "Standalone"
 msgstr "獨立"
 
-#: crates/equinox-gui/src/app.rs:436
+#: crates/equinox-gui/src/app.rs:439
 msgid "Run background via"
 msgstr "後臺役之以何道"
 
-#: crates/equinox-gui/src/app.rs:458
+#: crates/equinox-gui/src/app.rs:461
 msgid "Daemon status"
 msgstr "後台之狀"
 
-#: crates/equinox-gui/src/app.rs:471
+#: crates/equinox-gui/src/app.rs:474
 msgid "systemd is unavailable in flatpak"
 msgstr "flatpak 之內，systemd 無可施設"
 
-#: crates/equinox-gui/src/app.rs:473
+#: crates/equinox-gui/src/app.rs:476
 msgid ""
 "Sandboxed apps cannot reach the host systemd user session, so the background "
 "runs as a supervised process inside the sandbox."
 msgstr ""
 "沙盒之應用，不得通於主機 systemd 用戶之會，故後臺於沙盒之內，以受監之役而行。"
 
-#: crates/equinox-gui/src/app.rs:483 crates/equinox-gui/src/views/oobe.rs:166
+#: crates/equinox-gui/src/app.rs:486 crates/equinox-gui/src/views/oobe.rs:166
 msgid "Start at login"
 msgstr "登錄即啟"
 
-#: crates/equinox-gui/src/app.rs:490
+#: crates/equinox-gui/src/app.rs:493
 msgid "systemd service"
 msgstr "systemd 之役"
 
-#: crates/equinox-gui/src/app.rs:495 crates/equinox-gui/src/app.rs:545
+#: crates/equinox-gui/src/app.rs:498 crates/equinox-gui/src/app.rs:548
 msgid "Install"
 msgstr "裝設"
 
-#: crates/equinox-gui/src/app.rs:543
+#: crates/equinox-gui/src/app.rs:546
 msgid "Uninstall"
 msgstr "撤除"
 
-#: crates/equinox-gui/src/app.rs:557 crates/equinox-gui/src/app.rs:802
+#: crates/equinox-gui/src/app.rs:560 crates/equinox-gui/src/app.rs:805
 msgid "Stop"
 msgstr "止"
 
-#: crates/equinox-gui/src/app.rs:570
+#: crates/equinox-gui/src/app.rs:573
 msgid "Installed and running"
 msgstr "既裝且役"
 
-#: crates/equinox-gui/src/app.rs:572
+#: crates/equinox-gui/src/app.rs:575
 msgid "Installed, not running"
 msgstr "既裝未役"
 
-#: crates/equinox-gui/src/app.rs:575
+#: crates/equinox-gui/src/app.rs:578
 msgid "Not installed"
 msgstr "未裝設"
 
-#: crates/equinox-gui/src/app.rs:601
+#: crates/equinox-gui/src/app.rs:604
 msgid "Restart Equinox to apply the new language"
 msgstr "易語之後,須復啟 Equinox 乃效"
 
-#: crates/equinox-gui/src/app.rs:639 crates/equinox-gui/src/app.rs:706
-#: crates/equinox-gui/src/app.rs:726
+#: crates/equinox-gui/src/app.rs:642 crates/equinox-gui/src/app.rs:709
+#: crates/equinox-gui/src/app.rs:729
 msgid "Failed to change the systemd service"
 msgstr "systemd 之役，更易未果"
 
-#: crates/equinox-gui/src/app.rs:797
+#: crates/equinox-gui/src/app.rs:800
 msgid "Running"
 msgstr "運行中"
 
-#: crates/equinox-gui/src/app.rs:799
+#: crates/equinox-gui/src/app.rs:802
 msgid "Not running"
 msgstr "未運行"
 

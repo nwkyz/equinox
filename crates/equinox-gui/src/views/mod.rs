@@ -44,29 +44,8 @@ pub fn fmt_local(ts: i64, with_seconds: bool) -> String {
 /// wrong-looking tile shape can be chased from the log.
 pub fn screen_ratio() -> f64 {
     const FALLBACK: f64 = 9.0 / 16.0;
-    let Some(display) = gtk4::gdk::Display::default() else {
-        log::warn!("screen_ratio: no default display (display not ready); using {FALLBACK:.3}");
-        return FALLBACK;
-    };
-    let mons = display.monitors();
-    let n = mons.n_items();
-    let monitor = if n <= 1 {
-        mons.item(0)
-            .and_then(|o| o.downcast::<gtk4::gdk::Monitor>().ok())
-    } else {
-        let first = mons
-            .item(0)
-            .and_then(|o| o.downcast::<gtk4::gdk::Monitor>().ok());
-        (0..n)
-            .filter_map(|i| mons.item(i).and_then(|o| o.downcast::<gtk4::gdk::Monitor>().ok()))
-            .find(|m| {
-                let g = m.geometry();
-                g.x() <= 0 && 0 < g.x() + g.width() && g.y() <= 0 && 0 < g.y() + g.height()
-            })
-            .or(first)
-    };
-    let Some(monitor) = monitor else {
-        log::warn!("screen_ratio: display reports no monitors; using {FALLBACK:.3}");
+    let Some(monitor) = primary_monitor() else {
+        log::warn!("screen_ratio: no primary monitor; using {FALLBACK:.3}");
         return FALLBACK;
     };
     let g = monitor.geometry();
@@ -82,6 +61,41 @@ pub fn screen_ratio() -> f64 {
     } else {
         log::warn!("screen_ratio: monitor geometry 0x0 (not yet configured); using {FALLBACK:.3}");
         FALLBACK
+    }
+}
+
+/// The primary monitor, if any (see [`screen_ratio`] for how "primary" is
+/// derived without a `primary_monitor()` binding).
+fn primary_monitor() -> Option<gtk4::gdk::Monitor> {
+    let display = gtk4::gdk::Display::default()?;
+    let mons = display.monitors();
+    let n = mons.n_items();
+    if n <= 1 {
+        return mons
+            .item(0)
+            .and_then(|o| o.downcast::<gtk4::gdk::Monitor>().ok());
+    }
+    let first = mons
+        .item(0)
+        .and_then(|o| o.downcast::<gtk4::gdk::Monitor>().ok());
+    (0..n)
+        .filter_map(|i| mons.item(i).and_then(|o| o.downcast::<gtk4::gdk::Monitor>().ok()))
+        .find(|m| {
+            let g = m.geometry();
+            g.x() <= 0 && 0 < g.x() + g.width() && g.y() <= 0 && 0 < g.y() + g.height()
+        })
+        .or(first)
+}
+
+/// Width × height of the primary monitor in pixels; `None` when the display
+/// is not ready or reports no usable geometry. Used to auto-fill sources that
+/// default to the screen size (e.g. Lorem Picsum).
+pub fn primary_monitor_size() -> Option<(i32, i32)> {
+    let g = primary_monitor()?.geometry();
+    if g.width() > 0 && g.height() > 0 {
+        Some((g.width(), g.height()))
+    } else {
+        None
     }
 }
 

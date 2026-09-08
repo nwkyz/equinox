@@ -20,6 +20,9 @@ pub fn activate(app: &libadwaita::Application) {
     // `equinox-supervisor` (older versions) — such entries silently fail at
     // login on GNOME/KDE, where autostart runs outside the session PATH.
     equinox_core::autostart::refresh_autostart();
+    // Auto-fill the Lorem Picsum size from the primary monitor, but only while
+    // the user has not chosen a manual size (width/height still 0 = "auto").
+    auto_fill_picsum_size(&config);
     let window = libadwaita::ApplicationWindow::new(app);
     window.set_title(Some("Equinox"));
     window.set_default_size(1000, 680);
@@ -954,4 +957,24 @@ fn spawn_background(bin: &str) -> Option<std::process::Child> {
         }
     }
     None
+}
+
+/// Fill the Lorem Picsum source's width/height from the primary monitor.
+///
+/// Only applied while the user has not chosen a manual size (the stored value
+/// is still 0, i.e. "auto"). This runs once per GUI launch so the daemon —
+/// which may be headless — can rely on the screen size being recorded.
+fn auto_fill_picsum_size(config: &equinox_core::Config) {
+    let Some((w, h)) = crate::views::primary_monitor_size() else {
+        log::debug!("auto-fill picsum size: no primary monitor geometry yet; skipped");
+        return;
+    };
+    let settings = config.settings_for("picsum");
+    if settings.get_i64("width", 0) <= 0 {
+        config.set_source_setting("picsum", "width", serde_json::json!(w));
+    }
+    if settings.get_i64("height", 0) <= 0 {
+        config.set_source_setting("picsum", "height", serde_json::json!(h));
+    }
+    log::info!("auto-filled Lorem Picsum size: {w}x{h}");
 }

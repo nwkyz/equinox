@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: equinox 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 09:49+0000\n"
+"POT-Creation-Date: 2026-09-09 01:33+0000\n"
 "PO-Revision-Date: 2026-08-23 23:50+0300\n"
 "Last-Translator: nwkyz\n"
 "Language-Team: Russian <LL@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: crates/equinox-core/src/applier.rs:203
+#: crates/equinox-core/src/applier.rs:219
 msgid "no supported wallpaper backend detected (need GNOME, KDE, or XFCE)"
 msgstr "не обнаружен поддерживаемый бэкенд обоев(нужен GNOME, KDE или XFCE)"
 
-#: crates/equinox-core/src/applier.rs:230
+#: crates/equinox-core/src/applier.rs:246
 msgid ""
 "this environment cannot set the GNOME wallpaper (missing "
 "org.gnome.desktop.background schema)"
@@ -29,36 +29,36 @@ msgstr ""
 "В этой среде нельзя установить обои GNOME (отсутствует схема "
 "org.gnome.desktop.background)"
 
-#: crates/equinox-core/src/applier.rs:346
+#: crates/equinox-core/src/applier.rs:376
 msgid "Failed to set Plasma wallpaper via the running shell"
 msgstr "Не удалось установить обои Plasma"
 
-#: crates/equinox-core/src/applier.rs:401
-#: crates/equinox-core/src/applier.rs:695
+#: crates/equinox-core/src/applier.rs:431
+#: crates/equinox-core/src/applier.rs:756
 msgid "Failed to read"
 msgstr "Не удалось прочитать"
 
-#: crates/equinox-core/src/applier.rs:422
+#: crates/equinox-core/src/applier.rs:452
 msgid "No image-type wallpaper configured in Plasma"
 msgstr "В Plasma не настроены обои типа «изображение»"
 
-#: crates/equinox-core/src/applier.rs:427
-#: crates/equinox-core/src/applier.rs:430
-#: crates/equinox-core/src/applier.rs:705
-#: crates/equinox-core/src/applier.rs:708
+#: crates/equinox-core/src/applier.rs:457
+#: crates/equinox-core/src/applier.rs:460
+#: crates/equinox-core/src/applier.rs:766
+#: crates/equinox-core/src/applier.rs:769
 msgid "Failed to write"
 msgstr "Не удалось записать"
 
-#: crates/equinox-core/src/applier.rs:661
-#: crates/equinox-core/src/applier.rs:681
+#: crates/equinox-core/src/applier.rs:722
+#: crates/equinox-core/src/applier.rs:742
 msgid "Failed to set wallpaper"
 msgstr "Не удалось установить обои Plasma"
 
-#: crates/equinox-core/src/applier.rs:699
+#: crates/equinox-core/src/applier.rs:760
 msgid "No wallpaper property found in"
 msgstr "Свойство обоев не найдено в"
 
-#: crates/equinox-core/src/applier.rs:906
+#: crates/equinox-core/src/applier.rs:1001
 msgid "no backdrop last-image property found in the xfce4-desktop channel"
 msgstr "в канале xfce4-desktop не найдено свойство фона last-image"
 
@@ -201,27 +201,27 @@ msgstr ""
 msgid "No wallpaper source selected yet, choose one on the Wallpaper page"
 msgstr "Источник обоев ещё не выбран; выберите его на странице «Обои»"
 
-#: crates/equinox-daemon/src/scheduler.rs:600
+#: crates/equinox-daemon/src/scheduler.rs:611
 msgid "Setting wallpaper"
 msgstr "Установка обоев"
 
-#: crates/equinox-daemon/src/scheduler.rs:632
+#: crates/equinox-daemon/src/scheduler.rs:660
 msgid "Applying image"
 msgstr "Применение изображения"
 
-#: crates/equinox-daemon/src/scheduler.rs:651
+#: crates/equinox-daemon/src/scheduler.rs:679
 msgid "Applying previous"
 msgstr "Применение предыдущего"
 
-#: crates/equinox-daemon/src/scheduler.rs:657
+#: crates/equinox-daemon/src/scheduler.rs:685
 msgid "No earlier wallpaper in history"
 msgstr "В истории нет более ранних обоев"
 
-#: crates/equinox-daemon/src/scheduler.rs:674
+#: crates/equinox-daemon/src/scheduler.rs:702
 msgid "File does not exist"
 msgstr "Файл не существует"
 
-#: crates/equinox-daemon/src/scheduler.rs:692
+#: crates/equinox-daemon/src/scheduler.rs:734
 #: crates/equinox-gui/src/views/fullscreen_viewer.rs:388
 #: crates/equinox-gui/src/views/gallery.rs:866
 msgid "Failed to apply wallpaper"
@@ -385,7 +385,7 @@ msgid "Daemon is not running"
 msgstr "Демон не запущен"
 
 #: crates/equinox-gui/src/views/fullscreen_viewer.rs:80
-#: crates/equinox-gui/src/views/wallpaper.rs:953
+#: crates/equinox-gui/src/views/wallpaper.rs:1020
 msgid "Untitled wallpaper"
 msgstr "Обои без названия"
 
@@ -602,7 +602,7 @@ msgid "Scheduled"
 msgstr "По расписанию"
 
 #: crates/equinox-gui/src/views/timeline.rs:47
-#: crates/equinox-gui/src/views/wallpaper.rs:943
+#: crates/equinox-gui/src/views/wallpaper.rs:1010
 msgid "Manual"
 msgstr "Вручную"
 
@@ -656,32 +656,46 @@ msgstr "Предыдущий источник"
 msgid "Next source"
 msgstr "Выберите источники"
 
-#: crates/equinox-gui/src/views/wallpaper.rs:470
+#: crates/equinox-gui/src/views/wallpaper.rs:279
+#: crates/equinox-gui/src/views/wallpaper.rs:286
+#: crates/equinox-gui/src/views/wallpaper.rs:293
+#: crates/equinox-gui/src/views/wallpaper.rs:476
+#: crates/equinox-gui/src/views/wallpaper.rs:492
+#: crates/equinox-gui/src/views/wallpaper.rs:908
+msgid "None"
+msgstr "Нет"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:478
+msgid "Equinox will not change your wallpaper while no source is selected."
+msgstr "Пока не выбран источник обоев, Equinox не будет менять ваши обои."
+
+#: crates/equinox-gui/src/views/wallpaper.rs:483
 msgid "No wallpapers in this source yet"
 msgstr "В этом источнике пока нет изображений"
 
-#: crates/equinox-gui/src/views/wallpaper.rs:471
+#: crates/equinox-gui/src/views/wallpaper.rs:485
 msgid "Switch sources below or run an update to download the first images"
 msgstr "Переключите источник ниже или сначала выполните обновление"
 
-#: crates/equinox-gui/src/views/wallpaper.rs:610
+#: crates/equinox-gui/src/views/wallpaper.rs:643
 msgid "Failed to switch"
 msgstr "Не удалось переключить"
 
-#: crates/equinox-gui/src/views/wallpaper.rs:651
-#: crates/equinox-gui/src/views/wallpaper.rs:733
+#: crates/equinox-gui/src/views/wallpaper.rs:691
+#: crates/equinox-gui/src/views/wallpaper.rs:706
+#: crates/equinox-gui/src/views/wallpaper.rs:788
 msgid "Failed to set"
 msgstr "Не удалось установить"
 
-#: crates/equinox-gui/src/views/wallpaper.rs:799
+#: crates/equinox-gui/src/views/wallpaper.rs:854
 msgid "Operation failed"
 msgstr "Не удалось выполнить операцию"
 
-#: crates/equinox-gui/src/views/wallpaper.rs:942
+#: crates/equinox-gui/src/views/wallpaper.rs:1009
 msgid "Random"
 msgstr "Случайное"
 
-#: crates/equinox-gui/src/views/wallpaper.rs:944
+#: crates/equinox-gui/src/views/wallpaper.rs:1011
 msgid "Latest"
 msgstr "Последнее"
 

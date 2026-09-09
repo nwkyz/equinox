@@ -12,6 +12,7 @@ A multi-source online wallpaper manager built with **GTK4 / libadwaita**. Refres
   - NASA Astronomy Picture of the Day (APOD)
   - Wikimedia Picture of the Day (POTD)
   - Google Earth View
+  - Lorem Picsum
   - *Working on: Local folder & Unsplash collections*
 - **Scheduled update** - Auto update on your set interval.
 - **Deduplicated storage** - the same image is stored once.
@@ -27,15 +28,15 @@ A multi-source online wallpaper manager built with **GTK4 / libadwaita**. Refres
 **Using system package manager:**
 
 ```bash
-sudo dpkg -i equinox_0.1.2_amd64.deb     # For Debian/Ubuntu based distros
+sudo dpkg -i equinox_0.1.3_amd64.deb     # For Debian/Ubuntu based distros
 
-sudo rpm -Uvh equinox-0.1.2-1.x86_64.rpm # For Fedora/RedHat/SUSE based distros
+sudo rpm -Uvh equinox-0.1.3-1.x86_64.rpm # For Fedora/RedHat/SUSE based distros
 ```
 
 **Using Flatpak package:**
 
 ```bash
-flatpak install --user ./equinox-0.1.2.flatpak
+flatpak install --user ./equinox-0.1.3.flatpak
 flatpak run github.nwkyz.Equinox
 ```
 
@@ -124,7 +125,7 @@ To add or update a language:
 
 1. Regenerate the template after any string change:
    ```sh
-   xtr --package-name equinox --package-version 0.1.2 \
+   xtr --package-name equinox --package-version 0.1.3 \
        -o po/equinox.pot $(find crates -name '*.rs' | sort)
    ```
 2. Start a new catalogue (e.g. French):

@@ -258,6 +258,9 @@ pub fn maybe_show(config: &Config, client: &Rc<DaemonClient>) -> bool {
             cfg.set_run_mode(mode);
             cfg.set_autostart(autostart_row.is_active());
             cfg.set_setup_done(true);
+            // Brand-new install: fill the Lorem Picsum size from the screen
+            // right away (the app.rs call is skipped on this first run).
+            crate::app::auto_fill_picsum_size(&cfg);
             if mode == "systemd" {
                 let _ = equinox_core::autostart::install_systemd_service();
             } else if autostart_row.is_active() {
@@ -267,25 +270,17 @@ pub fn maybe_show(config: &Config, client: &Rc<DaemonClient>) -> bool {
             // in systemd mode the install above switched hosting, so re-run to
             // make the chosen arrangement the live one.
             crate::app::spawn_background_if_needed();
-            // Pick the first enabled source as the wallpaper rule so the
-            // wallpaper page shows its images right away instead of the
-            // misleading "no images in this source yet".
-            let first = registry()
-                .iter()
-                .map(|s| s.id())
-                .find(|id| cfg.update_enabled(id))
-                .unwrap_or("");
-            if !first.is_empty() {
-                cfg.set_wallpaper_source(first);
-                cfg.set_source_mode(first, "latest");
-                let c2 = Rc::clone(&c);
-                let id = first.to_owned();
-                glib::spawn_future_local(async move {
-                    if let Err(e) = c2.set_wallpaper_source(&id, "latest").await {
-                        log::warn!("OOBE wallpaper-source init failed: {e:#}");
-                    }
-                });
-            }
+            // Start in the "None" wallpaper source: merely opening the app
+            // must NOT replace the user's wallpaper. Updates download into
+            // the library; the wallpaper stays untouched until the user
+            // actively picks a source on the Wallpaper page.
+            cfg.set_wallpaper_source("");
+            let c2 = Rc::clone(&c);
+            glib::spawn_future_local(async move {
+                if let Err(e) = c2.set_wallpaper_source("", "latest").await {
+                    log::warn!("OOBE wallpaper-source init failed: {e:#}");
+                }
+            });
             w.close();
         });
     }

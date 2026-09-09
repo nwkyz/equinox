@@ -580,6 +580,17 @@ pub fn apply_rule(state: &Rc<DaemonState>) -> Result<()> {
 /// Auto-fetching here made switches feel blocked whenever a source's network
 /// was down, and left the page blank meanwhile.
 pub fn set_wallpaper_source(state: &Rc<DaemonState>, source: &str, mode: &str) {
+    if source.is_empty() {
+        // "None" wallpaper source: Equinox stops managing the wallpaper and
+        // restores the user's original wallpaper (the one Equinox first
+        // replaced, captured in apply_image). Nothing is fetched or applied.
+        state.config.set_wallpaper_source("");
+        state.emit_wallpaper_changed("", "", "");
+        if let Err(e) = restore_original(state) {
+            log::warn!("failed to restore original wallpaper: {e:#}");
+        }
+        return;
+    }
     state.config.set_wallpaper_source(source);
     state.config.set_source_mode(source, mode);
     // Tell the GUI to refresh the wallpaper page right away with a sentinel
@@ -607,6 +618,23 @@ pub fn set_wallpaper_source(state: &Rc<DaemonState>, source: &str, mode: &str) {
             apply_rule(s)
         }
     });
+}
+
+/// Apply the captured original wallpaper back — the "None" source keeps the
+/// desktop as the user left it; Equinox no longer manages the wallpaper.
+/// The original is applied directly (no history entry, no source switch).
+fn restore_original(state: &Rc<DaemonState>) -> Result<()> {
+    let orig = state.config.original_wallpaper();
+    if orig.is_empty() {
+        return Ok(()); // nothing was captured, nothing to restore
+    }
+    let orig_for_log = orig.clone();
+    Applier::apply(Path::new(&orig))
+        .with_context(|| format!("failed to restore original wallpaper: {orig_for_log}"))?;
+    log::info!("restored original wallpaper: {orig_for_log}");
+    *state.last_applied.borrow_mut() = Some(orig);
+    state.emit_wallpaper_changed("", "", "");
+    Ok(())
 }
 
 /// The newest history entry of a source — the manual pick after browsing.
@@ -687,6 +715,20 @@ fn apply_image(state: &Rc<DaemonState>, path: &Path) -> Result<()> {
     if same_as_last {
         log::info!("wallpaper unchanged, skipping duplicate apply: {}", path.display());
         return Ok(());
+    }
+    // Capture the user's original wallpaper ONCE, right before Equinox first
+    // overwrites it, so the "None" source can later restore it. The original
+    // stays remembered forever; "None" always restores it.
+    if state.config.original_wallpaper().is_empty() {
+        match Applier::current() {
+            Some(orig) => {
+                state.config.set_original_wallpaper(&orig);
+                log::info!("captured original wallpaper: {orig}");
+            }
+            None => log::warn!(
+                "could not read the current wallpaper; the \"None\" source cannot restore it"
+            ),
+        }
     }
     Applier::apply(path)
         .with_context(|| format!("{}: {}", gettext("Failed to apply wallpaper"), path.display()))?;

@@ -20,9 +20,6 @@ pub fn activate(app: &libadwaita::Application) {
     // `equinox-supervisor` (older versions) — such entries silently fail at
     // login on GNOME/KDE, where autostart runs outside the session PATH.
     equinox_core::autostart::refresh_autostart();
-    // Auto-fill the Lorem Picsum size from the primary monitor, but only while
-    // the user has not chosen a manual size (width/height still 0 = "auto").
-    auto_fill_picsum_size(&config);
     let window = libadwaita::ApplicationWindow::new(app);
     window.set_title(Some("Equinox"));
     window.set_default_size(1000, 680);
@@ -112,8 +109,15 @@ pub fn activate(app: &libadwaita::Application) {
 
     // First run: the OOBE welcome wizard shows once and lets the user pick
     // sources + update interval (then updates them right away), followed by
-    // the background hosting mode, before starting the background.
-    views::oobe::maybe_show(&config, &client);
+    // the background hosting mode, before starting the background. The
+    // picsum auto-fill MUST NOT run before the OOBE check — writing the
+    // config here would recreate a deleted config.json and suppress the
+    // first-run wizard. It runs after instead (and the OOBE finish also
+    // fills it, so brand-new installs get the screen size immediately).
+    let oobe_shown = views::oobe::maybe_show(&config, &client);
+    if !oobe_shown {
+        auto_fill_picsum_size(&config);
+    }
 
     window.present();
 }
@@ -964,7 +968,7 @@ fn spawn_background(bin: &str) -> Option<std::process::Child> {
 /// Only applied while the user has not chosen a manual size (the stored value
 /// is still 0, i.e. "auto"). This runs once per GUI launch so the daemon —
 /// which may be headless — can rely on the screen size being recorded.
-fn auto_fill_picsum_size(config: &equinox_core::Config) {
+pub fn auto_fill_picsum_size(config: &equinox_core::Config) {
     let Some((w, h)) = crate::views::primary_monitor_size() else {
         log::debug!("auto-fill picsum size: no primary monitor geometry yet; skipped");
         return;

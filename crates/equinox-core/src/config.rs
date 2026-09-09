@@ -90,6 +90,17 @@ impl Config {
         });
     }
 
+    /// The user's original wallpaper (a local path), captured right before
+    /// Equinox's first apply so the "None" source can restore it. Empty when
+    /// nothing has been applied yet or the original could not be read.
+    pub fn original_wallpaper(&self) -> String {
+        self.get_str("original-wallpaper")
+    }
+
+    pub fn set_original_wallpaper(&self, path: &str) {
+        self.set_str("original-wallpaper", path);
+    }
+
     /// Wallpaper mode: "latest" | "random" (default "latest", old-data compatible).
     pub fn wallpaper_mode(&self) -> String {
         let m = self.get_str("wallpaper-mode");

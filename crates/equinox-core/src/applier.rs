@@ -57,6 +57,14 @@ pub trait WallpaperBackend: Send + Sync {
     fn available(&self) -> bool;
     /// Set the desktop wallpaper to the image at `path`.
     fn apply(&self, path: &Path) -> Result<()>;
+    /// The currently set wallpaper as a **local file path** (best-effort;
+    /// `None` when it cannot be read, is not a local file, or the backend
+    /// does not support reading). Used to remember the user's original
+    /// wallpaper before the first Equinox apply, so switching to the "None"
+    /// source can restore it.
+    fn current(&self) -> Option<String> {
+        None
+    }
 }
 
 /// Dispatcher that picks a backend per the config / environment.
@@ -177,6 +185,14 @@ impl Applier {
         let config = Config::new()?;
         Self::resolve(&config).apply(path)
     }
+
+    /// The currently set wallpaper as a local path, via the active backend.
+    /// `None` when no backend is usable or it cannot report the current
+    /// wallpaper (see [`WallpaperBackend::current`]).
+    pub fn current() -> Option<String> {
+        let config = Config::new().ok()?;
+        Self::resolve(&config).current()
+    }
 }
 
 fn backend_for(b: Backend) -> Box<dyn WallpaperBackend> {
@@ -237,6 +253,20 @@ impl WallpaperBackend for GnomeBackend {
         // Dark-scheme key; ignored when missing in some environments
         let _ = bg.set_string("picture-uri-dark", &uri);
         Ok(())
+    }
+
+    fn current(&self) -> Option<String> {
+        if !self.available() {
+            return None;
+        }
+        let uri = gio::Settings::new(BG_SCHEMA)
+            .string("picture-uri")
+            .to_string();
+        // Only a local file can be restored via apply(); a remote/or-scaling
+        // uri is left alone (the original would be unrecoverable as a path).
+        uri.strip_prefix("file://")
+            .filter(|p| !p.is_empty())
+            .map(ToOwned::to_owned)
     }
 }
 
@@ -432,6 +462,37 @@ impl WallpaperBackend for KdeBackend {
         log::info!("applied Plasma wallpaper by editing {}", cfg.display());
         Ok(())
     }
+
+    fn current(&self) -> Option<String> {
+        plasma_appletsrc_current()
+    }
+}
+
+/// The current Plasma image wallpaper, from the `Image=` key inside the
+/// `[Containments][N][Wallpaper][org.kde.image][General]` group of the
+/// appletsrc file. `None` when unreadable (e.g. inside flatpak, where the
+/// host's `~/.config` is not shared) or no image wallpaper is configured.
+fn plasma_appletsrc_current() -> Option<String> {
+    let raw = fs::read_to_string(plasma_appletsrc_path()).ok()?;
+    plasma_current_from_raw(&raw)
+}
+
+/// Pure parser backing [`plasma_appletsrc_current`] (testable).
+fn plasma_current_from_raw(raw: &str) -> Option<String> {
+    let mut in_image_group = false;
+    for line in raw.lines() {
+        let t = line.trim();
+        if t.starts_with('[') && t.ends_with(']') {
+            in_image_group = is_image_wallpaper_group(line);
+            continue;
+        }
+        if in_image_group {
+            if let Some(v) = kconfig_value(t, "Image").map(str::trim).filter(|s| !s.is_empty()) {
+                return Some(v.strip_prefix("file://").unwrap_or(v).to_owned());
+            }
+        }
+    }
+    None
 }
 
 /// Case-insensitive `key=value` parse of a trim-red config line. KConfig keys
@@ -710,6 +771,20 @@ impl WallpaperBackend for XfceBackend {
         log::info!("applied XFCE wallpaper by editing {}", xml.display());
         Ok(())
     }
+
+    fn current(&self) -> Option<String> {
+        let proxy = xfconf_dbus_proxy()?;
+        for p in xfconf_list_backdrop_properties_dbus(&proxy) {
+            if p.ends_with("/last-image") {
+                if let Some(v) = xfconf_get_property_dbus(&proxy, &p) {
+                    if !v.is_empty() {
+                        return Some(v);
+                    }
+                }
+            }
+        }
+        None
+    }
 }
 
 fn xfconf_available() -> bool {
@@ -788,6 +863,28 @@ fn xfconf_set_property_dbus(proxy: &gio::DBusProxy, prop: &str, value: &str) -> 
         )
         .with_context(|| format!("xfconf SetProperty failed for {prop}"))?;
     Ok(())
+}
+
+/// Read a channel property via `GetProperty(channel, property)`. Returns
+/// `None` when the property is missing or not a string.
+fn xfconf_get_property_dbus(proxy: &gio::DBusProxy, prop: &str) -> Option<String> {
+    let reply = proxy
+        .call_sync(
+            "GetProperty",
+            Some(&(XFCONF_CHANNEL.to_owned(), prop.to_owned()).to_variant()),
+            gio::DBusCallFlags::NONE,
+            3000,
+            None::<&gio::Cancellable>,
+        )
+        .ok()?;
+    // The reply is a tuple wrapping the value — the string either directly
+    // (some xfconf builds) or boxed in a 'v' (verified 4.18: `(v)` with the
+    // string inside). Handle both.
+    let val = reply.child_value(0);
+    if let Some(s) = val.get::<String>() {
+        return Some(s);
+    }
+    val.get::<glib::Variant>()?.get::<String>()
 }
 
 /// Create a `/backdrop/screen0/monitor<NAME>/workspace0/last-image` property
@@ -1025,6 +1122,35 @@ FillMode=2
     fn plasma_no_image_wallpaper_returns_none() {
         let raw = "[Containments][1][General]\nplugin=org.kde.jpeg\n";
         assert!(rewrite_plasma(raw, "/x.jpg").is_none());
+    }
+
+    #[test]
+    fn plasma_current_reads_org_kde_image_group() {
+        // Native Plasma: the current wallpaper is the first `Image=` inside an
+        // org.kde.image wallpaper group; the file:// prefix is stripped so the
+        // stored original is a plain local path (restorable via apply()).
+        let raw = "\
+[Containments][1]
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
+[Containments][1][Wallpaper][org.kde.image][General]
+Image=file:///home/u/Pictures/original.jpg
+FillMode=2
+
+[Containments][2]
+plugin=org.kde.panel
+";
+        assert_eq!(
+            plasma_current_from_raw(raw).as_deref(),
+            Some("/home/u/Pictures/original.jpg")
+        );
+    }
+
+    #[test]
+    fn plasma_current_none_when_no_image_group() {
+        assert_eq!(plasma_current_from_raw("[Containments][1]\nplugin=org.kde.jpeg\n"), None);
+        assert_eq!(plasma_current_from_raw(""), None);
     }
 
     #[test]

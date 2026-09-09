@@ -41,6 +41,10 @@ done
 
 mkdir -p "$DIST"
 
+# Keep dist/ to the CURRENT release only: stale per-version artifacts from
+# every previous beta (deb/rpm/tar.gz/flatpak) must not pile up across runs.
+rm -f "$DIST"/equinox_*.deb "$DIST"/equinox-*.rpm "$DIST"/equinox-*.tar.gz "$DIST"/equinox-*.flatpak
+
 echo "==> cargo build --release"
 cargo build --release
 
@@ -109,6 +113,10 @@ if command -v rpmbuild >/dev/null 2>&1; then
         --exclude=.flatpak-builder .
     rpmtop="$HOME/rpmbuild"
     mkdir -p "$rpmtop"/{BUILD,BUILDROOT,RPMS,SOURCES,SPECS,SRPMS}
+    # Stale rpms from every previous version accumulate in RPMS/<arch>/ and
+    # would all be copied into dist/ below — purge them before the build so
+    # only THIS version's rpm is produced and shipped.
+    rm -rf "$rpmtop"/RPMS/*
     install -m644 "$DIST/equinox-$VERSION.tar.gz" "$rpmtop/SOURCES/"
     install -m644 packaging/rpm/equinox.spec "$rpmtop/SPECS/equinox.spec"
     # _topdir: explicit tree (Ubuntu rpm may not default to ~/rpmbuild);
@@ -133,8 +141,10 @@ if command -v rpmbuild >/dev/null 2>&1; then
         --define "_equinox_version $RPM_VERSION" \
         --define "_equinox_source $VERSION" \
         "$rpmtop/SPECS/equinox.spec" >/dev/null
-    find "$rpmtop/RPMS" -name "equinox*.rpm" -exec cp {} "$DIST/" \;
-    echo "    -> $DIST/equinox*.rpm"
+    # Copy ONLY the freshly built rpm (RPMS/ was purged above; the pattern
+    # pins the exact version in case anything else lands there).
+    find "$rpmtop/RPMS" -name "equinox-${RPM_VERSION}-*.rpm" -exec cp {} "$DIST/" \;
+    echo "    -> $(ls "$DIST"/equinox-${RPM_VERSION}-*.rpm 2>/dev/null)"
 else
     echo "==> rpmbuild 未安装,跳过 .rpm。要本机产出 .rpm(例如 Ubuntu):"
     echo "      sudo apt install rpm"

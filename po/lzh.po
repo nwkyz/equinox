@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: equinox 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 09:49+0000\n"
+"POT-Creation-Date: 2026-09-09 01:33+0000\n"
 "PO-Revision-Date: 2026-08-24 18:30+0800\n"
 "Last-Translator: nwkyz\n"
 "Language-Team: Literary Chinese\n"
@@ -16,46 +16,46 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: crates/equinox-core/src/applier.rs:203
+#: crates/equinox-core/src/applier.rs:219
 msgid "no supported wallpaper backend detected (need GNOME, KDE, or XFCE)"
 msgstr "未察得所宜之壁紙後端(需 GNOME、KDE 或 XFCE)"
 
-#: crates/equinox-core/src/applier.rs:230
+#: crates/equinox-core/src/applier.rs:246
 msgid ""
 "this environment cannot set the GNOME wallpaper (missing "
 "org.gnome.desktop.background schema)"
 msgstr "此境不能設 GNOME 之壁紙(闕 org.gnome.desktop.background schema)"
 
-#: crates/equinox-core/src/applier.rs:346
+#: crates/equinox-core/src/applier.rs:376
 msgid "Failed to set Plasma wallpaper via the running shell"
 msgstr "設 Plasma 壁紙未果"
 
-#: crates/equinox-core/src/applier.rs:401
-#: crates/equinox-core/src/applier.rs:695
+#: crates/equinox-core/src/applier.rs:431
+#: crates/equinox-core/src/applier.rs:756
 msgid "Failed to read"
 msgstr "讀之不果"
 
-#: crates/equinox-core/src/applier.rs:422
+#: crates/equinox-core/src/applier.rs:452
 msgid "No image-type wallpaper configured in Plasma"
 msgstr "Plasma 中未設圖像類壁紙"
 
-#: crates/equinox-core/src/applier.rs:427
-#: crates/equinox-core/src/applier.rs:430
-#: crates/equinox-core/src/applier.rs:705
-#: crates/equinox-core/src/applier.rs:708
+#: crates/equinox-core/src/applier.rs:457
+#: crates/equinox-core/src/applier.rs:460
+#: crates/equinox-core/src/applier.rs:766
+#: crates/equinox-core/src/applier.rs:769
 msgid "Failed to write"
 msgstr "寫之不果"
 
-#: crates/equinox-core/src/applier.rs:661
-#: crates/equinox-core/src/applier.rs:681
+#: crates/equinox-core/src/applier.rs:722
+#: crates/equinox-core/src/applier.rs:742
 msgid "Failed to set wallpaper"
 msgstr "設 Plasma 壁紙未果"
 
-#: crates/equinox-core/src/applier.rs:699
+#: crates/equinox-core/src/applier.rs:760
 msgid "No wallpaper property found in"
 msgstr "未得其壁紙之屬,於"
 
-#: crates/equinox-core/src/applier.rs:906
+#: crates/equinox-core/src/applier.rs:1001
 msgid "no backdrop last-image property found in the xfce4-desktop channel"
 msgstr "xfce4-desktop 道中未見 last-image 之屬"
 
@@ -197,27 +197,27 @@ msgstr "此源圖像闕如,盍先「即時更新」"
 msgid "No wallpaper source selected yet, choose one on the Wallpaper page"
 msgstr "壁紙之源未擇,請往「壁紙」之頁擇一"
 
-#: crates/equinox-daemon/src/scheduler.rs:600
+#: crates/equinox-daemon/src/scheduler.rs:611
 msgid "Setting wallpaper"
 msgstr "方設壁紙"
 
-#: crates/equinox-daemon/src/scheduler.rs:632
+#: crates/equinox-daemon/src/scheduler.rs:660
 msgid "Applying image"
 msgstr "方施圖像"
 
-#: crates/equinox-daemon/src/scheduler.rs:651
+#: crates/equinox-daemon/src/scheduler.rs:679
 msgid "Applying previous"
 msgstr "方施前圖"
 
-#: crates/equinox-daemon/src/scheduler.rs:657
+#: crates/equinox-daemon/src/scheduler.rs:685
 msgid "No earlier wallpaper in history"
 msgstr "覆按史乘,無復早者"
 
-#: crates/equinox-daemon/src/scheduler.rs:674
+#: crates/equinox-daemon/src/scheduler.rs:702
 msgid "File does not exist"
 msgstr "檔案不存"
 
-#: crates/equinox-daemon/src/scheduler.rs:692
+#: crates/equinox-daemon/src/scheduler.rs:734
 #: crates/equinox-gui/src/views/fullscreen_viewer.rs:388
 #: crates/equinox-gui/src/views/gallery.rs:866
 msgid "Failed to apply wallpaper"
@@ -379,7 +379,7 @@ msgid "Daemon is not running"
 msgstr "守護進程未運"
 
 #: crates/equinox-gui/src/views/fullscreen_viewer.rs:80
-#: crates/equinox-gui/src/views/wallpaper.rs:953
+#: crates/equinox-gui/src/views/wallpaper.rs:1020
 msgid "Untitled wallpaper"
 msgstr "無題壁紙"
 
@@ -590,7 +590,7 @@ msgid "Scheduled"
 msgstr "以時"
 
 #: crates/equinox-gui/src/views/timeline.rs:47
-#: crates/equinox-gui/src/views/wallpaper.rs:943
+#: crates/equinox-gui/src/views/wallpaper.rs:1010
 msgid "Manual"
 msgstr "手定"
 
@@ -641,32 +641,46 @@ msgstr "前源"
 msgid "Next source"
 msgstr "選源"
 
-#: crates/equinox-gui/src/views/wallpaper.rs:470
+#: crates/equinox-gui/src/views/wallpaper.rs:279
+#: crates/equinox-gui/src/views/wallpaper.rs:286
+#: crates/equinox-gui/src/views/wallpaper.rs:293
+#: crates/equinox-gui/src/views/wallpaper.rs:476
+#: crates/equinox-gui/src/views/wallpaper.rs:492
+#: crates/equinox-gui/src/views/wallpaper.rs:908
+msgid "None"
+msgstr "無"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:478
+msgid "Equinox will not change your wallpaper while no source is selected."
+msgstr "未擇源時,Equinox 不更壁紙。"
+
+#: crates/equinox-gui/src/views/wallpaper.rs:483
 msgid "No wallpapers in this source yet"
 msgstr "此源尚未藏圖"
 
-#: crates/equinox-gui/src/views/wallpaper.rs:471
+#: crates/equinox-gui/src/views/wallpaper.rs:485
 msgid "Switch sources below or run an update to download the first images"
 msgstr "請於下方易源,或先行一輪更新"
 
-#: crates/equinox-gui/src/views/wallpaper.rs:610
+#: crates/equinox-gui/src/views/wallpaper.rs:643
 msgid "Failed to switch"
 msgstr "易之不果"
 
-#: crates/equinox-gui/src/views/wallpaper.rs:651
-#: crates/equinox-gui/src/views/wallpaper.rs:733
+#: crates/equinox-gui/src/views/wallpaper.rs:691
+#: crates/equinox-gui/src/views/wallpaper.rs:706
+#: crates/equinox-gui/src/views/wallpaper.rs:788
 msgid "Failed to set"
 msgstr "設之不果"
 
-#: crates/equinox-gui/src/views/wallpaper.rs:799
+#: crates/equinox-gui/src/views/wallpaper.rs:854
 msgid "Operation failed"
 msgstr "操作不果"
 
-#: crates/equinox-gui/src/views/wallpaper.rs:942
+#: crates/equinox-gui/src/views/wallpaper.rs:1009
 msgid "Random"
 msgstr "隨機"
 
-#: crates/equinox-gui/src/views/wallpaper.rs:944
+#: crates/equinox-gui/src/views/wallpaper.rs:1011
 msgid "Latest"
 msgstr "至新"
 

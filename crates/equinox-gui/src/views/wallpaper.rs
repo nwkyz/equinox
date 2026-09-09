@@ -276,17 +276,21 @@ pub fn build(
     btn_src_next.add_css_class("eq-disc-btn");
     btn_src_next.set_valign(gtk4::Align::Center);
     btn_src_next.set_tooltip_text(Some(&gettext("Next source")));
-    let src_name = gtk4::Label::new(Some(&registry()[0].display_name()));
+    let src_name = gtk4::Label::new(Some(&gettext("None")));
     src_name.set_valign(gtk4::Align::Center);
     src_name.set_halign(gtk4::Align::Center);
 
+    // The source rotation starts with "None"; measure every slot (None +
+    // all real sources) so the capsule fits the widest name.
     let mut max_name = 0;
-    for s in registry() {
-        src_name.set_label(&s.display_name());
+    for name in std::iter::once(gettext("None"))
+        .chain(registry().into_iter().map(|s| s.display_name()))
+    {
+        src_name.set_label(&name);
         let (_, n, _, _) = src_name.measure(gtk4::Orientation::Horizontal, -1);
         max_name = max_name.max(n.max(0));
     }
-    src_name.set_label(&registry()[0].display_name());
+    src_name.set_label(&gettext("None"));
 
     // Single-layer name capsule (thick border from `.eq-btn-core`); the
     // CapsuleBox only clips and animates the width.
@@ -467,10 +471,39 @@ pub fn build(
                     cur_idx_st.set(0);
                     set_btn_on(&biprev, false);
                     set_btn_on(&binext, false);
-                    t.set_text(&gettext("No wallpapers in this source yet"));
-                    m.set_text(&gettext("Switch sources below or run an update to download the first images"));
-                    d.set_text("");
-                    unbtn.set_visible(true);
+                    if source.is_empty() {
+                        // "None" source: Equinox leaves the wallpaper alone.
+                        t.set_text(&gettext("None"));
+                        m.set_text(&gettext(
+                            "Equinox will not change your wallpaper while no source is selected.",
+                        ));
+                        d.set_text("");
+                        unbtn.set_visible(false);
+                    } else {
+                        t.set_text(&gettext("No wallpapers in this source yet"));
+                        m.set_text(&gettext(
+                            "Switch sources below or run an update to download the first images",
+                        ));
+                        d.set_text("");
+                        unbtn.set_visible(true);
+                    }
+                    // Source capsule + arrows: "None" is slot 0; each real
+                    // source sits at its registry index + 1.
+                    let all: Vec<String> = std::iter::once(gettext("None"))
+                        .chain(registry().into_iter().map(|s| s.display_name()))
+                        .collect();
+                    let pos = if source.is_empty() {
+                        0
+                    } else {
+                        registry()
+                            .iter()
+                            .position(|s| s.id() == source)
+                            .map(|i| i + 1)
+                            .unwrap_or(1)
+                    };
+                    name_lbl.set_label(&all[pos]);
+                    set_btn_on(&bprev, pos > 0);
+                    set_btn_on(&bnext, pos + 1 < all.len());
                     return;
                 }
                 // A source with images never shows the update-nothing state.
@@ -623,26 +656,48 @@ pub fn build(
     let switch_source =
         move |client: &Rc<DaemonClient>, config: &Config, toast: &Adw::ToastOverlay, delta: i32| {
             let reg = registry();
+            let n_slots = reg.len() + 1; // + the "None" slot at index 0
             let cur = config.wallpaper_source();
-            let pos = reg
-                .iter()
-                .position(|s| s.id() == cur)
-                .or_else(|| {
-                    pages_sw
-                        .borrow()
-                        .first()
-                        .and_then(|p| reg.iter().position(|s| s.id() == p.source))
-                })
-                .unwrap_or(0);
+            let pos = if cur.is_empty() {
+                0 // "None"
+            } else {
+                reg.iter()
+                    .position(|s| s.id() == cur)
+                    .map(|i| i + 1)
+                    .or_else(|| {
+                        pages_sw
+                            .borrow()
+                            .first()
+                            .and_then(|p| reg.iter().position(|s| s.id() == p.source))
+                            .map(|i| i + 1)
+                    })
+                    .unwrap_or(1)
+            };
             let target = pos as i32 + delta;
-            if target < 0 || target as usize >= reg.len() {
+            if target < 0 || target as usize >= n_slots {
                 return;
             }
-            let id = reg[target as usize].id();
-            let mode = config.source_mode(id);
             let c = Rc::clone(client);
             let t = toast.clone();
             let rr = reload_sw.clone();
+            if target == 0 {
+                // "None": stop managing the wallpaper — the daemon restores
+                // the user's original wallpaper captured before the first
+                // Equinox apply.
+                glib::spawn_future_local(async move {
+                    if let Err(e) = c.set_wallpaper_source("", "latest").await {
+                        t.add_toast(crate::views::toast(&format!(
+                            "{}: {e}",
+                            gettext("Failed to set")
+                        )));
+                    } else {
+                        rr();
+                    }
+                });
+                return;
+            }
+            let id = reg[target as usize - 1].id();
+            let mode = config.source_mode(id);
             let id = id.to_owned();
             glib::spawn_future_local(async move {
                 if let Err(e) = c.set_wallpaper_source(&id, &mode).await {
@@ -849,9 +904,13 @@ fn sync_page_ui(
         return;
     };
     set_info(t, m, d, page);
-    let display = by_id(&page.source)
-        .map(|s| s.display_name())
-        .unwrap_or_else(|| page.source.clone());
+    let display = if page.source.is_empty() {
+        gettext("None")
+    } else {
+        by_id(&page.source)
+            .map(|s| s.display_name())
+            .unwrap_or_else(|| page.source.clone())
+    };
     name_lbl.set_label(&display);
     // Plate width follows the current name (smooth ease-out animation);
     // target = label width + chip padding (28) + plate padding (6).
@@ -865,11 +924,19 @@ fn sync_page_ui(
     );
     mb.set_label(&mode_label(&config.source_mode(&page.source)));
 
-    // Source-switch arrows follow the current source's registry position.
+    // Source-switch arrows: "None" is slot 0, real sources follow at their
+    // registry index + 1.
     let reg = registry();
-    let pos = reg.iter().position(|s| s.id() == page.source).unwrap_or(0);
+    let pos = if page.source.is_empty() {
+        0
+    } else {
+        reg.iter()
+            .position(|s| s.id() == page.source)
+            .map(|i| i + 1)
+            .unwrap_or(1)
+    };
     set_btn_on(bprev, pos > 0);
-    set_btn_on(bnext, pos + 1 < reg.len());
+    set_btn_on(bnext, pos + 1 < reg.len() + 1);
 }
 
 /// Animate a widget's forced width (size_request) from its current value to

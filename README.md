@@ -31,15 +31,15 @@ A multi-source online wallpaper manager built with **GTK4 / libadwaita**. Refres
 **Using system package manager:**
 
 ```bash
-sudo dpkg -i equinox_0.1.3_amd64.deb     # For Debian/Ubuntu based distros
+sudo dpkg -i equinox_0.1.4-a2_amd64.deb     # For Debian/Ubuntu based distros
 
-sudo rpm -Uvh equinox-0.1.3-1.x86_64.rpm # For Fedora/RedHat/SUSE based distros
+sudo rpm -Uvh equinox-0.1.4a2-1.x86_64.rpm # For Fedora/RedHat/SUSE based distros
 ```
 
 **Using Flatpak package:**
 
 ```bash
-flatpak install --user ./equinox-0.1.3.flatpak
+flatpak install --user ./equinox-0.1.4-a2.flatpak
 flatpak run github.nwkyz.Equinox
 ```
 
@@ -51,8 +51,9 @@ flatpak run github.nwkyz.Equinox
 
 ### Requirements
 
-- A Linux desktop: GNOME 50 (GTK 4.22+ / libadwaita 1.9) verified; KDE Plasma 6
-  and XFCE 4.20 are supported wallpaper targets.
+- A Linux desktop: GNOME 51 via the Flatpak bundle (GTK 4.24 / libadwaita
+  1.10); the native deb/rpm build needs GTK 4.22+ / libadwaita 1.9+. KDE
+  Plasma 6 and XFCE 4.20 are supported wallpaper targets.
 - Rust toolchain 1.75+ (an offline build works when the deps are cached).
 
 ### Build
@@ -79,7 +80,7 @@ Outputs land in `dist/`:
 
 - `--no-flatpak` skips the flatpak build.
 - `--install-flatpak` also installs the flatpak into your *user* session
-  (pulls the `org.gnome.Platform//50` runtime from Flathub as needed, no sudo).
+  (pulls the `org.gnome.Platform//51` runtime from Flathub as needed, no sudo).
 
 The one optional build tool you may need to add: `sudo apt install
 flatpak-builder` (for the flatpak bundle).
@@ -128,7 +129,7 @@ To add or update a language:
 
 1. Regenerate the template after any string change:
    ```sh
-   xtr --package-name equinox --package-version 0.1.3 \
+   xtr --package-name equinox --package-version 0.1.4-a2 \
        -o po/equinox.pot $(find crates -name '*.rs' | sort)
    ```
 2. Start a new catalogue (e.g. French):
@@ -161,6 +162,14 @@ data/              install scripts, desktop file, icon, optional systemd unit
 packaging/         flatpak manifest & AppStream metadata, RPM spec
 po/                gettext catalogues (equinox.pot + *.po)
 ```
+## Adding a new wallpaper source
+
+1. Add a file under `crates/equinox-core/src/sources/` implementing the
+   `Source` trait.
+2. Export it in `sources/mod.rs` and register it in `source.rs::registry()`.
+3. Done — the GUI automatically builds the source's settings page, schedule,
+   gallery and wallpaper rules.
+
 ## Already supported and tested on
 | Distro                    | DE                   | Package    |
 |---------------------------|----------------------|------------|
@@ -170,12 +179,3 @@ po/                gettext catalogues (equinox.pot + *.po)
 | Fedora 44 x86_64          | Plasma 6.6.4 Wayland | flatpak    |
 | Xubuntu 26.04 x86_64      | Xfce 4.20 X11        | dpkg       |
 | Xubuntu 26.04 x86_64      | Xfce 4.20 X11        | flatpak    |
-
-
-## Adding a new wallpaper source
-
-1. Add a file under `crates/equinox-core/src/sources/` implementing the
-   `Source` trait.
-2. Export it in `sources/mod.rs` and register it in `source.rs::registry()`.
-3. Done — the GUI automatically builds the source's settings page, schedule,
-   gallery and wallpaper rules.

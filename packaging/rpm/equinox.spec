@@ -18,8 +18,8 @@ Name:           equinox
 # "0.1.1-a1" becomes the rpm package version "0.1.1a1"; the SOURCE tarball
 # keeps the Cargo form ("equinox-0.1.1-a1.tar.gz"). Fallbacks keep a raw
 # `rpmbuild -bb` working without release.sh.
-%{!?_equinox_version:%global _equinox_version 0.1.3final}
-%{!?_equinox_source:%global _equinox_source 0.1.3-final}
+%{!?_equinox_version:%global _equinox_version 0.1.4a2}
+%{!?_equinox_source:%global _equinox_source 0.1.4-a2}
 Version:        %{_equinox_version}
 Release:        1%{?dist}
 Summary:        Multi-source daily wallpaper manager

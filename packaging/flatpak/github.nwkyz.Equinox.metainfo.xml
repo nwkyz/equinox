@@ -9,7 +9,7 @@
   <description>
     <p>Equinox is a multi-source online wallpaper manager built with GTK4 and libadwaita. It refreshes your desktop with a new wallpaper at the interval you set — from Bing&apos;s daily wallpaper, Windows Spotlight, NASA&apos;s Astronomy Picture of the Day, Wikimedia&apos;s Picture of the Day, Google Earth View, Lorem Picsum and Europeana&apos;s open-access art (with local folders and Unsplash collections on the way).</p>
     <p>Every source is managed independently: its own update schedule, on-demand refresh and its own gallery. A resident background service (a supervisor plus a daemon) keeps updates running while you work — no systemd required, though it is supported as an option. The daemon stays lean at idle (~11 MB) because image downloads run in a short-lived child process.</p>
-    <p>Wallpapers are applied through pluggable GNOME, KDE Plasma and XFCE backends on both X11 and Wayland, and duplicate images are stored only once in your Pictures folder. Tested on Ubuntu and Fedora with GNOME 50, Plasma 6 and Xfce 4.20.</p>
+    <p>Wallpapers are applied through pluggable GNOME, KDE Plasma and XFCE backends on both X11 and Wayland, and duplicate images are stored only once in your Pictures folder. Tested on Ubuntu and Fedora with GNOME 51, Plasma 6 and Xfce 4.20.</p>
   </description>
   <launchable type="desktop-id">github.nwkyz.Equinox.desktop</launchable>
   <screenshots/>
@@ -40,6 +40,7 @@
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
   <releases>
+    <release version="0.1.4-a2" date="2026-09-24"/>
     <release version="0.1.3-final" date="2026-09-11"/>
     <release version="0.1.3-a7" date="2026-09-09"/>
     <release version="0.1.3-a6" date="2026-09-09"/>

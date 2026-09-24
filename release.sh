@@ -168,10 +168,10 @@ elif [ "$FLATPAK_INSTALL" = "1" ]; then
     echo "    安装完成:flatpak run github.nwkyz.Equinox"
 elif command -v flatpak-builder >/dev/null 2>&1; then
     echo "==> flatpak: only building a portable bundle (nothing is installed)"
-    if ! flatpak info org.gnome.Platform//50 >/dev/null 2>&1; then
-        echo "    org.gnome.Platform 50 runtime 未安装(构建需要它)。先装运行时:"
+    if ! flatpak info org.gnome.Sdk//51 >/dev/null 2>&1; then
+        echo "    org.gnome.Sdk 51 未安装(构建 flatpak 需要它)。先装 SDK:"
         echo "      flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo"
-        echo "      flatpak install --user flathub org.gnome.Platform//50"
+        echo "      flatpak install --user flathub org.gnome.Sdk//51"
         echo "    (或直接 ./release.sh --install-flatpak,它会顺带拉取并安装)"
     else
         flatpak-builder --repo="$DIST/flatpak-repo" --force-clean \

@@ -1,6 +1,6 @@
 app-id: github.nwkyz.Equinox
-runtime: org.gnome.Platform//50
-sdk: org.gnome.Sdk//50
+runtime: org.gnome.Platform//51
+sdk: org.gnome.Sdk//51
 command: equinox-gui
 separate-locales: false
 

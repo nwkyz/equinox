@@ -172,6 +172,20 @@ impl Storage {
                 url = result.image_url
             ));
         }
+        // Reject responses that explicitly declare a non-image type: some
+        // providers serve an HTML landing/protection page or a PDF with HTTP
+        // 200 (observed with Europeana's `edmIsShownBy`). Without this guard
+        // the bytes would be saved under an image extension and every view of
+        // the file would fail. A missing Content-Type is left to the
+        // URL-extension fallback below.
+        if !is_image_content_type(resp.content_type.as_deref()) {
+            let ct = resp.content_type.as_deref().unwrap_or("").to_owned();
+            return Err(anyhow!(
+                "{} ({ct}): {url}",
+                gettext("Response is not an image"),
+                url = result.image_url
+            ));
+        }
         let ext = image_extension(resp.content_type.as_deref(), &result.image_url);
         let meta = ImageMeta {
             source: source.to_owned(),
@@ -334,6 +348,22 @@ impl Storage {
     }
 }
 
+/// Whether a response Content-Type denotes an image. A missing header is
+/// accepted (the URL extension is used as a fallback); any explicit non-image
+/// type (`text/html`, `application/pdf`, …) is rejected — see `store`.
+fn is_image_content_type(content_type: Option<&str>) -> bool {
+    match content_type {
+        None => true,
+        Some(ct) => ct
+            .split(';')
+            .next()
+            .unwrap_or(ct)
+            .trim()
+            .to_ascii_lowercase()
+            .starts_with("image/"),
+    }
+}
+
 /// Content hash: first `HASH_LEN` hex chars of sha256 (used for file-name dedup).
 fn content_hash(body: &[u8]) -> String {
     use sha2::{Digest, Sha256};
@@ -481,7 +511,7 @@ fn list_dir(dir: &Path) -> Vec<StoredImage> {
         let Some(ext) = path.extension().and_then(|e| e.to_str()) else {
             continue;
         };
-        if !matches!(ext, "jpg" | "jpeg" | "png" | "webp" | "avif" | "gif") {
+        if !matches!(ext, "jpg" | "jpeg" | "png" | "webp" | "avif" | "gif" | "tif" | "tiff") {
             continue;
         }
         let json_path = path.with_extension("json");
@@ -541,6 +571,21 @@ mod tests {
     fn hash_is_sha256_prefix() {
         // First 12 hex chars of sha256("hello")
         assert_eq!(content_hash(b"hello"), "2cf24dba5fb0");
+    }
+
+    #[test]
+    fn accepts_only_image_content_types() {
+        assert!(is_image_content_type(Some("image/jpeg")));
+        assert!(is_image_content_type(Some("image/jpg")));
+        assert!(is_image_content_type(Some("image/webp; charset=binary")));
+        assert!(is_image_content_type(Some("IMAGE/PNG")));
+        // Missing header → fall back to the URL extension in store()
+        assert!(is_image_content_type(None));
+        // Explicit non-image types must be rejected (Europeana serves these
+        // with HTTP 200 for some records).
+        assert!(!is_image_content_type(Some("text/html; charset=utf-8")));
+        assert!(!is_image_content_type(Some("application/pdf")));
+        assert!(!is_image_content_type(Some("application/json")));
     }
 
     #[test]

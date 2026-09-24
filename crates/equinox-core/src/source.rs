@@ -135,8 +135,8 @@ pub trait Source: Send + Sync {
 /// All built-in sources.
 pub fn registry() -> Vec<&'static dyn Source> {
     use crate::sources::{
-        BingSource, EarthViewSource, NasaApodSource, PicsumSource, SpotlightSource,
-        WikimediaPotdSource,
+        BingSource, EarthViewSource, EuropeanaSource, NasaApodSource, PicsumSource,
+        SpotlightSource, WikimediaPotdSource,
     };
     vec![
         &BingSource,
@@ -145,6 +145,7 @@ pub fn registry() -> Vec<&'static dyn Source> {
         &WikimediaPotdSource,
         &EarthViewSource,
         &PicsumSource,
+        &EuropeanaSource,
     ]
 }
 

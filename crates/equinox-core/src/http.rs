@@ -161,6 +161,7 @@ pub fn image_extension(content_type: Option<&str>, url: &str) -> String {
             "image/webp" => "webp",
             "image/avif" => "avif",
             "image/gif" => "gif",
+            "image/tiff" => "tiff",
             _ => "",
         };
         if !ext.is_empty() {
@@ -173,7 +174,7 @@ pub fn image_extension(content_type: Option<&str>, url: &str) -> String {
         .extension()
         .and_then(|e| e.to_str())
         .map(|e| e.to_ascii_lowercase())
-        .filter(|e| matches!(e.as_str(), "jpg" | "jpeg" | "png" | "webp" | "avif" | "gif"))
+        .filter(|e| matches!(e.as_str(), "jpg" | "jpeg" | "png" | "webp" | "avif" | "gif" | "tif" | "tiff"))
         .unwrap_or_else(|| "jpg".to_owned())
 }
 
@@ -190,11 +191,13 @@ mod tests {
         assert_eq!(image_extension(Some("image/jpeg"), "https://x/a"), "jpg");
         assert_eq!(image_extension(Some("image/png"), "https://x/a"), "png");
         assert_eq!(image_extension(Some("image/webp; charset=binary"), "https://x/a"), "webp");
+        assert_eq!(image_extension(Some("image/tiff"), "https://x/a"), "tiff");
     }
 
     #[test]
     fn extension_fallback_to_url() {
         assert_eq!(image_extension(None, "https://x/a.avif"), "avif");
+        assert_eq!(image_extension(None, "https://x/a.tif"), "tif");
         assert_eq!(image_extension(None, "https://x/photo?w=1920"), "jpg");
         assert_eq!(image_extension(Some("text/html"), "https://x/photo"), "jpg");
     }

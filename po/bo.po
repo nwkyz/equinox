@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: equinox 0.1.3-final\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-09 01:33+0000\n"
+"POT-Creation-Date: 2026-09-19 14:03+0000\n"
 "PO-Revision-Date: 2026-08-24 17:52+0800\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -58,7 +58,7 @@ msgstr "རྩིག་ངོས་ཀྱི་པར་སྒྲིག་མ་
 msgid "No wallpaper property found in"
 msgstr "རྩིག་ངོས་ཀྱི་པར་གྱི་ཁྱད་ཆོས་མ་རྙེད།"
 
-#: crates/equinox-core/src/applier.rs:1001
+#: crates/equinox-core/src/applier.rs:1003
 msgid "no backdrop last-image property found in the xfce4-desktop channel"
 msgstr "xfce4-desktop བརྡ་ལམ་ནང་རྩིག་ངོས་ཀྱི་པར་གྱི་མཐའ་མའི་བརྙན་རིས་ཀྱི་ཁྱད་ཆོས་མ་རྙེད།"
 
@@ -94,14 +94,24 @@ msgstr "ལོ་རྒྱུས་ཚུད་པ།"
 msgid "Auto"
 msgstr "རང་འགུལ།"
 
+#: crates/equinox-core/src/sources/europeana.rs:46
+#: crates/equinox-core/src/sources/europeana.rs:181
+msgid "Europeana"
+msgstr ""
+
+#: crates/equinox-core/src/sources/europeana.rs:53
+#: crates/equinox-core/src/sources/nasa.rs:31
+msgid "API key (optional)"
+msgstr "API ལྡེ་མིག (འདེམས་ཆོག)"
+
+#: crates/equinox-core/src/sources/europeana.rs:58
+msgid "Search keyword"
+msgstr ""
+
 #: crates/equinox-core/src/sources/nasa.rs:24
 #: crates/equinox-core/src/sources/nasa.rs:87
 msgid "NASA"
 msgstr "NASA"
-
-#: crates/equinox-core/src/sources/nasa.rs:31
-msgid "API key (optional)"
-msgstr "API ལྡེ་མིག (འདེམས་ཆོག)"
 
 #: crates/equinox-core/src/sources/nasa.rs:36
 msgid "Use high-definition image (hdurl)"
@@ -152,20 +162,24 @@ msgstr "Wikimedia"
 msgid "Thumbnail width"
 msgstr "བསྡུས་པའི་པར་གྱི་ཞེང་ཚད།"
 
-#: crates/equinox-core/src/storage.rs:284
+#: crates/equinox-core/src/storage.rs:185
+msgid "Response is not an image"
+msgstr ""
+
+#: crates/equinox-core/src/storage.rs:298
 #: crates/equinox-gui/src/views/gallery.rs:832
 msgid "Failed to delete"
 msgstr "སུབ་མ་ཐུབ།"
 
-#: crates/equinox-core/src/storage.rs:406
+#: crates/equinox-core/src/storage.rs:436
 msgid "Failed to create directory"
 msgstr "ཡིག་ཆ་ཁང་བཟོ་མ་ཐུབ།"
 
-#: crates/equinox-core/src/storage.rs:454
+#: crates/equinox-core/src/storage.rs:484
 msgid "Failed to write image"
 msgstr "པར་འབྲི་མ་ཐུབ།"
 
-#: crates/equinox-core/src/storage.rs:460
+#: crates/equinox-core/src/storage.rs:490
 msgid "Failed to write description"
 msgstr "འགྲེལ་བཤད་འབྲི་མ་ཐུབ།"
 
@@ -227,101 +241,101 @@ msgid "Failed to apply wallpaper"
 msgstr "རྩིག་ངོས་ཀྱི་པར་སྤྱོད་མ་ཐུབ།"
 
 #. Daemon status banner
-#: crates/equinox-gui/src/app.rs:38
+#: crates/equinox-gui/src/app.rs:35
 msgid "The daemon is not running; scheduled updates will be unavailable"
 msgstr "ཌེ་མོན་འཁོར་སྐྱོད་མི་བྱེད་པས། དུས་བཀག་གསར་སྒྱུར་བྱེད་མི་ཐུབ།"
 
-#: crates/equinox-gui/src/app.rs:40 crates/equinox-gui/src/app.rs:464
-#: crates/equinox-gui/src/app.rs:562 crates/equinox-gui/src/app.rs:807
+#: crates/equinox-gui/src/app.rs:37 crates/equinox-gui/src/app.rs:468
+#: crates/equinox-gui/src/app.rs:566 crates/equinox-gui/src/app.rs:811
 msgid "Start"
 msgstr "འགོ་འཛུགས།"
 
-#: crates/equinox-gui/src/app.rs:60
+#: crates/equinox-gui/src/app.rs:57
 msgid "Wallpaper"
 msgstr "རྩིག་ངོས་ཀྱི་པར།"
 
-#: crates/equinox-gui/src/app.rs:66 crates/equinox-gui/src/views/oobe.rs:82
+#: crates/equinox-gui/src/app.rs:63 crates/equinox-gui/src/views/oobe.rs:82
 msgid "Sources"
 msgstr "ཁུངས་ཁག"
 
-#: crates/equinox-gui/src/app.rs:72
+#: crates/equinox-gui/src/app.rs:69
 msgid "Gallery"
 msgstr "པར་མཛོད།"
 
-#: crates/equinox-gui/src/app.rs:78 crates/equinox-gui/src/views/history.rs:130
+#: crates/equinox-gui/src/app.rs:75 crates/equinox-gui/src/views/history.rs:130
 msgid "History"
 msgstr "ལོ་རྒྱུས།"
 
-#: crates/equinox-gui/src/app.rs:146
+#: crates/equinox-gui/src/app.rs:150
 msgid "Main menu"
 msgstr "གཙོ་བོའི་དཀར་ཆག"
 
-#: crates/equinox-gui/src/app.rs:156
+#: crates/equinox-gui/src/app.rs:160
 msgid "Tasks"
 msgstr "ལས་ཀ་ཁག"
 
-#: crates/equinox-gui/src/app.rs:174
+#: crates/equinox-gui/src/app.rs:178
 #: crates/equinox-gui/src/views/timeline.rs:54
 msgid "Timeline"
 msgstr "དུས་ཐོའི་ཐིག"
 
-#: crates/equinox-gui/src/app.rs:196 crates/equinox-gui/src/app.rs:509
+#: crates/equinox-gui/src/app.rs:200 crates/equinox-gui/src/app.rs:513
 msgid "Preferences"
 msgstr "གདམ་ག་ཁག"
 
-#: crates/equinox-gui/src/app.rs:216
+#: crates/equinox-gui/src/app.rs:220
 msgid "About"
 msgstr "སྐོར་ལ།"
 
-#: crates/equinox-gui/src/app.rs:231
+#: crates/equinox-gui/src/app.rs:235
 msgid "Multi-source daily wallpaper manager"
 msgstr "ཁུངས་མང་པོའི་ཉིན་རེའི་རྩིག་ངོས་ཀྱི་པར་དོ་དམ་བྱེད་ཆས།"
 
-#: crates/equinox-gui/src/app.rs:236
+#: crates/equinox-gui/src/app.rs:240
 msgid "Released under the"
 msgstr "ཆོག་མཆན་འདིའི་འོག་ཏུ་སྤེལ་བ།"
 
-#: crates/equinox-gui/src/app.rs:275
+#: crates/equinox-gui/src/app.rs:279
 msgid "No running tasks"
 msgstr "ད་ལྟ་འཁོར་སྐྱོད་བྱེད་པའི་ལས་ཀ་མེད།"
 
-#: crates/equinox-gui/src/app.rs:324
+#: crates/equinox-gui/src/app.rs:328
 msgid "Cancel"
 msgstr "ཕྱིར་འཐེན་པ།"
 
-#: crates/equinox-gui/src/app.rs:395
+#: crates/equinox-gui/src/app.rs:399
 msgid "Interface"
 msgstr "མཐུད་ཁ།"
 
-#: crates/equinox-gui/src/app.rs:400
+#: crates/equinox-gui/src/app.rs:404
 msgid "Auto (follow system)"
 msgstr "རང་འགུལ། (རྒྱུད་ཁོངས་ལ་རྗེས་སུ་འབྲང་།)"
 
-#: crates/equinox-gui/src/app.rs:417
+#: crates/equinox-gui/src/app.rs:421
 msgid "Language"
 msgstr "སྐད་ཡིག"
 
-#: crates/equinox-gui/src/app.rs:424 crates/equinox-gui/src/views/oobe.rs:145
+#: crates/equinox-gui/src/app.rs:428 crates/equinox-gui/src/views/oobe.rs:145
 msgid "Background service"
 msgstr "རྒྱབ་ལོགས་ཞབས་ཞུ།"
 
-#: crates/equinox-gui/src/app.rs:433 crates/equinox-gui/src/views/oobe.rs:154
+#: crates/equinox-gui/src/app.rs:437 crates/equinox-gui/src/views/oobe.rs:154
 msgid "Standalone"
 msgstr "རང་ཚུགས་ཀྱི་བྱ་རིམ།"
 
-#: crates/equinox-gui/src/app.rs:439
+#: crates/equinox-gui/src/app.rs:443
 msgid "Run background via"
 msgstr "རྒྱབ་ལོགས་ཞབས་ཞུ་འདི་བརྒྱུད་ནས་གཉེར་བ།"
 
-#: crates/equinox-gui/src/app.rs:461
+#: crates/equinox-gui/src/app.rs:465
 msgid "Daemon status"
 msgstr "ཌེ་མོན་གྱི་གནས་སྟངས།"
 
-#: crates/equinox-gui/src/app.rs:474
+#: crates/equinox-gui/src/app.rs:478
 msgid "systemd is unavailable in flatpak"
 msgstr "Flatpak ནང་ systemd སྤྱོད་མི་ཐུབ།"
 
-#: crates/equinox-gui/src/app.rs:476
+#: crates/equinox-gui/src/app.rs:480
 msgid ""
 "Sandboxed apps cannot reach the host systemd user session, so the background "
 "runs as a supervised process inside the sandbox."
@@ -329,52 +343,52 @@ msgstr ""
 "བཀག་སྡོམ་བྱས་པའི་ཉེར་སྤྱོད་ཀྱིས་གཙོ་གཞིའི་ systemd སྤྱོད་མཁན་གྱི་ལས་ཡུན་ལ་འབྲེལ་མི་ཐུབ་པས། རྒྱབ་ལོགས་ཀྱི་"
 "ལས་རིམ་དེ་བཀག་སྡོམ་ཁོངས་སུ་ལྟ་སྐྱོང་བྱས་པའི་ལས་རིམ་ཞིག་གི་ཚུལ་དུ་གཉེར་གྱི་ཡོད།"
 
-#: crates/equinox-gui/src/app.rs:486 crates/equinox-gui/src/views/oobe.rs:166
+#: crates/equinox-gui/src/app.rs:490 crates/equinox-gui/src/views/oobe.rs:166
 msgid "Start at login"
 msgstr "ཐོ་འཇུག་སྐབས་འགོ་འཛུགས།"
 
-#: crates/equinox-gui/src/app.rs:493
+#: crates/equinox-gui/src/app.rs:497
 msgid "systemd service"
 msgstr "systemd ཞབས་ཞུ།"
 
-#: crates/equinox-gui/src/app.rs:498 crates/equinox-gui/src/app.rs:548
+#: crates/equinox-gui/src/app.rs:502 crates/equinox-gui/src/app.rs:552
 msgid "Install"
 msgstr "བསྒར་འཛུད།"
 
-#: crates/equinox-gui/src/app.rs:546
+#: crates/equinox-gui/src/app.rs:550
 msgid "Uninstall"
 msgstr "བསྒར་འཛུད་མེད་པར་བཟོ་བ།"
 
-#: crates/equinox-gui/src/app.rs:560 crates/equinox-gui/src/app.rs:805
+#: crates/equinox-gui/src/app.rs:564 crates/equinox-gui/src/app.rs:809
 msgid "Stop"
 msgstr "མཚམས་འཇོག་པ།"
 
-#: crates/equinox-gui/src/app.rs:573
+#: crates/equinox-gui/src/app.rs:577
 msgid "Installed and running"
 msgstr "བསྒར་འཛུད་ཟིན་ནས་གཉེར་བཞིན་ཡོད།"
 
-#: crates/equinox-gui/src/app.rs:575
+#: crates/equinox-gui/src/app.rs:579
 msgid "Installed, not running"
 msgstr "བསྒར་འཛུད་ཟིན་ཡང་གཉེར་མེད།"
 
-#: crates/equinox-gui/src/app.rs:578
+#: crates/equinox-gui/src/app.rs:582
 msgid "Not installed"
 msgstr "སྒྲིག་འཇུག་བྱས་མེད།"
 
-#: crates/equinox-gui/src/app.rs:604
+#: crates/equinox-gui/src/app.rs:608
 msgid "Restart Equinox to apply the new language"
 msgstr "སྐད་ཡིག་གསར་པ་སྤྱོད་པར་Equinox བསྐྱར་དུ་འགོ་སྒྲུབ་དགོས།"
 
-#: crates/equinox-gui/src/app.rs:642 crates/equinox-gui/src/app.rs:709
-#: crates/equinox-gui/src/app.rs:729
+#: crates/equinox-gui/src/app.rs:646 crates/equinox-gui/src/app.rs:713
+#: crates/equinox-gui/src/app.rs:733
 msgid "Failed to change the systemd service"
 msgstr "systemd ཞབས་ཞུ་བརྗེ་བཅོས་མ་ཐུབ།"
 
-#: crates/equinox-gui/src/app.rs:800
+#: crates/equinox-gui/src/app.rs:804
 msgid "Running"
 msgstr "འཁོར་སྐྱོད་བཞིན་པ།"
 
-#: crates/equinox-gui/src/app.rs:802
+#: crates/equinox-gui/src/app.rs:806
 msgid "Not running"
 msgstr "འཁོར་སྐྱོད་མི་བཞིན་པ།"
 

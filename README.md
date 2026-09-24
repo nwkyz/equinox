@@ -13,7 +13,8 @@ A multi-source online wallpaper manager built with **GTK4 / libadwaita**. Refres
   - Wikimedia Picture of the Day (POTD)
   - Google Earth View
   - Lorem Picsum
-  - *Working on: Local folder & Unsplash collections*
+  - Europeana
+  - *Working on: Local folder, Wallhaven, MediaRSS, Artstation & Unsplash collections*
 - **Scheduled update** - Auto update on your set interval.
 - **Deduplicated storage** - the same image is stored once.
 - **Background service** - No systemd (Optional); the daemon stays lean at idle (~11 MB) because image downloads run in a short-lived child process.
@@ -22,6 +23,8 @@ A multi-source online wallpaper manager built with **GTK4 / libadwaita**. Refres
 ## Quick Start (recommended)
 
 ### 1. Download package from Releases page.
+
+<b> \>\>\> [Releases Page](https://github.com/nwkyz/equinox/releases)</b>
 
 ### 2. Install
 
